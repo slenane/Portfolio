@@ -27,18 +27,23 @@ h2, h3 {
 }
 
 h2 {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
 }
 
-h3 {
+/* h3 {
     margin-bottom: 2rem;
-}
+} */
 
 p {
     color: var(--secondary-font-white);
 }
 
 /* HERO */
+#hero_section {
+    /* CHANGE MEEEEEE */
+    height: 30rem;
+}
+
 .navbar {
     margin-bottom: 3rem;
     color: var(--main-font-white);
@@ -48,19 +53,43 @@ p {
     width: 3rem;
 }
 
+.theme_div {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.theme_div img {
+    width: 2rem;
+}
+
 .hero_body {
     padding-top: 10rem;
 }
 
 
 /* BIO */
+#bio_section p {
+    text-align: justify;
+    padding: 0 10rem;
+}
 
 
 /* PROJECTS */
 
-.project_item--left {
+.project_item {
+    height: 25rem;
     display: grid;
+    margin-bottom: 3rem;
+    padding: 0 3rem;
+}
+
+.project_item--left {
     grid-template-columns: 50% auto;
+}
+
+.project_item--right {
+    grid-template-columns: auto 50%;
 }
 
 .project_item--left_image img,
@@ -68,8 +97,127 @@ p {
     width: 100%;
 }
 
+.project_item--left_body,
+.project_item--left_image,
+.project_item--right_body {
+    display: grid;
+    align-content: center;
+}
+
+.project_item--left_body .project_title {
+    text-align: end;
+}
+
+.project_item--right_body .project_title {
+    text-align: left;
+}
+
+.sacred_tribe--title {
+    font-family: "Amatic SC";
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.daily_chess--title {
+    font-family: "Spartan";
+    color: #8f3016;
+    font-weight: 400;
+}
+
+.daily_chess--title_bold {
+    font-weight: 600;
+}
+
+.goals_title {
+    font-family: "Spartan";
+    font-weight: 900;
+    color: #3b8038;
+}
+
 .project_description {
-    border: 1px solid var(--main-font-white);
+    border: 1px solid var(--secondary-font-white);
+    border-radius: 3px;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+}
+
+.project_item--read_more {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* .project_item--left_body .project_description {
+    right: 10%;
+} */
+
+.project_links {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+}
+
+.project_item--left_body .project_links {
+    justify-content: end;
+}
+
+.project_item--right_body .project_links {
+    justify-content: start;
+}
+
+.project_links button {
+    background: none;
+    border-radius: 3px;
+}
+
+.project_link--external {
+    border: navy 1px solid;
+    color: navy;
+}
+
+.github_link {
+    border: purple 1px solid;
+    color: purple;
+}
+
+.project_link--external:hover {
+    color: white;
+    background-color: navy;
+}
+
+.github_link:hover {
+    color: white;
+    background-color: purple;
+}
+
+.project_stack {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project_stack img {
+    width: 2rem;
+    padding-bottom: .1rem;
+}
+
+.code_bracket {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-font-white);
+}
+
+.sacred-tribe_stack {
+    grid-template-columns: repeat(11, auto);
+}
+
+.daily-chess_stack {
+    grid-template-columns: repeat(7, auto);
+}
+
+.goals_stack {
+    grid-template-columns: repeat(5, auto);
 }
 
 /* SKILLSET */
@@ -112,7 +260,7 @@ p {
 }
 
 .skill_item img {
-    width: 100%;
+    width: 4rem;
 }
 
 /* WHAT I CAN DO */

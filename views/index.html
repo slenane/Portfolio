@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen Lenane</title>
 
-    <!-- INDEX STYLESHET -->
-    <link rel="stylesheet" href="/assets/stylesheets/index.css">
     <!-- BOOTSTRAP STYLESHEET -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Spartan:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- INDEX STYLESHET -->
+    <link rel="stylesheet" href="/assets/stylesheets/index.css">
 </head>
 <body class="container">
+
     <div id="hero_section">
          <!-- NAVBAR -->
          <nav class="navbar fixed-top navbar-expand-md navbar-light pt-0 mt-0">
             <div class="navbar--items container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="#hero_section">
                     <img src="/assets/images/logo/SL-black.png" alt="Stephen Lenane Logo">
                 </a>
                 <ul class="navbar-nav ml-auto">
@@ -39,6 +44,11 @@
             </div>
         </nav>
 
+        <div class="theme_div">
+            <!-- <img src="/assets/images/icons/sun.png" alt="Light mode icon">  -->
+            <img src="/assets/images/icons/disco.png" alt="Dark mode icon"> 
+        </div>
+
         <div class="hero_body">
             <h1>Hi, I'm Stephen Lenane</h1>
             <p>Freelance Full-Stack Web Developer Based in Ireland</p>
@@ -50,68 +60,100 @@
     </div>
 
     <div id="bio_section">
-        <h2>Bio</h2>
-        <p>Blurrbb</p>
-        <p>Love playing chess and I'm training for my second marathon</p>
+        <h2>BIO</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
     </div>
 
     <div id="project_section">
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
 
-        <div class="project_item--left">
+        <div class="project_item project_item--left">
             <div class="project_item--left_image">
                 <!-- <img src="/assets/images/gifs/sacredtribe.gif" alt="Sacred Tribe Energy Healing Preview"> -->
-                <img src="/assets/images//sacredtribe-static.png" alt="Sacred Tribe Energy Healing Preview">
+                <img src="/assets/images/sacred-tribe-energy-healing.png" alt="Sacred Tribe Energy Healing Preview">
             </div>
             <div class="project_item--left_body">
-                <h3 class="project_title">Sacred Tribe Energy Healing</h3>
-                <div class="project_description">
+                <h3 class="project_title sacred_tribe--title">Sacred Tribe Energy Healing</h3>
+                <div class="project_description shadow">
                     <p>Short description of the project - Shopify implementation - saved money - custom design and development</p>
-                    <div>
-                        <a target="_blank" href="https://sacred-tribe-energy-healing.herokuapp.com/"><button>View Site</button></a> 
-                        <a target="_blank" href="https://github.com/slenane/SacredTribeEnergyHealing"><button>View on GitHub</button></a> 
+                    <p class="project_item--read_more">Read more</p>
+                    <div class="project_links">
+                        <a target="_blank" href="https://sacred-tribe-energy-healing.herokuapp.com/"><button class="project_link--external">View Site</button></a> 
+                        <a target="_blank" href="https://github.com/slenane/SacredTribeEnergyHealing"><button class="github_link"><i class="fab fa-github"></i> GitHub</button></a> 
                     </div>
                 </div>
-                <div class="project_stack">
-                    <p>JavaScript Shopify Pints and Cans</p>
+                <div class="project_stack sacred-tribe_stack">
+                    <p class="code_bracket">{</p> 
+                    <img src="/assets/images/icons/html5.png" alt="HTML Logo"> 
+                    <img src="/assets/images/icons/css3.png" alt="CSS Logo"> 
+                    <img src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
+                    <img src="/assets/images/icons/bootstrap.png" alt="Bootstrap Logo">
+                    <img src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                    <img src="/assets/images/icons/express.png" alt="ExpressJS Logo">
+                    <img src="/assets/images/icons/mongodb.png" alt="MongoDB Logo">
+                    <img src="/assets/images/icons/shopify.png" alt="Shopify Logo">
+                    <img src="/assets/images/icons/heroku.png" alt="Heroku Logo">
+                    <p class="code_bracket">}</p>   
                 </div>
             </div>
         </div>
-        <div class="project_item--right">
+
+        <div class="project_item project_item--right">
             <div class="project_item--right_body">
-                <h3 class="project_title">Daily Chess Puzzle</h3>
-                <div class="project_description">
+                <h3 class="project_title daily_chess--title">DAILY <span class="daily_chess--title_bold">CHESS</span> PUZZLE</h3>
+                <div class="project_description shadow">
                     <p>Short description of the project - Chrome extension using the chess api</p>
-                    <div>
-                        <a target="_blank" href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=es"><button>View Site</button></a> 
-                        <a target="_blank" href="https://github.com/slenane/Chess-Daily-Puzzle"><button>View on GitHub</button></a> 
+                    <p class="project_item--read_more">Read more</p>
+                    <div class="project_links">
+                        <a target="_blank" href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=es"><button class="project_link--external">View Extension</button></a> 
+                        <a target="_blank" href="https://github.com/slenane/Chess-Daily-Puzzle"><button class="github_link"><i class="fab fa-github"></i> GitHub</button></a> 
                     </div>
                 </div>
-                <div class="project_stack">
-                    <p>JavaScript Shopify Pints and Cans</p>
+                <div class="project_stack daily-chess_stack">
+                    <p class="code_bracket">{</p> 
+                    <img src="/assets/images/icons/html5.png" alt="HTML Logo"> 
+                    <img src="/assets/images/icons/css3.png" alt="CSS Logo"> 
+                    <img src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
+                    <img src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                    <img src="/assets/images/icons/webpack.png" alt="Webpack Logo"> 
+                    <p class="code_bracket">}</p>                
                 </div>
             </div>
-            <div class="project_item--right_image"></div>
+            <div class="project_item--right_image">
+                 <!-- <img src="/assets/images/gifs/dailychess.gif" alt="Daily Chess Puzzle Preview"> -->
+                 <img src="/assets/images/daily-chess-puzzle.png" alt="Daily Chess Puzzle Preview">
+            </div>
         </div>
-        <div class="project_item--left">
-            <div class="project_item--left_image"></div>
-            <div class="project_item--left_body"></div>
-            <h3 class="project_title">Goal Tracker</h3>
-            <div class="project_description">
+
+        <div class="project_item project_item--left">
+            <div class="project_item--left_image">
+                <!-- <img src="/assets/images/gifs/goaltracker.gif" alt="Goal Tracker Preview"> -->
+                <img src="/assets/images/goal-tracker.png" alt="Goal Tracker Preview">
+            </div>
+            <div class="project_item--left_body">
+                <h3 class="project_title goals_title">GOALS</h3>
+            <div class="project_description shadow">
                 <p>Short description of the project - Vanilla JavaScript</p>
-                <div>
-                    <a target="_blank" href="https://sacred-tribe-energy-healing.herokuapp.com/"><button>View Site</button></a> 
-                        <a target="_blank" href="https://github.com/slenane/Goal-Tracker"><button>View on GitHub</button></a> 
+                <p class="project_item--read_more">Read more</p>
+                <div class="project_links">
+                    <a target="_blank" href="#"><button class="project_link--external">View Project</button></a> 
+                    <a target="_blank" href="https://github.com/slenane/Goal-Tracker"><button class="github_link"><i class="fab fa-github"></i> GitHub</button></a> 
                 </div>
             </div>
-            <div class="project_stack">
-                <p>JavaScript Shopify Pints and Cans</p>
+            <div class="project_stack goals_stack">
+                <p class="code_bracket">{</p> 
+                <img src="/assets/images/icons/html5.png" alt="HTML Logo"> 
+                <img src="/assets/images/icons/css3.png" alt="CSS Logo"> 
+                <img src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
+                <p class="code_bracket">}</p>
+            </div>
             </div>
         </div>
+
     </div>
 
     <div id="skillset_section">
-        <h2>Skillset</h2>
+        <h2>SKILLSET</h2>
         <h3>Front-end</h3>
         <ul class="skillset--frontend">
             <li class="skill_item">
@@ -210,12 +252,12 @@
     </div>
 
     <div id="what-i-do_section">
-        <h2>What I Do</h2>
+        <h2>WHAT I CAN DO FOR YOU</h2>
         <p>MOUTH VOMIT NONSENSE</p>
     </div>
 
     <div id="contact_section">
-        <h2>Contact</h2>
+        <h2>CONTACT</h2>
         <div class="contact_form">
             <label for="name">Name</label>
             <input type="text" id="name">
@@ -225,6 +267,9 @@
             <textarea name="message" id="message" cols="30" rows="10"></textarea>
             <input type="submit">
         </div>
+    </div>
+
+    <div id="footer">
     </div>
 
     <!-- BOOTSTRAP -->
