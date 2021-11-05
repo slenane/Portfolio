@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    /* FONTS */
+    --main-font-white: #28292b;
+    --secondary-font-white: #8e8e91;
+    --main-font-black: #f3f3f3;
+    --secondary-font-black: #919394;
+
+    /* COLOURS */
+    --white-background: #fbfaff;
+    --black-background: #282a2c;
+    --light-black-background: #343739;
+}
+
+/* GENERAL */
+body {
+    background-color: var(--white-background);
+    color: var(--main-font-white);
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 3rem;
+}
+
+h3 {
+    margin-bottom: 2rem;
+}
+
+p {
+    color: var(--secondary-font-white);
+}
+
+/* HERO */
+.navbar {
+    margin-bottom: 3rem;
+    color: var(--main-font-white);
+}
+
+.navbar-brand img {
+    width: 3rem;
+}
+
+.hero_body {
+    padding-top: 10rem;
+}
+
+
+/* BIO */
+
+
+/* PROJECTS */
+
+.project_item--left {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.project_item--left_image img,
+.project_item--right_image img {
+    width: 100%;
+}
+
+.project_description {
+    border: 1px solid var(--main-font-white);
+}
+
+/* SKILLSET */
+#skillset_section ul, li {
+    list-style: none;
+    padding: 0;
+}
+
+#skillset_section ul {
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skillset--frontend {
+    grid-template-columns: repeat(4, 4rem);
+}
+
+.skillset--backend {
+    grid-template-columns: repeat(4, 4rem);
+}
+
+.skillset--general {
+    grid-template-columns: repeat(7, 4rem);
+}
+
+.skillset--languages {
+    grid-template-columns: repeat(2, 4rem);
+}
+
+.skillset--learning {
+    grid-template-columns: repeat(3, 4rem);
+}
+
+.skill_item {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.skill_item img {
+    width: 100%;
+}
+
+/* WHAT I CAN DO */
+
+
+
+/* CONTACT */
+
+.contact_form {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0 20rem;
+}

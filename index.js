@@ -6,8 +6,12 @@ const app = express();
 
 const server = http.createServer(app);
 
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res, next) => {
-    res.send("pints")
+    // res.send("pints")
+    res.render("index");
 });
 
 // LISTENING
