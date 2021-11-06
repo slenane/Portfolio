@@ -8,7 +8,7 @@
     --main-font-white: #28292b;
     --secondary-font-white: #8e8e91;
     --main-font-black: #f3f3f3;
-    --secondary-font-black: #919394;
+    --secondary-font-black: #848687;
 
     /* COLOURS */
     --white-background: #fbfaff;
@@ -27,15 +27,15 @@ h2, h3 {
 }
 
 h2 {
-    margin: 3rem 0;
+    margin-bottom: 3rem;
 }
 
-/* h3 {
-    margin-bottom: 2rem;
-} */
-
 p {
-    color: var(--secondary-font-white);
+    color: var(--secondary-font-black);
+}
+
+.section {
+    margin-bottom: 3rem;
 }
 
 /* HERO */
@@ -67,6 +67,46 @@ p {
     padding-top: 10rem;
 }
 
+.hero_body--grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.hero_grid--2 {
+    display: grid; 
+    grid-template-columns: auto;
+    gap: 1rem;
+}
+
+.hero_grid--2 a img {
+    width: 1.5rem;
+}
+
+.send_mail--button {
+    border: none;
+    background: none;
+}
+
+.send_mail--button img {
+    width: 1.5rem;
+}
+
+.hero_contact--link {
+    font-size: 2rem;
+    color: var(--main-font-white);
+}
+
+.hero_cv--link {
+    font-family: "Spartan";
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-top: .2rem;
+}
+
+
 
 /* BIO */
 #bio_section p {
@@ -80,8 +120,8 @@ p {
 .project_item {
     height: 25rem;
     display: grid;
-    margin-bottom: 3rem;
-    padding: 0 3rem;
+    margin-bottom: 5rem;
+    padding: 0 8rem;
 }
 
 .project_item--left {
@@ -99,6 +139,7 @@ p {
 
 .project_item--left_body,
 .project_item--left_image,
+.project_item--right_image,
 .project_item--right_body {
     display: grid;
     align-content: center;
@@ -116,6 +157,7 @@ p {
     font-family: "Amatic SC";
     font-weight: 700;
     font-size: 2.5rem;
+    color: #602f78;
 }
 
 .daily_chess--title {
@@ -145,6 +187,14 @@ p {
 .project_item--read_more {
     text-align: center;
     text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: .3rem;
+}
+
+.project_item--read_more:hover {
+    text-decoration-style: solid;
+    cursor: pointer;
+    transform: scale(1.03);
 }
 
 /* .project_item--left_body .project_description {
@@ -170,24 +220,44 @@ p {
     border-radius: 3px;
 }
 
-.project_link--external {
-    border: navy 1px solid;
-    color: navy;
+.sacred_tribe--link {
+    border: #602f78 1px solid;
+    color: #602f78;
+}
+
+.sacred_tribe--link:hover {
+    color: white;
+    background-color: #602f78;
+}
+
+.daily_chess--link {
+    border: #8f3016 1px solid;
+    color: #8f3016;
+}
+
+.daily_chess--link:hover {
+    color: white;
+    background-color: #8f3016;
+}
+
+.goals--link {
+    border: #3b8038 1px solid;
+    color: #3b8038;
+}
+
+.goals--link:hover {
+    color: white;
+    background-color: #3b8038;
 }
 
 .github_link {
-    border: purple 1px solid;
-    color: purple;
-}
-
-.project_link--external:hover {
-    color: white;
-    background-color: navy;
+    border: #333 1px solid;
+    color: #333;
 }
 
 .github_link:hover {
     color: white;
-    background-color: purple;
+    background-color: #333;
 }
 
 .project_stack {
@@ -195,6 +265,23 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transition: all .2s;
+}
+
+.project_stack:hover {
+   transform: scaleX(1.03);
+}
+
+.sacred-tribe_stack {
+    grid-template-columns: repeat(11, auto);
+}
+
+.daily-chess_stack {
+    grid-template-columns: repeat(7, auto);
+}
+
+.goals_stack {
+    grid-template-columns: repeat(8, auto);
 }
 
 .project_stack img {
@@ -208,19 +295,22 @@ p {
     color: var(--main-font-white);
 }
 
-.sacred-tribe_stack {
-    grid-template-columns: repeat(11, auto);
+.project_stack--item {
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-.daily-chess_stack {
-    grid-template-columns: repeat(7, auto);
+.project_stack--item:hover {
+    transform: translateY(-20%);
 }
 
-.goals_stack {
-    grid-template-columns: repeat(5, auto);
-}
 
 /* SKILLSET */
+#skillset_section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 #skillset_section ul, li {
     list-style: none;
     padding: 0;
@@ -270,7 +360,16 @@ p {
 /* CONTACT */
 
 .contact_form {
-    display: grid;
-    grid-template-columns: auto;
+    border: 1px solid var(--secondary-font-black);
+    padding: 1rem;
+    border-radius: 3px;
     margin: 0 20rem;
+}
+
+/* FOOTER */
+#footer {
+    height: auto;
+    margin-top: auto;
+    background-color: var(--secondary-font-black);
+    color: white;
 }
