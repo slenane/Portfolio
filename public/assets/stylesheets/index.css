@@ -38,6 +38,10 @@ p {
     margin-bottom: 3rem;
 }
 
+.hide {
+    display: none;
+}
+
 /* HERO */
 #hero_section {
     /* CHANGE MEEEEEE */
@@ -47,6 +51,7 @@ p {
 .navbar {
     margin-bottom: 3rem;
     color: var(--main-font-white);
+    background: var(--white-background);
 }
 
 .navbar-brand img {
@@ -106,22 +111,19 @@ p {
     padding-top: .2rem;
 }
 
-
-
 /* BIO */
 #bio_section p {
     text-align: justify;
     padding: 0 10rem;
 }
 
-
 /* PROJECTS */
-
 .project_item {
-    height: 25rem;
+    height: auto;
     display: grid;
     margin-bottom: 5rem;
     padding: 0 8rem;
+    gap: 1rem;
 }
 
 .project_item--left {
@@ -137,12 +139,83 @@ p {
     width: 100%;
 }
 
+.project_image--main {
+    transform: translateX(0);
+    transition: all 1s;
+    opacity: 1;
+}
+
+.project_secondary_images {
+    grid-row: 1 / -1;
+    padding-top: 2rem;
+}
+
+.project_image--secondary {
+    transition: all 1s;
+    opacity: 0;
+    padding-bottom: 3rem;
+}
+
+.project_image--secondary.left {
+    transform: translateX(-60rem);
+}
+
+.project_image--secondary.right {
+    transform: translateX(60rem);
+}
+
+.project_image--secondary.left.slide_in,
+.project_image--secondary.right.slide_in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project_image--main.left.slide_out {
+    transform: translateX(-60rem);
+    opacity: 0;
+    display: none;
+}
+
+.project_image--main.right.slide_out {
+    transform: translateX(60rem);
+    opacity: 0;
+    display: none;
+}
+
+.project_open--stack {
+    display: grid;
+    grid-template-rows: 3rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project_open--sacred_tribe_stack {
+    grid-template-columns: repeat(6, 2.5rem);
+}
+
+.project_open--daily_chess_stack {
+    grid-template-columns: repeat(5, 2.5rem);
+}
+
+.project_open--goals_stack {
+    grid-template-columns: repeat(6, 2.5rem);
+}
+
 .project_item--left_body,
 .project_item--left_image,
 .project_item--right_image,
 .project_item--right_body {
     display: grid;
     align-content: center;
+}
+
+.project_images.open {
+    align-content: start;
+}
+
+.project_item--left_image,
+.project_item--right_image {
+    gap: 2rem;
 }
 
 .project_item--left_body .project_title {
@@ -176,7 +249,7 @@ p {
     color: #3b8038;
 }
 
-.project_description {
+.project_info {
     border: 1px solid var(--secondary-font-white);
     border-radius: 3px;
     padding: 1rem;
@@ -197,9 +270,19 @@ p {
     transform: scale(1.03);
 }
 
-/* .project_item--left_body .project_description {
-    right: 10%;
-} */
+.project_body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.project_body--open {
+    max-height: 40rem;
+} 
+
+.project_body h4 {
+    font-size: 1.2rem;
+}
 
 .project_links {
     display: grid;
@@ -265,16 +348,36 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: all .2s;
+    transition: all .3s;
+    animation: grow 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes grow {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        transform: scaleX(1.05);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .project_stack:hover {
-   transform: scaleX(1.03);
+   transform: scaleX(1.03) !important;
 }
 
 .sacred-tribe_stack {
     grid-template-columns: repeat(11, auto);
 }
+
 
 .daily-chess_stack {
     grid-template-columns: repeat(7, auto);
@@ -304,6 +407,23 @@ p {
     transform: translateY(-20%);
 }
 
+.stack_shrink  {
+    animation: shrink 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+    30% {
+        transform: scaleX(1.05);
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
 
 /* SKILLSET */
 #skillset_section h3 {
