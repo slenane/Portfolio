@@ -8,6 +8,10 @@ const toggleShowProject = (e) => {
     let mainImage = project.querySelector('.project_image--main');
     let secondaryImageDiv = project.querySelector('.project_secondary_images');
     let secondaryImages = project.querySelectorAll('.project_image--secondary');
+    
+    let projectLinks = project.querySelector('.project_links');
+    let chessChallenge =  project.querySelector('.chess--challenge_link');
+  
 
     if (e.target.classList.contains('closed')) {
         // Animate the removal of the stack
@@ -25,6 +29,11 @@ const toggleShowProject = (e) => {
             // Set the project to be shown
             e.target.classList.remove("closed");
             e.target.textContent = "Read less";
+            // if the project is the Daily Chess Puzzle show challenge link
+            if (chessChallenge) {
+                projectLinks.classList.add("chess_links");
+                chessChallenge.classList.remove("hide");
+            }
         }, 400);
     } else {
         // Animate the showing of the stack
@@ -38,6 +47,11 @@ const toggleShowProject = (e) => {
         mainImage.classList.remove('slide_out');
         // Hide the project body
         body.classList.remove('project_body--open');
+        // if the project is the Daily Chess Puzzle hide challenge link
+        if (chessChallenge) {
+            projectLinks.classList.remove("chess_links");
+            chessChallenge.classList.add("hide");
+        }
         // Set the project to be closed
         e.target.classList.add("closed");
         e.target.textContent = "Read more";
