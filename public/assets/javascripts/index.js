@@ -8,6 +8,7 @@ const toggleShowProject = (e) => {
     let mainImage = project.querySelector('.project_image--main');
     let secondaryImageDiv = project.querySelector('.project_secondary_images');
     let secondaryImages = project.querySelectorAll('.project_image--secondary');
+    let blurb = project.querySelector('.project_blurb');
     
     let projectLinks = project.querySelector('.project_links');
     let chessChallenge =  project.querySelector('.chess--challenge_link');
@@ -16,6 +17,9 @@ const toggleShowProject = (e) => {
     if (e.target.classList.contains('closed')) {
         // Animate the removal of the stack
         stack.classList.add('stack_shrink');
+        stack.classList.remove('stack_grow');
+        // Hide the project blurb
+        blurb.classList.add('blurb_shrink');
         // Hide the main image
         mainImage.classList.add('slide_out');
         setTimeout(() => {
@@ -38,6 +42,9 @@ const toggleShowProject = (e) => {
     } else {
         // Animate the showing of the stack
         stack.classList.remove('stack_shrink');
+        stack.classList.add('stack_grow');
+        // Show the project blurb
+        blurb.classList.remove('blurb_shrink');
         // Hide secondary images
         secondaryImageDiv.classList.add('hide');
         secondaryImages.forEach(img => img.classList.remove('slide_in'));
@@ -55,6 +62,10 @@ const toggleShowProject = (e) => {
         // Set the project to be closed
         e.target.classList.add("closed");
         e.target.textContent = "Read more";
+
+        setTimeout(() => {
+            stack.classList.remove('stack_grow');
+        },1000);
 
         // Set the scroll position to the top of the project div
         window.scrollTo({
