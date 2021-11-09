@@ -9,12 +9,12 @@ const server = http.createServer(app);
 
 app.use(compression());
 
-// app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res, next) => {
-    res.sendFile((__dirname + '/views/coming-soon.html'));
-    // res.render("index");
+    // res.sendFile((__dirname + '/views/coming-soon.html'));
+    res.render("index");
 });
 
 // LISTENING
