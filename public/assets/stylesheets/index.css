@@ -132,9 +132,14 @@ p {
 .project_item {
     height: auto;
     display: grid;
-    margin-bottom: 5rem;
-    padding: 0 8rem;
+    margin: 0 .2rem 3rem;
+    padding: 2rem 7rem;
     gap: 1rem;
+    border: 1px solid var(--light-mode-secondary-font);
+}
+
+.project_item.project_open {
+    margin-bottom: 8rem;
 }
 
 .project_item--left {
@@ -145,8 +150,7 @@ p {
     grid-template-columns: auto 50%;
 }
 
-.project_item--left_image img,
-.project_item--right_image img {
+.project_images img {
     width: 100%;
 }
 
@@ -154,11 +158,6 @@ p {
     transform: translateX(0);
     transition: all 1s;
     opacity: 1;
-}
-
-.project_secondary_images {
-    grid-row: 1 / -1;
-    padding-top: 2rem;
 }
 
 .chess_gif--div {
@@ -173,72 +172,23 @@ p {
     margin: 0 auto;
 }
 
-.project_image--secondary {
+.secondary_images {
+    display: grid;
     transition: all 1s;
+    overflow: hidden;
+    max-height: 0;
     opacity: 0;
-    padding-bottom: 3rem;
 }
 
-.project_image--secondary.left {
-    transform: translateX(-60rem);
+.secondary_images.show_secondary_images {
+   opacity: 1;
+   max-height: 60rem;
 }
 
-.project_image--secondary.right {
-    transform: translateX(60rem);
-}
-
-.project_image--secondary.left.slide_in,
-.project_image--secondary.right.slide_in {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.project_image--main.left.slide_out {
-    transform: translateX(-60rem);
-    opacity: 0;
-    display: none;
-}
-
-.project_image--main.right.slide_out {
-    transform: translateX(60rem);
-    opacity: 0;
-    display: none;
-}
-
-.project_open--stack {
+.project_images,
+.secondary_images {
     display: grid;
-    grid-template-rows: 3rem;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.project_open--sacred_tribe_stack {
-    grid-template-columns: repeat(6, 2.5rem);
-}
-
-.project_open--daily_chess_stack {
-    grid-template-columns: repeat(5, 2.5rem);
-}
-
-.project_open--goals_stack {
-    grid-template-columns: repeat(6, 2.5rem);
-}
-
-.project_item--left_body,
-.project_item--left_image,
-.project_item--right_image,
-.project_item--right_body {
-    display: grid;
-    align-content: start;
-}
-
-.project_images.open {
-    align-content: start;
-}
-
-.project_item--left_image,
-.project_item--right_image {
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .project_item--left_body .project_title {
@@ -323,11 +273,16 @@ p {
 }
 
 .project_body--open {
-    max-height: 40rem;
+    max-height: 60rem;
 } 
 
 .project_body h4 {
     font-size: 1.1rem;
+}
+
+.project_notable_features li {
+    list-style: initial;
+    color: var(--light-mode-secondary-font);
 }
 
 .project_links {
@@ -413,61 +368,23 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: transform .5s !important;
+    transition: transform .5s;
 }
 
 .project_stack:hover {
-    transform: scaleX(1.03) !important;
+    transform: scaleX(1.03);
 }
 
-.stack_grow {
-    animation: grow 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+.hide_stack {
+    display: none;
 }
-
-@keyframes grow {
-    0% {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-    30% {
-        opacity: 1;
-    }
-    70% {
-        transform: scaleX(1.05);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.stack_shrink  {
-    animation: shrink .8s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes shrink {
-    30% {
-        transform: scaleX(1.05);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scaleX(0);
-        opacity: 0;
-    }
-}
-
 
 .sacred-tribe_stack {
     grid-template-columns: repeat(11, auto);
 }
 
-
 .daily-chess_stack {
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(9, auto);
 }
 
 .goals_stack {
@@ -525,6 +442,27 @@ p {
 .project_stack--item:hover .project_stack--description {
     opacity: 1;
     visibility: visible;
+}
+
+.project_open--stack {
+    grid-column: 1 /-1;
+    margin-top: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+}
+
+.project_open--stack img {
+    width: 3rem;
+}
+
+.project_open--stack .code_bracket {
+    font-size: 3rem;
+}
+
+.project_open--stack.show_large_stack {
+    display: grid;
 }
 
 
