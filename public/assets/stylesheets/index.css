@@ -132,10 +132,11 @@ p {
 .project_item {
     height: auto;
     display: grid;
-    margin: 0 .2rem 3rem;
+    margin: 0 1rem 3rem;
     padding: 2rem 7rem;
     gap: 1rem;
     border: 1px solid var(--light-mode-secondary-font);
+    border-radius: 3px;
 }
 
 .project_item.project_open {
@@ -150,26 +151,22 @@ p {
     grid-template-columns: auto 50%;
 }
 
+.project_images {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 0;
+    transition: max-height 1s;
+}
+
 .project_images img {
     width: 100%;
+    height: auto;
 }
 
-.project_image--main {
-    transform: translateX(0);
-    transition: all 1s;
-    opacity: 1;
-}
-
-.chess_gif--div {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.chess_gif {
-    max-height: 30rem;
-    max-width: 15rem;
-    margin: 0 auto;
+.project_images.images_open {
+    align-content: start;
+    align-items: start;
+    gap: 4rem;
 }
 
 .secondary_images {
@@ -182,13 +179,20 @@ p {
 
 .secondary_images.show_secondary_images {
    opacity: 1;
-   max-height: 60rem;
+   max-height: 30rem;
 }
 
-.project_images,
-.secondary_images {
-    display: grid;
-    gap: 4rem;
+.chess_gif {
+    max-height: 30rem;
+    max-width: 15rem;
+    margin: .5rem auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.goals_gif {
+    margin: 1rem auto;
+    max-width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .project_item--left_body .project_title {
@@ -246,6 +250,7 @@ p {
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: .3rem;
+    margin-bottom: 1.5rem;
 }
 
 .project_item--read_more:hover {
@@ -269,7 +274,7 @@ p {
 .project_body {
     max-height: 0;
     overflow: hidden;
-    transition: all 1s;
+    transition: max-height 1s;
 }
 
 .project_body--open {
@@ -368,7 +373,8 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: transform .5s;
+    max-height: 5rem;
+    transition: all .5s;
 }
 
 .project_stack:hover {
@@ -376,7 +382,9 @@ p {
 }
 
 .hide_stack {
-    display: none;
+    transition: all 1s;
+    opacity: 0;
+    max-height: 0;
 }
 
 .sacred-tribe_stack {
@@ -391,11 +399,6 @@ p {
     grid-template-columns: repeat(8, auto);
 }
 
-.project_stack img {
-    width: 2rem;
-    padding-bottom: .1rem;
-}
-
 .code_bracket {
     font-size: 2.5rem;
     font-weight: 700;
@@ -408,6 +411,11 @@ p {
     cursor: pointer;
 }
 
+.project_stack img {
+    width: 2rem;
+    padding-bottom: .1rem;
+}
+
 .project_stack--item:hover {
     transform: translateY(-20%);
 }
@@ -415,8 +423,8 @@ p {
 .project_stack--description {
     position: absolute;
     bottom: 3rem;
-    right: -4.5rem;
-    width: 10rem;
+    right: -15rem;
+    width: 30rem;
     height: auto;
     padding: 1rem;
     border-radius: 3px;
@@ -427,8 +435,13 @@ p {
     cursor: initial;
 }
 
+.project_stack--description.description_out_of_view {
+    right: -10rem;
+}
+
 .description_large {
     bottom: 4rem;
+    right: -14rem;
 }
 
 .project_stack--description h4 {
@@ -450,11 +463,28 @@ p {
     display: none;
     justify-content: center;
     align-items: center;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .project_open--stack img {
     width: 3rem;
+}
+
+.project_open--stack.bouncing_icon .project_stack--item.bounce {
+    animation: bounce 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    25% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-20%);
+    }
 }
 
 .project_open--stack .code_bracket {

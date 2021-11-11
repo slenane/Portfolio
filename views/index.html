@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Spartan:wght@400;600;900&display=swap" rel="stylesheet">
-    <!-- INDEX STYLESHET -->
+    <!-- INDEX STYLESHEET -->
     <link rel="stylesheet" href="/assets/stylesheets/index.css">
 </head>
 <body>
@@ -97,11 +97,13 @@
 
         <!-- PROJECT 1: SACRED TRIBE ENERGY HEALING -->
 
-        <div class="project--sacred_tribe_energy_healing project_item project_item--left">
+        <div class="project--sacred_tribe_energy_healing project_item project_item--left shadow">
             <div class="project_images">
                 <img class="project_image--main" src="/assets/images/sacred-tribe-energy-healing.png" alt="Sacred Tribe Energy Healing Preview">
                 <div class="secondary_images">
                     <img class="project_image--secondary" src="/assets/images/sacredtribe-desktop.png" alt="Sacred Tribe Energy Healing Desktop Preview">
+                </div>
+                <div class="secondary_images">
                     <img class="project_image--secondary" src="/assets/images/sacredtribe-mobile.png" alt="Sacred Tribe Energy Healing Mobile Preview">
                 </div>
             </div>
@@ -114,9 +116,9 @@
                     </p>
                     <div class="project_body">
                         <div class="project_description">
-                            <h4>Description and Role</h4>
+                            <h4>Description</h4>
                             <p>
-                                Client had created a site with a drag-and-drop website provider that acheived a high volume of visitors but a low conversion rate.
+                                Client had created a site with a drag-and-drop website provider that achieved a high volume of visitors but a low conversion rate.
                                 The site required a personal design and identity that matched the product but the limited available options made the site look outdated and as a result customers did not find it trustworthy.
                                 I designed and developed the site based on the clients ideas and integrated a Shopify Lite, giving their site an identity and a reduction in monthly subscription fees.
                             </p>
@@ -125,7 +127,7 @@
                             <h4>Difficulties</h4>
                             <p>
                                The client's original site lacked structure and a natural flow that would make navigation easier for users and lead to increased sales.
-                               The client also needed the freedom to add new products, update prices and edit product information. In addition to posting blogs and adding links to parter sites.
+                               The client also needed the freedom to add new products, update prices and edit product information. In addition to posting blogs and adding links to partner sites.
                                Most importantly, the client was looking for a cheaper alternative to the service they were using as the subscription fees continued to rise and there was a product limit set for each site.
                             </p>
                         </div>
@@ -164,63 +166,94 @@
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>HTML</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used in conjunction with Embedded JavaScript Templating (EJS) to create template pages with dynamic additions to the markup. 
+                                    All product information is dynamically loaded and inserted from Shopify so the client has full control over what is shown on the page.
+                                    The cart is generated with a template displaying information from a Shopify checkout.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/html5.png" alt="HTML Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>CSS</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to style all pages and create the responsive design through media queries. 
+                                    All style changes and animations made using JavaScript are achieved through CSS classes.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/css3.png" alt="CSS Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>JavaScript</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to produce interactivity of the site. Everything from opening the navigation to filtering products is made possible with JavaScript. 
+                                    WebSockets are used to improve the user experience by communicating with the server to update the cart without having to load a new page, making the process much smoother for the user.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>Bootstrap</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used for boilerplate fonts, navigation bars and styles. 
+                                    Contact forms were generated using Bootstrap classes for familiar style and functionality
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/bootstrap.png" alt="Bootstrap Logo">
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
-                                <h4>NodeJS</h4>
-                                <p>What I used it for</p>
+                                <h4>Node.js</h4>
+                                <p>
+                                    Used to create the web application. 
+                                    Node.js connects all aspects of the site together. 
+                                    The app serves pages based on the user request, making calls to Shopify and the database to provide all the information required.
+                                </p>
                             </div>
-                            <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                            <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
-                                <h4>ExpressJS</h4>
-                                <p>What I used it for</p>
+                                <h4>Express.js</h4>
+                                <p>
+                                    Used as a Node.js framework that provides a variety of HTTP utility methods and allows the addition of middleware to the routes for extra functionality.
+                                </p>
                             </div>
-                            <img class="project_stack--icon" src="/assets/images/icons/express.png" alt="ExpressJS Logo">
+                            <img class="project_stack--icon" src="/assets/images/icons/express.png" alt="Express.js Logo">
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>MongoDB</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to store session information for users, blog posts, links and client information.
+                                    The remote database is capable of much more and can easily be adjusted to store more information but it is not necessary as the products and business information is all stored on Shopify.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/mongodb.png" alt="MongoDB Logo">
                         </div>
                         <div class="project_stack--item">
-                            <div class="project_stack--description shadow">
+                            <div class="project_stack--description description_out_of_view shadow">
                                 <h4>Shopify</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to manage the business.
+                                    A Shopify Lite store was created to hold all product information and provide secure payment method.
+                                    The client maintains full control of the store after the site is finished and can set prices, add discounts, control shipping and inventory with ease. 
+                                    As soon as the changes are saved, the site will automatically be updated
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/shopify.png" alt="Shopify Logo">
                         </div>
                         <div class="project_stack--item">
-                            <div class="project_stack--description shadow">
+                            <div class="project_stack--description description_out_of_view shadow">
                                 <h4>Heroku</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to host the website.
+                                    The Heroku Hobby plan allows you to maintain an always-on dyno with SSL certificates and custom domains all for $7 per month.
+                                    With this package you are also able to see live metrics including traffic, memory and response time of your site.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/heroku.png" alt="Heroku Logo">
                         </div>
@@ -228,68 +261,99 @@
                 </div>
             </div>
 
-            <div class="project_open--stack sacred-tribe_stack">
+            <div class="project_open--stack sacred-tribe_stack bouncing_icon">
                 <p class="code_bracket">{</p>   
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>HTML</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used in conjunction with Embedded JavaScript Templating (EJS) to create template pages with dynamic additions to the markup. 
+                                All product information is dynamically loaded and inserted from Shopify so the client has full control over what is shown on the page.
+                                The cart is generated with a template displaying information from a Shopify checkout.
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/html5.png" alt="HTML Logo"> 
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>CSS</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used to style all pages and create the responsive design through media queries. 
+                                All style changes and animations made using JavaScript are achieved through CSS classes.
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/css3.png" alt="CSS Logo"> 
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>JavaScript</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used to produce interactivity of the site. Everything from opening the navigation to filtering products is made possible with JavaScript. 
+                                WebSockets are used to improve the user experience by communicating with the server to update the cart without having to load a new page, making the process much smoother for the user.
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>Bootstrap</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used for boilerplate fonts, navigation bars and styles. 
+                                Contact forms were generated using Bootstrap classes for familiar style and functionality
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/bootstrap.png" alt="Bootstrap Logo">
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
-                            <h4>NodeJS</h4>
-                            <p>What I used it for</p>
+                            <h4>Node.js</h4>
+                            <p>
+                                Used to create the web application. 
+                                Node.js connects all aspects of the site together and allows the use of libraries to improve the site. 
+                                The app serves pages based on the user request, making calls to Shopify and the database to provide all the information required.
+                            </p>
                         </div>
-                        <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                        <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description shadow">
-                            <h4>ExpressJS</h4>
-                            <p>What I used it for</p>
+                            <h4>Express.js</h4>
+                            <p>
+                                Used as a Node.js framework that provides a variety of HTTP utility methods and allows the addition of middleware to the routes for extra functionality.
+                            </p>
                         </div>
-                        <img class="project_stack--icon" src="/assets/images/icons/express.png" alt="ExpressJS Logo">
+                        <img class="project_stack--icon" src="/assets/images/icons/express.png" alt="Express.js Logo">
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>MongoDB</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used to store session information for users, blog posts, links and client information.
+                                The remote database is capable of much more and can easily be adjusted to store more information but it is not necessary as the products and business information is all stored on Shopify.
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/mongodb.png" alt="MongoDB Logo">
                     </div>
-                    <div class="project_stack--item">
+                    <div class="project_stack--item bounce">
                         <div class="project_stack--description description_large shadow">
                             <h4>Shopify</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used to manage the business.
+                                A Shopify Lite store was created to hold all product information and provide secure payment method.
+                                The client maintains full control of the store after the site is finished and can set prices, add discounts, control shipping and inventory with ease. 
+                                As soon as the changes are saved, the site will automatically be updated
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/shopify.png" alt="Shopify Logo">
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description description_large shadow">
                             <h4>Heroku</h4>
-                            <p>What I used it for</p>
+                            <p>
+                                Used to host the website.
+                                The Heroku Hobby plan allows you to maintain an always-on dyno with SSL certificates and custom domains all for $7 per month.
+                                With this package you are also able to see live metrics including traffic, memory and response time of your site.
+                            </p>
                         </div>
                         <img class="project_stack--icon" src="/assets/images/icons/heroku.png" alt="Heroku Logo">
                     </div>
@@ -299,42 +363,61 @@
 
         <!-- PROJECT 2: DAILY CHESS PUZZLE -->
 
-        <div class="project--daily_chess_puzzle project_item project_item--right">
+        <div class="project--daily_chess_puzzle project_item project_item--right shadow">
             <div class="project_item--right_body">
                 <h3 class="project_title daily_chess--title">DAILY <span class="daily_chess--title_bold">CHESS</span> PUZZLE</h3>
                 <div class="project_info shadow">
-                    <p class="project_blurb">Daily Chess Puzzle chrome extension allows users to solve chess.com's daily puzzle directly from the browser.  It also gives users unlimited free access to the puzzle archives. No membership required!</p>
+                    <p class="project_blurb">
+                        Daily Chess Puzzle chrome extension allows users to solve chess.com's daily puzzle directly from the browser.
+                        It also gives users unlimited free access to the puzzle archives. 
+                        No membership required!
+                    </p>
                     <div class="project_body">
                         <div class="project_description">
-                            <h4>Description and Role</h4>
-                            <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum qui pariatur tenetur at aliquam. Unde tempora animi delectus veritatis. dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                            <h4>Description</h4>
+                            <p>
+                                Most chess experts claim that solving chess puzzles is the most effective chess training method to improve your chess skills.
+                                So I wanted to develop a free chrome extension that would allow the user to improve their chess conveniently from the browser as no other puzzle chrome extension exists.
+                            </p>
                         </div>
                         <div class="project_difficulties">
                             <h4>Difficulties</h4>
-                            <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perferendis repellat quas reiciendis non quos quo at a. Laudantium, pariatur. dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                            <p>
+                                I also wanted it to be free as a lot of chess puzzle applications are paid services.
+                                PGN/FEN chess notation needed to be parsed and used to recreate the puzzles.
+                                Needed to deal with all situations - castling, promotion etc.
+                                It needed to look familiar to the users and operate in a manner that they are used to.
+                                It had to have more than just a few puzzles.
+                                It should link to another site for more information on the puzzle.
+                            </p>
                         </div>
                         <div class="project_solutions">
                             <h4>Solutions</h4>
-                            <p>Lorem ipsum Lorem ipsum, dolor sit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque aliquid numquam voluptas maiores velit facere maxime adipisci, blanditiis dignissimos consequatur. amet consectetur adipisicing elit. Cum laborum alias qui nam vitae, suscipit eveniet labore distinctio tempora velit. dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                            <p>
+                                Chess.com's chess-web-api provided the information for their daily puzzle in PGN/FEN notation.
+                                This information was parsed and separated into individual moves. chessboard.js was used for the chessboard with moveable pieces and chess.js was used for the chess logic and rules.
+                                With chess.js, you can get the current position in PGN notation - this is used to compare the move the user made to the expected move. 
+                                Using these three packages I was able to set the starting position and allow the user to make a move, which was then compared against what the board expected to look like after a correct move.
+                                If the move matched the expected value, the puzzle continued. If not, the user is shown an incorrect move message and asked to try again.  
+                                The chess-web-api also releases the notation for a random daily puzzle from the archives, which changes every 15 seconds allowing unlimited access to past puzzles. 
+                                I added a random mode that would allow unlimited access to the daily puzzle archives for free
+                            </p>
                         </div>
                         <div class="project_notable_features">
                             <h4>Notable Features</h4>
                             <ul>
-                                <li>Secure payments with Shopify</li>
-                                <li>Full control of product inventory, shipping, pricing and discounts</li>
-                                <li>Personalised design</li>
-                                <li>Responsive design</li>
-                                <li>Product filtering</li>
-                                <li>Material list with images</li>
-                                <li>Secret log in for client to add/edit blogs and links to partner sites</li>
-                                <li>Custom client email</li>
-                                <li>Sessions to store items in cart and wishlist for returning customers</li>
+                                <li>Unlimited Free Puzzles</li>
+                                <li>Direct Access from the Browser</li>
+                                <li>Familiar Chess.com style</li>
+                                <li>No membership/subscription necessary</li>
+                                <li>Hints, Solution, Reset and Rotate Board Buttons</li>
+                                <li>Direct links to chess.com for more information</li>
                              </ul>                        
                         </div>
                     </div>
                     <p class="project_item--read_more closed">Read more</p>
                     <div class="project_links">
-                        <a target="_blank" href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=es"><button type="button" class="btn project_link--external daily_chess--link">View Extension</button></a> 
+                        <a target="_blank" href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=en"><button type="button" class="btn project_link--external daily_chess--link">View Extension</button></a> 
                         <a target="_blank" href="https://github.com/slenane/Chess-Daily-Puzzle"><button type="button" class="btn github_link"><i class="fab fa-github"></i> GitHub</button></a> 
                         <a class="chess--challenge_link hide" target="_blank" href="https://www.chess.com/member/lovelycarbonara"><button type="button" class="btn chess_com_link"><img src="/assets/images/icons/chesscom.png" alt=""> Challenge me!</button></a> 
                     </div>
@@ -344,113 +427,151 @@
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>HTML</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to structure the application.
+                                    The chessboard itself is added dynamically but the controls are added here in the same setup as chess.com
+                                    chessboard.js does not provide any promotion piece options so this was also added here to replicate the style of chess.com
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/html5.png" alt="HTML Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>CSS</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to style the application like chess.com.
+                                    The style is altered in response to user interaction - red and green messages flash depending on the move they make and whether the puzzle is solve or not.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/css3.png" alt="CSS Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>JavaScript</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to control the puzzle.
+                                    The puzzle stating position is loaded by parsing the PGN notation from chess.com. 
+                                    When the user makes a move, the position on the board is compared to what the board should look like after that move.
+                                    If the user makes the wrong move they are kicked back and have to try again.
+                                    When the position on the board matches the solution position then the puzzle has been solved.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
-                                <h4>NodeJS</h4>
-                                <p>What I used it for</p>
+                                <h4>Node.js</h4>
+                                <p>
+                                    Used to create the application. 
+                                    Node.js connects all aspects of the extension together and allows the use of libraries to improve the application. 
+                                    Node.js is used to fetch the information from chess.com and to import the chessboard.js and chess.js libraries.
+                                </p>
                             </div>
-                            <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                            <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>Webpack</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to bundle the JavaScript files for use in the browser.
+                                    This application would not be possible without webpack as the Chrome web store has strict cross-origin policies. 
+                                    Which means that without it it would not be possible to use chessboard.js, chess.js or make calls to the chess-web-api.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/webpack.png" alt="Webpack Logo"> 
                         </div>
                         <div class="project_stack--item">
                             <div class="project_stack--description shadow">
                                 <h4>Chess-web-api</h4>
-                                <p>What I used it for</p>
+                                <p>
+                                    Used to import all the data required to create this application.
+                                    The name and PGN/FEN notation of the daily and random puzzles is provided as an object. 
+                                    This information is then parsed and used in conjunction with chessboard.js and chess.js to add functionality to the application.
+                                </p>
                             </div>
                             <img class="project_stack--icon" src="/assets/images/icons/chesscom.png" alt="Chess.com Logo"> 
-                        </div>
-                        <div class="project_stack--item">
-                            <div class="project_stack--description shadow">
-                                <h4>Chrome Web Store</h4>
-                                <p>What I used it for</p>
-                            </div>
-                            <img class="project_stack--icon" src="/assets/images/icons/chrome-web-store.png" alt="Chrome Web Store Logo"> 
                         </div>
                     <p class="code_bracket">}</p>                
                 </div>
             </div>
             <div class="project_images">
                 <img class="project_image--main" src="/assets/images/daily-chess-puzzle.png" alt="Daily Chess Puzzle Preview">
+                <div class="secondary_images chess_gif--div">
+                    <img class="project_image--secondary chess_gif" src="/assets/images/daily-chess.gif" alt="Daily Chess Gif Preview">
+                </div>
                 <div class="secondary_images">
-                    <img class="project_image--secondaryshadow chess_gif" src="/assets/images/daily-chess.gif" alt="Daily Chess Gif Preview">
-                    <img class="project_image--secondary" src="/assets/images/chess2.png" alt="Sacred Tribe Energy Healing Mobile Preview">
+                    <img class="project_image--secondary" src="/assets/images/daily-chess-puzzle2.png" alt="Sacred Tribe Energy Healing Mobile Preview">
                 </div>
             </div>
         
-            <div class="project_open--stack daily-chess_stack">
+            <div class="project_open--stack daily-chess_stack  bouncing_icon">
                 <p class="code_bracket">{</p>  
                 <div class="project_stack--item">
                     <div class="project_stack--description description_large shadow">
                         <h4>HTML</h4>
-                        <p>What I used it for</p>
+                        <p>
+                            Used to structure the application.
+                            The chessboard itself is added dynamically but the controls are added here in the same setup as chess.com
+                            chessboard.js does not provide any promotion piece options so this was also added here to replicate the style of chess.com
+                        </p>
                     </div>
                     <img class="project_stack--icon" src="/assets/images/icons/html5.png" alt="HTML Logo"> 
                 </div>
                 <div class="project_stack--item">
                     <div class="project_stack--description description_large shadow">
                         <h4>CSS</h4>
-                        <p>What I used it for</p>
+                        <p>
+                            Used to style the application like chess.com.
+                            The style is altered in response to user interaction - red and green messages flash depending on the move they make and whether the puzzle is solve or not.
+                        </p>
                     </div>
                     <img class="project_stack--icon" src="/assets/images/icons/css3.png" alt="CSS Logo"> 
                 </div>
                 <div class="project_stack--item">
                     <div class="project_stack--description description_large shadow">
                         <h4>JavaScript</h4>
-                        <p>What I used it for</p>
+                        <p>
+                            Used to control the puzzle.
+                            The puzzle stating position is loaded by parsing the PGN notation from chess.com. 
+                            When the user makes a move, the position on the board is compared to what the board should look like after that move.
+                            If the user makes the wrong move they are kicked back and have to try again.
+                            When the position on the board matches the solution position then the puzzle has been solved.
+                        </p>
                     </div>
                     <img class="project_stack--icon" src="/assets/images/icons/javascript.png" alt="JavaScript Logo"> 
                 </div>
                 <div class="project_stack--item">
                     <div class="project_stack--description description_large shadow">
-                        <h4>NodeJS</h4>
-                        <p>What I used it for</p>
+                        <h4>Node.js</h4>
+                        <p>
+                            Used to create the application. 
+                            Node.js connects all aspects of the extension together and allows the use of libraries to improve the application. 
+                            Node.js is used to fetch the information from chess.com and to import the chessboard.js and chess.js libraries.
+                        </p>
                     </div>
-                    <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                    <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
                 </div>
                 <div class="project_stack--item">
                     <div class="project_stack--description description_large shadow">
                         <h4>Webpack</h4>
-                        <p>What I used it for</p>
+                        <p>
+                            Used to bundle the JavaScript files for use in the browser.
+                            This application would not be possible without webpack as the Chrome web store has strict cross-origin policies. 
+                            Which means that without it it would not be possible to use chessboard.js, chess.js or make calls to the chess-web-api.
+                        </p>
                     </div>
                     <img class="project_stack--icon" src="/assets/images/icons/webpack.png" alt="Webpack Logo"> 
                 </div>
-                <div class="project_stack--item">
+                <div class="project_stack--item  bounce">
                     <div class="project_stack--description shadow">
                         <h4>Chess-web-api</h4>
-                        <p>What I used it for</p>
+                        <p>
+                            Used to import all the data required to create this application.
+                            The name and PGN/FEN notation of the daily and random puzzles is provided as an object. 
+                            This information is then parsed and used in conjunction with chessboard.js and chess.js to add functionality to the application.
+                        </p>
                     </div>
                     <img class="project_stack--icon" src="/assets/images/icons/chesscom.png" alt="Chess.com Logo"> 
-                </div>
-                <div class="project_stack--item">
-                    <div class="project_stack--description shadow">
-                        <h4>Chrome Web Store</h4>
-                        <p>What I used it for</p>
-                    </div>
-                    <img class="project_stack--icon" src="/assets/images/icons/chrome-web-store.png" alt="Chrome Web Store Logo"> 
                 </div>
                 <p class="code_bracket">}</p>  
             </div>
@@ -458,35 +579,65 @@
 
         <!-- PROJECT 3: GOAL TRACKER -->
 
-        <div class="project--goals project_item project_item--left">
+        <div class="project--goals project_item project_item--left shadow">
             <div class="project_images">
-                <img class="project_image--main" src="/assets/images/goal-tracker.png" alt="Goal Tracker Preview">
+                <img class="project_image--main" src="/assets/images/goal-tracker1.png" alt="Goal Tracker Preview">
                 <div class="secondary_images">
-                    <img class="project_image--secondary" src="/assets/images/goals1.png" alt="Goal Tracker Preview">
-                    <img class="project_image--secondary" src="/assets/images/goals2.png" alt="Goal Tracker Preview">
+                    <img class="project_image--secondary goals_gif" src="/assets/images/goal-tracker.gif" alt="Goal Tracker Preview">
+                </div>
+                <div class="secondary_images">
+                    <img class="project_image--secondary" src="/assets/images/goal-tracker2.png" alt="Goal Tracker Preview">
                 </div>
             </div>
 
             <div class="project_item--left_body">
                 <h3 class="project_title goals_title">GOALS</h3>
             <div class="project_info shadow">
-                <p class="project_blurb">Goals web application allows users to track their yearly goals see their progress in real time. Whether you want to acheive something great or kick a bad habit, this application will help you stay focused.</p>
+                <p class="project_blurb">
+                    Goals web application allows users to track their yearly goals see their progress in real time. 
+                    Whether you want to achieve something great or kick a bad habit, this application will help you stay focused.
+                </p>
                 <div class="project_body">
                     <div class="project_description">
-                        <h4>Description and Role</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                        <h4>Description</h4>
+                        <p>
+                            After trying several goal tracking applications and never quite finding one that functioned like I expected, I decided to create my own.
+                            Updates on your progress is essential to keeping you motivated to achieve your goals.
+                            Goals allows you to track and view your goals in real time, regardless of the type of goal, and view your progress as the year goes on. 
+                        </p>                    
                     </div>
                     <div class="project_difficulties">
                         <h4>Difficulties</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                        <p>
+                            Users need to be able to set goals to achieve and also things they would like to quit.
+                            Needed to be more than one type of goal, some things cannot be measured with a checkbox.
+                            Needed to add notes to keep track of and be able to reflect on the achievements you have made.
+                            Needed to be able to organise goals.
+                            Needed to be able to store them.
+                        </p>
                     </div>
                     <div class="project_solutions">
                         <h4>Solutions</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                        <p>
+                            Implemented realtime updates on percentages by taking the percentage completion of targets and combining them with the checked goals to give an accurate reading of progress.
+                            Added notes to targets to keep track of each time the users adds to the target so they can have an account of everything.
+                            Used localStorage to save the user's goals locally.
+                            Goals can be organised based on priority ot the user. Once a sub-goal is complete, it moves to the bottom so the focus can switch to the next goal.
+                            Motivational quotes are shown to further motivate the user.
+                        </p>
                     </div>
                     <div class="project_notable_features">
                         <h4>Notable Features</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id sit laudantium, quaerat corrupti quod necessitatibus magnam, quis saepe nam, ut dolores tenetur accusamus delectus aliquam voluptate ullam dolorem asperiores!</p>
+                        <ul>
+                            <li>Real Time Goal Updates</li>
+                            <li>Set Goals to Achieve or Quit Something</li>
+                            <li>Target Sub-goals for Tracking Quantity with Notes</li>
+                            <li>Checkbox Sub-goals for Simple Complete/Incomplete Goals</li>
+                            <li>Organise Goals</li>
+                            <li>Save to localStorage</li>
+                            <li>Motivational Quotes</li>
+                            <p>Percentage Wheels and Bars with Animations</p>
+                        </ul>
                     </div>
                 </div>
                 <p class="project_item--read_more closed">Read more</p>
@@ -520,10 +671,10 @@
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description shadow">
-                            <h4>NodeJS</h4>
+                            <h4>Node.js</h4>
                             <p>What I used it for</p>
                         </div>
-                        <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                        <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
                     </div>
                     <div class="project_stack--item">
                         <div class="project_stack--description shadow">
@@ -544,7 +695,7 @@
             </div>
 
 
-        <div class="project_open--stack goals_stack">
+        <div class="project_open--stack goals_stack  bouncing_icon">
             <p class="code_bracket">{</p>  
             <div class="project_stack--item">
                 <div class="project_stack--description description_large shadow">
@@ -560,7 +711,7 @@
                 </div>
                 <img class="project_stack--icon" src="/assets/images/icons/css3.png" alt="CSS Logo"> 
             </div>
-            <div class="project_stack--item">
+            <div class="project_stack--item  bounce">
                 <div class="project_stack--description description_large shadow">
                     <h4>JavaScript</h4>
                     <p>What I used it for</p>
@@ -569,10 +720,10 @@
             </div>
             <div class="project_stack--item">
                 <div class="project_stack--description description_large shadow">
-                    <h4>NodeJS</h4>
+                    <h4>Node.js</h4>
                     <p>What I used it for</p>
                 </div>
-                <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="NodeJS Logo"> 
+                <img class="project_stack--icon" src="/assets/images/icons/nodejs.png" alt="Node.js Logo"> 
             </div>
             <div class="project_stack--item">
                 <div class="project_stack--description description_large shadow">
@@ -600,6 +751,7 @@
 
     <div id="skillset_section" class="section container">
         <h2>SKILLSET</h2>
+
         <h3>Front-end</h3>
         <ul class="skillset--frontend">
             <li class="skill_item">
@@ -619,15 +771,16 @@
                 <p>Bootstrap</p>
             </li>
         </ul>
+        
         <h3>Back-end</h3>
         <ul class="skillset--backend">
             <li class="skill_item">
-                <img src="/assets/images/icons/nodejs.png" alt="NodeJS Logo">
-                <p>NodeJS</p>
+                <img src="/assets/images/icons/nodejs.png" alt="Node.js Logo">
+                <p>Node.js</p>
             </li>
             <li class="skill_item">
-                <img src="/assets/images/icons/express.png" alt="ExpressJS Logo">
-                <p>ExpressJS</p>
+                <img src="/assets/images/icons/express.png" alt="Express.js Logo">
+                <p>Express.js</p>
             </li>
             <li class="skill_item">
                 <img src="/assets/images/icons/mongodb.png" alt="MongoDB Logo">
@@ -638,6 +791,7 @@
                 <p>MySQL</p>
             </li>
         </ul>
+
         <h3>General</h3>
         <ul class="skillset--general">
             <li class="skill_item">
@@ -669,6 +823,7 @@
                 <p>Heroku</p>
             </li>
         </ul>
+
         <h3>Languages</h3>
         <ul class="skillset--languages">
             <li class="skill_item">
