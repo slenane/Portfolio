@@ -60,8 +60,9 @@ const toggleShowProject = (e) => {
             chessChallenge.classList.add("hide");
         }
         // Set the scroll position to the top of the project div
+        let scroll = project.offsetTop - 100;
         window.scrollTo({
-            top: project.offsetTop - 100,
+            top: scroll,
             behaviour: "smooth"
         });
         // Set the project to be closed (reduce margin-bottom)

@@ -135,7 +135,7 @@ p {
     margin: 0 1rem 3rem;
     padding: 2rem 7rem;
     gap: 1rem;
-    border: 1px solid var(--light-mode-secondary-font);
+    /* border: 1px solid var(--light-mode-secondary-font); */
     border-radius: 3px;
 }
 
@@ -233,14 +233,17 @@ p {
     position: relative;
 }
 
+/* .project--sacred_tribe_energy_healing, */
 .project--sacred_tribe_energy_healing .project_info {
     border: 1px solid var(--sacred-tribe-purple);
 }
 
+/* .project--daily_chess_puzzle, */
 .project--daily_chess_puzzle .project_info {
     border: 1px solid var(--daily-chess-red);
 }
 
+/* .project--goals, */
 .project--goals .project_info {
     border: 1px solid var(--goals-green);
 }
