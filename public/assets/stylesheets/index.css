@@ -38,7 +38,7 @@ h2, h3 {
 }
 
 h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 p {
@@ -132,15 +132,14 @@ p {
 .project_item {
     height: auto;
     display: grid;
-    margin: 0 1rem 3rem;
-    padding: 2rem 7rem;
+    margin: 0 1rem 7rem;
+    padding: 0 7rem;
     gap: 1rem;
-    /* border: 1px solid var(--light-mode-secondary-font); */
     border-radius: 3px;
 }
 
 .project_item.project_open {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 }
 
 .project_item--left {
@@ -164,9 +163,7 @@ p {
 }
 
 .project_images.images_open {
-    align-content: start;
-    align-items: start;
-    gap: 4rem;
+    align-content: space-around;
 }
 
 .secondary_images {
@@ -281,7 +278,7 @@ p {
 }
 
 .project_body--open {
-    max-height: 60rem;
+    max-height: 70rem;
 } 
 
 .project_body h4 {
