@@ -30,15 +30,21 @@ const toggleShowProject = (e) => {
             e.target.textContent = "Read less";
             // Remove the small stack
             stack.classList.add('hide_stack');
-            // Show the large stack
-            stackLarge.classList.add('show_large_stack');
             // If the project is the daily puzzle then add the challenge me button
             if (chessChallenge) {
                 projectLinks.classList.add("chess_links");
                 chessChallenge.classList.remove("hide");
             }
+            setTimeout(() => {
+                // Show the large stack
+                stackLarge.classList.add('show_large_stack');
+                // Remove the small stack completely after animation is finished
+                stack.classList.add('hide');
+            }, 1000);
         }, 400);
     } else {
+        // Set display to block to alow for animation
+        stack.classList.remove('hide');
         // Remove gap between the main and secondary images
         images.classList.remove('images_open');
         // Hide secondary images

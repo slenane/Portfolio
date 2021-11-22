@@ -20,10 +20,13 @@
     /* BACKGROUND COLOURS */
     --light-mode-main-background: #fbfaff;
     --light-mode-secondary-background: #FFFFFF;
+    --light-mode-main-colour-background: #86C232;
 
     --dark-mode-main-background: #282a2c;
     --dark-mode-secondary-background: #343739;
 
+    /* AVATAR */
+    --avatar-bg: #ea885f;
 
 }
 
@@ -33,12 +36,16 @@ body {
     color: var(--light-mode-main-font);
 }
 
+/* h1 {
+    font-size: 3.5rem;
+} */
+
 h2, h3 {
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 p {
@@ -46,23 +53,29 @@ p {
 }
 
 .section {
-    margin-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 /* HERO */
 #hero_section {
-    /* CHANGE MEEEEEE */
-    height: 30rem;
+    height: 100vh;
+    background-image: url('/assets/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 100%;
+    background-size: 60%;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 .navbar {
     margin-bottom: 3rem;
+    background-color: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
-    background: var(--light-mode-main-background);
 }
 
 .navbar-brand img {
@@ -80,7 +93,14 @@ p {
 }
 
 .hero_body {
-    padding-top: 10rem;
+    position: relative;
+    top: 10rem;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto 2.5rem;
+    height: 10rem;
 }
 
 .hero_body--grid {
@@ -90,42 +110,115 @@ p {
     gap: 1rem;
 }
 
+.hero--header {
+    font-size: 3.5rem;
+}
+
+.hero--subheader {
+    font-size: 1.3rem;
+}
+
+.hero_grid_1--buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.hero--buttons {
+    padding: 1rem;
+    color: white;
+}
+
+.hire_me--button {
+    border: 1px solid #ea885f;
+    color: #ea885f;
+}
+
+.view_portfolio--button {
+    border: 1px solid #49A117;
+    color: #49A117;
+}
+
+.hire_me--button:hover {
+    background: #ea885f;
+    color: white;
+}
+
+.view_portfolio--button:hover {
+    background: #49A117;
+    color: white;
+}
+
 .hero_grid--2 {
     display: grid; 
     grid-template-columns: auto;
-    gap: 1rem;
+    gap: .2rem;
 }
 
 .hero_grid--2 a img {
     width: 1.5rem;
 }
 
-.send_mail--button {
-    border: none;
-    background: none;
-}
-
-.send_mail--button img {
-    width: 1.5rem;
-}
-
 .hero_contact--link {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--light-mode-main-font);
+}
+
+.hero_contact--link:hover {
+    color: var(--light-mode-secondary-font);
 }
 
 .hero_cv--link {
     font-family: "Spartan";
     font-weight: 700;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-top: .2rem;
 }
 
 /* BIO */
+/* #bio_section {
+    background: #49A117;
+    color: white;
+    border-radius: 5px;
+} */
+
 #bio_section p {
     text-align: justify;
     padding: 0 10rem;
+}
+
+/* WHAT I CAN DO */
+/* #what-i-do_section {
+
+} */
+
+.what_i_do--grid {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: auto;
+    background-image: url('/assets/images/new4.png');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.what_i_do--grid_item {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 3rem;
+    background-color: var(--light-mode-secondary-background);
+    padding: 3rem;
+}
+
+.what_i_do--grid_item_right {
+    grid-column: 5 / -1;
+}
+
+.what_i_do--grid_item img {
+    max-height: 15rem;
 }
 
 /* PROJECTS */
@@ -136,6 +229,10 @@ p {
     padding: 0 7rem;
     gap: 1rem;
     border-radius: 3px;
+}
+
+.project--goals.project_item {
+    margin: 0 1rem 2rem;
 }
 
 .project_item.project_open {
@@ -499,12 +596,16 @@ p {
 /* SKILLSET */
 #skillset_section h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #skillset_section ul, li {
     list-style: none;
     padding: 0;
+}
+
+#skillset_section ul {
+    margin-bottom: 4rem;
 }
 
 #skillset_section ul {
@@ -515,52 +616,66 @@ p {
 }
 
 .skillset--frontend {
-    grid-template-columns: repeat(4, 4rem);
+    grid-template-columns: repeat(4, auto);
 }
 
 .skillset--backend {
-    grid-template-columns: repeat(4, 4rem);
+    grid-template-columns: repeat(4, auto);
 }
 
 .skillset--general {
-    grid-template-columns: repeat(7, 4rem);
+    grid-template-columns: repeat(7, auto);
 }
 
 .skillset--languages {
-    grid-template-columns: repeat(2, 4rem);
+    grid-template-columns: repeat(2, auto);
 }
 
 .skillset--learning {
-    grid-template-columns: repeat(3, 4rem);
+    grid-template-columns: repeat(3, auto);
 }
 
 .skill_item {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
+    align-items: center;
+    align-content: center;
+    gap: .5rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5px;
+    background-color: var(--light-mode-secondary-background);
 }
 
 .skill_item img {
-    width: 4rem;
+    width: 3rem;
 }
 
-/* WHAT I CAN DO */
-
-
+.skill_item p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
 
 /* CONTACT */
-
 .contact_form {
-    border: 1px solid var(--dark-mode-secondary-font);
     padding: 1rem;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 0 20rem;
+    background-color: white;
+}
+
+.form_submit {
+    display: grid;
+    justify-content: center;
+    margin: 1.5rem auto;
 }
 
 /* FOOTER */
 #footer {
-    height: auto;
-    margin-top: auto;
+    height: 30rem;
+    margin-top: 5rem;
     background-color: var(--dark-mode-secondary-font);
     color: white;
 }
