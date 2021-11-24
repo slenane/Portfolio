@@ -1,3 +1,28 @@
+// ##################################
+//            WHAT I DO
+// ##################################
+const whatIDoGrid = document.querySelector('.what_i_do--grid');
+const whatIDoGridItem = document.querySelectorAll('.what_i_do--grid_item');
+
+const toggleShowGridItem = (e) => {
+    const gridStart = whatIDoGrid.offsetTop - 500;
+    const gridEnd = whatIDoGrid.offsetTop + whatIDoGrid.clientHeight;
+    // If the user is not scrolling the grid section
+    if (window.scrollY < gridStart || window.scrollY > gridEnd) return;
+    //  If they are then check where the user is and show the correct item 
+    for (let item of whatIDoGridItem) {
+        console.log(item);
+        if (window.scrollY > (item.offsetTop - 500)) {
+            item.classList.add('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', toggleShowGridItem);
+
+// ##################################
+//              WORKS
+// ##################################
 const projectToggleShowBtns = document.querySelectorAll(".project_item--read_more");
 const bounce = document.querySelectorAll('.bouncing_icon');
 
@@ -69,7 +94,7 @@ const toggleShowProject = (e) => {
         let scroll = project.offsetTop - 100;
         window.scrollTo({
             top: scroll,
-            behaviour: "smooth"
+            behavior: "smooth"
         });
         // Set the project to be closed (reduce margin-bottom)
         project.classList.remove('project_open');
