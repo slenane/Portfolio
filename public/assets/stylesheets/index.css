@@ -25,6 +25,9 @@
     --dark-mode-main-background: #282a2c;
     --dark-mode-secondary-background: #343739;
 
+    /* ICONS AND BACKGROUND GREY */
+    --background-grey: #686868;
+
     /* AVATAR */
     --avatar-bg: #ea885f;
 
@@ -32,7 +35,7 @@
 
 /* GENERAL */
 body {
-    background-color: var(--light-mode-main-background);
+    background-color: var(--dark-mode-main-background);
     color: var(--light-mode-main-font);
 }
 
@@ -187,20 +190,16 @@ p {
 }
 
 /* WHAT I CAN DO */
-/* #what-i-do_section {
-
-} */
-
 .what_i_do--grid {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: auto;
-    background-image: url('/assets/images/background-images/new5.png');
+    background-image: url('/assets/images/background-images/what-i-do-background.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    align-content: space-around;
-    row-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: auto;
+    align-content: space-between;
+    row-gap: 3rem;
     overflow: hidden;
     padding: 2rem 0;
 }
@@ -256,7 +255,13 @@ p {
 
 .what_i_do--grid_item img {
     width: 5rem;
-    min-height: 4rem;
+    min-height: 3.5rem;
+}
+
+.what_i_do--grid_item_2 img,
+.what_i_do--grid_item_5 img {
+    width: 5rem;
+    height: 5rem;
 }
 
 .what_i_do--grid_item_4 img {
