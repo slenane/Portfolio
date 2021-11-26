@@ -11,19 +11,23 @@
     --dark-mode-main-font: #f3f3f3;
     --dark-mode-secondary-font: #8e8e91;
 
+    /* BACKGROUND COLOURS */
+    --light-mode-main-background: #fbfaff;
+    --light-mode-secondary-background: #FFFFFF;
+
+    --dark-mode-main-background: #282a2c;
+    --dark-mode-secondary-background: #343739;
+
+    /* WORKS STYLES */
     --sacred-tribe-purple: #602f78;
     --daily-chess-red: #8f3016;
     --goals-green: #3b8038;
     --github-black: #333;
     --chess-com-green: #5b9e46;
 
-    /* BACKGROUND COLOURS */
-    --light-mode-main-background: #fbfaff;
-    --light-mode-secondary-background: #FFFFFF;
-    --light-mode-main-colour-background: #86C232;
-
-    --dark-mode-main-background: #282a2c;
-    --dark-mode-secondary-background: #343739;
+    /* MAIN COLOURS */
+    --main-colour: #ea885f;
+    --secondary-colour: #49A117;
 
     /* ICONS AND BACKGROUND GREY */
     --background-grey: #686868;
@@ -35,7 +39,7 @@
 
 /* GENERAL */
 body {
-    background-color: var(--dark-mode-main-background);
+    background-color: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
 }
 
@@ -58,7 +62,7 @@ p {
 
 .section {
     padding-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .hide {
@@ -73,8 +77,6 @@ p {
     background-position-x: right;
     background-position-y: 100%;
     background-size: 60%;
-    margin-bottom: 3rem;
-    padding-top: 3rem;
 }
 
 .navbar {
@@ -99,7 +101,7 @@ p {
 
 .hero_body {
     position: relative;
-    top: 10rem;
+    top: 12rem;
 }
 
 .hero_body--grid {
@@ -131,22 +133,22 @@ p {
 }
 
 .hire_me--button {
-    border: 1px solid #ea885f;
-    color: #ea885f;
+    border: 1px solid var(--main-colour);
+    color: var(--main-colour);
 }
 
 .view_portfolio--button {
-    border: 1px solid #49A117;
-    color: #49A117;
+    border: 1px solid var(--secondary-colour);
+    color: var(--secondary-colour);
 }
 
 .hire_me--button:hover {
-    background: #ea885f;
+    background: var(--main-colour);
     color: white;
 }
 
 .view_portfolio--button:hover {
-    background: #49A117;
+    background: var(--secondary-colour);
     color: white;
 }
 
@@ -186,7 +188,7 @@ p {
 
 #bio_section p {
     text-align: justify;
-    padding: 0 14rem;
+    padding: 0 10rem;
 }
 
 /* WHAT I CAN DO */
@@ -194,7 +196,7 @@ p {
     background-image: url('/assets/images/background-images/what-i-do-background.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: auto;
@@ -202,6 +204,7 @@ p {
     row-gap: 3rem;
     overflow: hidden;
     padding: 2rem 0;
+    margin: 0 7rem;
 }
 
 .what_i_do--grid_item {
@@ -711,24 +714,113 @@ p {
 }
 
 /* CONTACT */
+#contact_section {
+    background-image: url('/assets/images/background-images/envelope-open.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 50rem;
+    padding-top: 3rem;
+    position: relative
+}
+
+.form_overlay {
+    position: absolute;
+    background-image: url('/assets/images/background-images/envelope-open-front.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height: 100%;
+    width: 100%;
+    padding-top: 3rem;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
 .contact_form {
-    padding: 1rem;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
     margin: 0 20rem;
     background-color: white;
+    transform: translateY(10rem);
+    transition: all 1s;
+}
+
+.contact_form.show_contact_form {
+    transform: translateY(-9rem);
+    z-index: 3;
+}
+
+.form-control,
+.form-control:focus {
+    border: none;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    border-color: none;
+}
+
+.form-group {
+    border-bottom: 1.5px solid var(--light-mode-secondary-font);
+    margin-bottom: 1rem;
+}
+
+.form-group.group-focused {
+    border-bottom: 1.8px solid var(--light-mode-main-font);
+}
+
+.contact_label {
+    position: relative;
+    transition: all .5s;
+    transform: translateY(2rem);
+}
+
+.contact_label.input-focused {
+    transform: translateY(0);
 }
 
 .form_submit {
     display: grid;
     justify-content: center;
-    margin: 1.5rem auto;
+    padding: 1rem auto;
+}
+
+.form_submit button {
+    background-color: var(--secondary-colour);
+    border: none;
+}
+
+.form_submit button:hover {
+    background-color: var(--main-colour);
 }
 
 /* FOOTER */
 #footer {
-    height: 10rem;
+    height: 4rem;
     margin-top: 5rem;
     margin-bottom: 0;
-    background-color: var(--dark-mode-secondary-font);
+    background-color: var(--dark-mode-main-background);
     color: white;
+    padding: 1rem;;
+}
+
+.footer_icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+.footer_icons a {
+    font-size: 1.5rem;
+    display: grid;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.footer_icons a img {
+    height: 1.5rem;
 }

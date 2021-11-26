@@ -67,9 +67,9 @@
                     </div>
                 </div>
                 <div class="hero_grid--2">
-                        <a class="hero_contact--link" href="https://github.com/slenane"><i class="fab fa-github"></i></a>
-                        <a class="hero_contact--link"href=""><i class="fab fa-linkedin"></i></a>
-                        <a class="hero_contact--link hero_cv--link" href="">CV</a>
+                        <a target="_blank" class="hero_contact--link" href="https://github.com/slenane"><i class="fab fa-github"></i></a>
+                        <a target="_blank" class="hero_contact--link"href=""><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" class="hero_contact--link hero_cv--link" href="">CV</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
     </div>
 
     
-    <div id="what-i-do_section" class="section container">
+    <div id="what-i-do_section" class="section">
         <h2>WHAT I DO</h2>
 
         <div class="what_i_do--grid">
@@ -503,7 +503,7 @@
                     <div class="project_links">
                         <a target="_blank" href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=en"><button type="button" class="btn project_link--external daily_chess--link">View Extension</button></a> 
                         <a target="_blank" href="https://github.com/slenane/Chess-Daily-Puzzle"><button type="button" class="btn github_link"><i class="fab fa-github"></i> GitHub</button></a> 
-                        <a class="chess--challenge_link hide" target="_blank" href="https://www.chess.com/member/lovelycarbonara"><button type="button" class="btn chess_com_link"><img src="/assets/images/icons/chesscom.png" alt=""> Challenge me!</button></a> 
+                        <a target="_blank" href="https://www.chess.com/member/lovelycarbonara" class="chess--challenge_link hide"><button type="button" class="btn chess_com_link"><img src="/assets/images/icons/chesscom.png" alt=""> Challenge me!</button></a> 
                     </div>
                 </div>
                 <div class="project_stack daily-chess_stack">
@@ -991,28 +991,40 @@
     </div>
 
     <div id="contact_section" class="section container">
-        <h2>CONTACT</h2>
-        <form class="contact_form shadow">
-            <div class="form-group">
-                <label for="contact[name]">Name</label>
-                <input type="name" class="form-control" id="contact[name]" aria-describedby="name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <label for="contact[email]">Email</label>
-                <input type="email" class="form-control" id="contact[email]" aria-describedby="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="contact[message]">Message</label>
-                <textarea class="form-control" id="contact[message]" rows="3"></textarea>
-            </div>
-            <div class="form_submit">
-                <button type="submit" class="btn btn-primary">Get in Touch</button>
-            </div>
-        </form>
+            <h2>GET IN TOUCH</h2>
+            <form class="contact_form shadow">
+                <div class="form-group">
+                    <label class="contact_label" for="contact[name]">Name</label>
+                    <input type="name" class="form-control" id="contact[name]" aria-describedby="name">
+                </div>
+                <div class="form-group">
+                    <label class="contact_label" for="contact[email]">Email</label>
+                    <input type="email" class="form-control" id="contact[email]" aria-describedby="email">
+                </div>
+                <div class="form-group">
+                    <label class="contact_label" for="contact[phone]">Phone</label>
+                    <input type="email" class="form-control" id="contact[phone]" aria-describedby="phone">
+                </div>
+                <div class="form-group">
+                    <label class="contact_label" for="contact[message]">Message</label>
+                    <textarea class="form-control" id="contact[message]" rows="2"></textarea>
+                </div>
+                <div class="form_submit">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            <div class="form_overlay"></div>
     </div>
 
-    <div id="footer" class="section">
-        Pints
+    <div id="footer">
+        <div class="footer_icons">
+            <a target="_blank" href="https://github.com/slenane"><i class="fab fa-github"></i></a>
+            <a target="_blank" href=""><i class="fab fa-linkedin"></i></a>
+            <a target="_blank" href="">CV</a>
+            <a target="_blank" href="">
+                <img src="/assets/images/icons/chesscom_white.png" alt="">
+            </a>
+        </div>
     </div>
 
     <!-- BOOTSTRAP -->

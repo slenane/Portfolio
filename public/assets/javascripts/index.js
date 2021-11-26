@@ -108,3 +108,28 @@ const stopBounceAnimation = (e) => {
 
 projectToggleShowBtns.forEach(btn => btn.addEventListener('click', toggleShowProject));
 bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation));
+
+// ##################################
+//          CONTACT FORM
+// ##################################
+
+const contactSection = document.querySelector('#contact_section');
+const contactGroups = document.querySelectorAll('.form-group');
+const contactInputs = document.querySelectorAll('.form-control');
+
+const animateInput = (e) => {
+    let input = e.target;
+    let group = input.parentElement;
+    let label = group.querySelector('.contact_label');
+
+    // Animate the input label
+    label.classList.add('input-focused');
+    // Style the input
+    contactGroups.forEach(group => group.classList.remove('group-focused'));
+    group.classList.add('group-focused');
+}
+
+contactInputs.forEach(input => input.addEventListener('focus', animateInput));
+contactSection.addEventListener('click', () => {
+    contactSection.querySelector('.contact_form').classList.add('show_contact_form');
+});
