@@ -26,8 +26,8 @@
     --chess-com-green: #5b9e46;
 
     /* MAIN COLOURS */
-    --main-colour: #ea885f;
-    --secondary-colour: #49A117;
+    --main-colour: #615648;
+    --secondary-colour: #EFB45C;
 
     /* ICONS AND BACKGROUND GREY */
     --background-grey: #686868;
@@ -50,10 +50,16 @@ body {
 h2, h3 {
     text-align: center;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    
 }
 
 h2 {
     margin-bottom: 3rem;
+    color: var(--main-colour);
+}
+
+h3 {
+    color: white;
 }
 
 p {
@@ -62,7 +68,7 @@ p {
 
 .section {
     padding-top: 5rem;
-    margin-bottom: 6rem;
+    padding-bottom: 3rem;
 }
 
 .hide {
@@ -81,7 +87,7 @@ p {
 
 .navbar {
     margin-bottom: 3rem;
-    background-color: var(--light-mode-main-background);
+    background: none;
     color: var(--light-mode-main-font);
 }
 
@@ -101,7 +107,7 @@ p {
 
 .hero_body {
     position: relative;
-    top: 12rem;
+    top: 10rem;
 }
 
 .hero_body--grid {
@@ -192,11 +198,20 @@ p {
 }
 
 /* WHAT I CAN DO */
+#what-i-do_section {
+    background-color: var(--secondary-colour);
+    color: var(--main-colour);
+}
+
+#what-i-do_section h2 {
+    color: white;
+}
+
 .what_i_do--grid {
     background-image: url('/assets/images/background-images/what-i-do-background.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: auto;
@@ -649,6 +664,11 @@ p {
 
 
 /* SKILLSET */
+#skillset_section {
+    background-color: var(--secondary-colour);
+    color: var(--main-colour);
+}
+
 #skillset_section h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -714,42 +734,52 @@ p {
 }
 
 /* CONTACT */
-#contact_section {
-    background-image: url('/assets/images/background-images/envelope-open.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    height: 50rem;
-    padding-top: 3rem;
-    position: relative
+/* Add sent animation - show tick then thanks you then we'll get back to you */
+/* #contact_section {
+
+} */
+
+.contact_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 2rem;
 }
 
-.form_overlay {
-    position: absolute;
-    background-image: url('/assets/images/background-images/envelope-open-front.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    height: 100%;
-    width: 100%;
-    padding-top: 3rem;
-    z-index: 2;
-    top: 0;
-    left: 0;
+.contact_grid_item {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 16rem;
+    height: 5rem;
+}
+
+.contact_grid_item:hover {
+    background-color: var(--light-mode-secondary-background);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contact_grid_item img {
+    width: 3rem;
+}
+
+.contact_grid_item p {
+   margin-bottom: 0;
 }
 
 .contact_form {
     padding: 1rem 2rem;
     border-radius: 10px;
-    margin: 0 20rem;
     background-color: white;
-    transform: translateY(10rem);
-    transition: all 1s;
+    margin: 2rem 15rem;
 }
 
-.contact_form.show_contact_form {
-    transform: translateY(-9rem);
-    z-index: 3;
+.form_top {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem
 }
 
 .form-control,
@@ -778,6 +808,12 @@ p {
 
 .contact_label.input-focused {
     transform: translateY(0);
+}
+
+.contact_radio_group {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1rem 0;
 }
 
 .form_submit {

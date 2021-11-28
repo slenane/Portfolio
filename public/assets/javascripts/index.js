@@ -11,7 +11,6 @@ const toggleShowGridItem = (e) => {
     if (window.scrollY < gridStart || window.scrollY > gridEnd) return;
     //  If they are then check where the user is and show the correct item 
     for (let item of whatIDoGridItem) {
-        console.log(item);
         if (window.scrollY > (item.offsetTop - 500)) {
             item.classList.add('active');
         }
@@ -130,6 +129,3 @@ const animateInput = (e) => {
 }
 
 contactInputs.forEach(input => input.addEventListener('focus', animateInput));
-contactSection.addEventListener('click', () => {
-    contactSection.querySelector('.contact_form').classList.add('show_contact_form');
-});
