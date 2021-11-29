@@ -18,6 +18,10 @@
     --dark-mode-main-background: #282a2c;
     --dark-mode-secondary-background: #343739;
 
+    --primary-colour: #EFB45C;
+    --secondary-colour: #1D6AA3;
+    --accent-colour: #5BB0F0;
+
     /* WORKS STYLES */
     --sacred-tribe-purple: #602f78;
     --daily-chess-red: #8f3016;
@@ -25,12 +29,8 @@
     --github-black: #333;
     --chess-com-green: #5b9e46;
 
-    /* MAIN COLOURS */
-    --main-colour: #615648;
-    --secondary-colour: #EFB45C;
-
     /* ICONS AND BACKGROUND GREY */
-    --background-grey: #686868;
+    --icon-grey: #686868;
 
     /* AVATAR */
     --avatar-bg: #ea885f;
@@ -50,26 +50,25 @@ body {
 h2, h3 {
     text-align: center;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
-    
+    color: var(--light-mode-main-font);
 }
 
 h2 {
-    margin-bottom: 3rem;
-    color: var(--main-colour);
-}
-
-h3 {
-    color: white;
+    text-align: start;
+    padding-left: 2rem;
+    color: var(--light-mode-main-background);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
 }
 
 p {
     color: var(--light-mode-secondary-font);
 }
 
-.section {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-}
+/* .section {
+    margin: 2rem auto;
+} */
 
 .hide {
     display: none !important;
@@ -77,17 +76,17 @@ p {
 
 /* HERO */
 #hero_section {
-    height: 100vh;
+    height: 40rem;
     background-image: url('/assets/images/background-images/desktop.png');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: 100%;
-    background-size: 60%;
+    background-size: 55%;
 }
 
 .navbar {
     margin-bottom: 3rem;
-    background: none;
+    background: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
 }
 
@@ -107,7 +106,7 @@ p {
 
 .hero_body {
     position: relative;
-    top: 10rem;
+    top: 12rem;
 }
 
 .hero_body--grid {
@@ -117,45 +116,57 @@ p {
     gap: 1rem;
 }
 
+.hero--intro {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: var(--light-mode-main-font);
+}
+
 .hero--header {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 .hero--subheader {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .hero_grid_1--buttons {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: start;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .hero--buttons {
-    padding: 1rem;
+    padding: 1.2rem;
     color: white;
 }
 
 .hire_me--button {
-    border: 1px solid var(--main-colour);
-    color: var(--main-colour);
+    background: var(--secondary-colour);
+    color: white;
+    font-weight: 700;
 }
 
 .view_portfolio--button {
+    background: var(--accent-colour);
+    color: white;
+    font-weight: 700;
+}
+
+.hire_me--button:hover {
+    background: none;
     border: 1px solid var(--secondary-colour);
     color: var(--secondary-colour);
 }
 
-.hire_me--button:hover {
-    background: var(--main-colour);
-    color: white;
-}
-
 .view_portfolio--button:hover {
-    background: var(--secondary-colour);
-    color: white;
+    background: none;
+    border: 1px solid var(--accent-colour);
+    color: var(--accent-colour);
 }
 
 .hero_grid--2 {
@@ -165,16 +176,16 @@ p {
 }
 
 .hero_grid--2 a img {
-    width: 1.5rem;
+    width: 1.7rem;
 }
 
 .hero_contact--link {
-    font-size: 1.5rem;
-    color: var(--light-mode-main-font);
+    font-size: 1.7rem;
+    color: var(--secondary-colour);
 }
 
 .hero_contact--link:hover {
-    color: var(--light-mode-secondary-font);
+    color: var(--primary-colour);
 }
 
 .hero_cv--link {
@@ -186,32 +197,36 @@ p {
 }
 
 /* BIO */
+#bio_section {
+    padding: 5rem 0;
+}
+
 .avatar {
     display: block;
     margin: 0 auto 2.5rem;
     height: 10rem;
 }
 
+
 #bio_section p {
     text-align: justify;
+    font-size: 1.1rem;
     padding: 0 10rem;
 }
 
 /* WHAT I CAN DO */
 #what-i-do_section {
-    background-color: var(--secondary-colour);
-    color: var(--main-colour);
+    background-color: var(--primary-colour);
 }
 
-#what-i-do_section h2 {
-    color: white;
+#what-i-do_section h3 {
+    color: var(--secondary-colour);
 }
 
 .what_i_do--grid {
-    background-image: url('/assets/images/background-images/what-i-do-background.png');
+    background-image: url('/assets/images/background-images/what-i-do-bg.png');
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: auto;
@@ -219,7 +234,6 @@ p {
     row-gap: 3rem;
     overflow: hidden;
     padding: 2rem 0;
-    margin: 0 7rem;
 }
 
 .what_i_do--grid_item {
@@ -227,13 +241,13 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    background-image: url('/assets/images/background-images/background.png');
+    background-image: url('/assets/images/background-images/what-i-do-item-bg.png');
     background-color: var(--light-mode-secondary-background);
-    background-position: top;
+    background-position-y: 3%;
     background-repeat: no-repeat;
     background-size: contain;
     gap: 0.5rem;
-    padding: 5rem 3rem 1rem;
+    padding: 3.5rem 3rem 1rem;
     border-radius: 15px;
     justify-items: center;
     transform: translateX(-30rem);
@@ -292,21 +306,22 @@ p {
 }
 
 /* PROJECTS */
+#project_section h2 {   
+    color: var(--primary-colour);
+    margin-bottom: 5rem;
+}
+
 .project_item {
     height: auto;
     display: grid;
-    margin: 0 1rem 7rem;
+    margin: 0 3rem 10rem;
     padding: 0 7rem;
     gap: 1rem;
     border-radius: 3px;
 }
 
 .project--goals.project_item {
-    margin: 0 1rem 2rem;
-}
-
-.project_item.project_open {
-    margin-bottom: 5rem;
+    margin: 0 1rem 5rem;
 }
 
 .project_item--left {
@@ -397,17 +412,14 @@ p {
     position: relative;
 }
 
-/* .project--sacred_tribe_energy_healing, */
 .project--sacred_tribe_energy_healing .project_info {
     border: 1px solid var(--sacred-tribe-purple);
 }
 
-/* .project--daily_chess_puzzle, */
 .project--daily_chess_puzzle .project_info {
     border: 1px solid var(--daily-chess-red);
 }
 
-/* .project--goals, */
 .project--goals .project_info {
     border: 1px solid var(--goals-green);
 }
@@ -665,13 +677,18 @@ p {
 
 /* SKILLSET */
 #skillset_section {
-    background-color: var(--secondary-colour);
-    color: var(--main-colour);
+    background-color: var(--primary-colour);
+}
+
+.skillset--sub_grid {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 #skillset_section h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: var(--light-mode-main-background);
 }
 
 #skillset_section ul, li {
@@ -680,7 +697,7 @@ p {
 }
 
 #skillset_section ul {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 #skillset_section ul {
@@ -735,9 +752,15 @@ p {
 
 /* CONTACT */
 /* Add sent animation - show tick then thanks you then we'll get back to you */
-/* #contact_section {
+#contact_section {
+    padding: 3rem 0; 
+}
 
-} */
+#contact_section h2 {
+    color: var(--primary-colour);
+    text-align: center;
+    padding: 0;
+}
 
 .contact_grid {
     display: grid;
@@ -754,6 +777,7 @@ p {
     align-content: center;
     width: 16rem;
     height: 5rem;
+    border-radius: 10px;
 }
 
 .contact_grid_item:hover {
@@ -823,22 +847,21 @@ p {
 }
 
 .form_submit button {
-    background-color: var(--secondary-colour);
+    background-color: var(--primary-colour);
     border: none;
 }
 
 .form_submit button:hover {
-    background-color: var(--main-colour);
+    background-color: var(--secondary-colour);
 }
 
 /* FOOTER */
 #footer {
     height: 4rem;
-    margin-top: 5rem;
     margin-bottom: 0;
-    background-color: var(--dark-mode-main-background);
+    background-color: #686868;
     color: white;
-    padding: 1rem;;
+    padding: 1rem;
 }
 
 .footer_icons {
