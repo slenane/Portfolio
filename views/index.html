@@ -57,7 +57,7 @@
             <h1 class="hero--header">Stephen Lenane</h1>
             <div class="hero_body--grid">
                 <div class="hero_grid--1">
-                    <p class="hero--subheader">Freelance Full-Stack Web Developer</p>
+                    <p class="hero--subheader">Full-Stack Web Developer</p>
                     <div class="hero_grid_1--buttons">
                         <a href="#contact_section">
                             <button type="button" class="btn hero--buttons hire_me--button">HIRE ME</button>
@@ -1008,87 +1008,99 @@
         
     </div>
 
-    <div id="contact_section" class="section container">
-        <h2>Get in touch!</h2>
-        
-        <div class="contact_grid">
-            <div class="contact_grid_item">
-                <img src="/assets/images/icons/whatsapp.png" loading="lazy" alt="Whatsapp Icon">
-                <p>+353 83 092 0355</p>
-            </div>
-            <div class="contact_grid_item">
-                <img src="/assets/images/icons/email.png" loading="lazy" alt="Email Icon">
-                <p>info@stephenlenane.com</p>
-            </div>
-        </div>
+    <div id="contact_section" class="section">
+        <div class="container">
+            <h2>Get in touch!</h2>
 
-        <form class="contact_form shadow">
-            <div class="form_top">
-                <div class="form-group">
-                    <label class="contact_label" for="contact[name]">First Name</label>
-                    <input type="name" class="form-control" id="contact[name]" aria-describedby="name">
-                </div>
-                <div class="form-group">
-                    <label class="contact_label" for="contact[name]">Last Name</label>
-                    <input type="name" class="form-control" id="contact[name]" aria-describedby="name">
-                </div>
-                <div class="form-group">
-                    <label class="contact_label" for="contact[email]">Email</label>
-                    <input type="email" class="form-control" id="contact[email]" aria-describedby="email">
-                </div>
-                <div class="form-group">
-                    <label class="contact_label" for="contact[phone]">Phone</label>
-                    <input type="email" class="form-control" id="contact[phone]" aria-describedby="phone">
-                </div>
-            </div>
-            <div class="form_bottom">
-                <div class="service_select">
-                    <label for="radio_group">What services are you interested in?</label>
-                    <div id="radio_group" class="contact_radio_group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contact[service]" id="design_and_develop" checked>
-                            <label class="form-check-label" for="design_and_develop">
-                                Design and Develop
-                            </label>
+            <div class="contact_grid">
+                <div class="contact_grid_1">
+                    <div class="contact_grid-1--top">
+                        <div class="contact_information">
+                            <h3>Contact Information</h3>
+                            <p>Tell me a little about your project and I will get back to you within 24 hours</p>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contact[service]" id="update_existing">
-                            <label class="form-check-label" for="update_existing">
-                                Update Existing Site
-                            </label>
+                        <div class="contact_grid_item contact--phone_number">
+                            <img src="/assets/images/icons/whatsapp.png" loading="lazy" alt="Whatsapp Icon">
+                            <p>+353 83 092 0355</p>
+                            <p class="copied_to_clipboard">Copied to Clipboard</p>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contact[service]" id="other_service">
-                            <label class="form-check-label" for="other_service">
-                                Other
-                            </label>
+                        <div class="contact_grid_item contact--email">
+                            <img src="/assets/images/icons/email.png" loading="lazy" alt="Email Icon">
+                            <p>info@stephenlenane.com</p>
+                            <p class="copied_to_clipboard">Copied to Clipboard</p>
+                        </div>
+                        <div class="contact_grid_item no-hover">
+                            <img src="/assets/images/icons/location.png" loading="lazy" alt="Location Icon">
+                            <p>Galway, Ireland</p>
                         </div>
                     </div>
+                    <div class="contact_grid-1--bottom">
+                        <a target="_blank" href="https://github.com/slenane"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href=""><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" class="contact_cv" href="">CV</a>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="contact_label" for="contact[message]">Message</label>
-                    <textarea class="form-control" id="contact[message]" rows="3"></textarea>
-                </div>
+            
+    
+                <form class="contact_grid_2 contact_form shadow">
+                        <div class="form-group">
+                            <label class="contact_label" for="contact[name]">Name</label>
+                            <input type="text" class="form-control" id="contact[name]" aria-describedby="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="contact_label" for="contact[email]">Email</label>
+                            <input type="email" class="form-control" id="contact[email]" aria-describedby="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="contact_label" for="contact[phone]">Phone</label>
+                            <input type="tel" class="form-control" id="contact[phone]" aria-describedby="phone">
+                        </div>
+                        <div class="service_select">
+                            <label for="radio_group">What services are you interested in?</label>
+                            <div id="radio_group" class="contact_radio_group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="web_development" checked>
+                                    <label class="form-check-label" for="web_development">
+                                        Web Development
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="website_update">
+                                    <label class="form-check-label" for="website_update">
+                                        Website Update
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="other_service">
+                                    <label class="form-check-label" for="other_service">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="form-group website_url--input hide">
+                            <label class="contact_label" for="contact[website]">Website URL</label>
+                            <input type="text" class="form-control" id="contact[website]" aria-describedby="website">
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="contact_label" for="contact[message]">Message</label>
+                            <textarea class="form-control" id="contact[message]" rows="3"></textarea>
+                        </div>
+    
+                    <div class="form_submit">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
-
-            <div class="form_submit">
-                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-        </form>
-
         </div>
+        
     </div>
 
     <div id="footer">
-        <div class="footer_icons">
-            <a target="_blank" href="https://github.com/slenane"><i class="fab fa-github"></i></a>
-            <a target="_blank" href=""><i class="fab fa-linkedin"></i></a>
-            <a target="_blank" href="">CV</a>
-            <a target="_blank" href="">
-                <img src="/assets/images/icons/chesscom_white.png" loading="lazy" alt="Chess.com Icon">
-            </a>
-        </div>
+
     </div>
 
     <!-- BOOTSTRAP -->

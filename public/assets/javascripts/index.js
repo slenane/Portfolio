@@ -113,8 +113,14 @@ bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation
 // ##################################
 
 const contactSection = document.querySelector('#contact_section');
+const contactRadioGroup = document.querySelector('.contact_radio_group');
+const websiteUpdate = document.querySelector('#website_update');
+const websiteUrl = document.querySelector('.website_url--input');
 const contactGroups = document.querySelectorAll('.form-group');
 const contactInputs = document.querySelectorAll('.form-control');
+
+const phoneNumber = document.querySelector('.contact--phone_number');
+const email = document.querySelector('.contact--email');
 
 const animateInput = (e) => {
     let input = e.target;
@@ -126,6 +132,41 @@ const animateInput = (e) => {
     // Style the input
     contactGroups.forEach(group => group.classList.remove('group-focused'));
     group.classList.add('group-focused');
+};
+
+const toggleWebsiteField = (e) => {
+    if (websiteUpdate.checked) {
+        websiteUrl.classList.remove('hide');
+    } else {
+        websiteUrl.classList.add('hide');
+    }
+};
+
+const copyToClipboard = (e) => {
+    let target = e.target.closest('.contact_grid_item');
+
+    if (target === phoneNumber) {
+        navigator.clipboard.writeText("+353830920355").then(function() {
+            phoneNumber.querySelector('.copied_to_clipboard').classList.add('clipboard_updated');
+            setTimeout(() => {
+                phoneNumber.querySelector('.copied_to_clipboard').classList.remove('clipboard_updated');
+            }, 1500);
+          }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+          });
+    } else {
+        navigator.clipboard.writeText("info@stephenlenane.com").then(function() {
+            email.querySelector('.copied_to_clipboard').classList.add('clipboard_updated');
+            setTimeout(() => {
+                email.querySelector('.copied_to_clipboard').classList.remove('clipboard_updated');
+            }, 1500);
+          }, function(err) {
+            console.error('Async: Could not copy text: ', err);
+          });
+    }
 }
 
 contactInputs.forEach(input => input.addEventListener('focus', animateInput));
+contactRadioGroup.addEventListener("click", toggleWebsiteField);
+phoneNumber.addEventListener('click', copyToClipboard);
+email.addEventListener('click', copyToClipboard);
