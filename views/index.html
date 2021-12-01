@@ -1042,57 +1042,74 @@
                 </div>
             
     
-                <form class="contact_grid_2 contact_form shadow">
+                <form class="contact_form shadow" novalidate>
+                    <div class="form_loader"></div>
+                    <div class="form_overlay">
+
+                        <div class="form_failure hide">
+                            <p>Oh no! Something went wrong. Please try again</p>
+                        </div>
+
                         <div class="form-group">
-                            <label class="contact_label" for="contact[name]">Name</label>
-                            <input type="text" class="form-control" id="contact[name]" aria-describedby="name">
+                            <label class="contact_label" for="contact_name">Name</label>
+                            <input type="text" class="form-control" id="contact_name" name="contact[name]" aria-describedby="name" required>
                         </div>
                         <div class="form-group">
-                            <label class="contact_label" for="contact[email]">Email</label>
-                            <input type="email" class="form-control" id="contact[email]" aria-describedby="email">
+                            <label class="contact_label" for="contact_email">Email</label>
+                            <input type="email" class="form-control" id="contact_email" name="contact[email]" aria-describedby="email" required>
                         </div>
                         <div class="form-group">
-                            <label class="contact_label" for="contact[phone]">Phone</label>
-                            <input type="tel" class="form-control" id="contact[phone]" aria-describedby="phone">
+                            <label class="contact_label" for="contact_phone">Phone</label>
+                            <input type="tel" class="form-control" id="contact_phone" name="contact[phone]" aria-describedby="phone" required>
                         </div>
                         <div class="service_select">
                             <label for="radio_group">What services are you interested in?</label>
                             <div id="radio_group" class="contact_radio_group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="contact[service]" id="web_development" checked>
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="web_development" value="Web development" checked required>
                                     <label class="form-check-label" for="web_development">
                                         Web Development
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="contact[service]" id="website_update">
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="website_update" value="Website update">
                                     <label class="form-check-label" for="website_update">
                                         Website Update
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="contact[service]" id="other_service">
+                                    <input class="form-check-input" type="radio" name="contact[service]" id="other_service" value="Other service">
                                     <label class="form-check-label" for="other_service">
                                         Other
                                     </label>
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="form-group website_url--input hide">
-                            <label class="contact_label" for="contact[website]">Website URL</label>
-                            <input type="text" class="form-control" id="contact[website]" aria-describedby="website">
+                            <label class="contact_label" for="contact_website">Website URL</label>
+                            <input type="text" class="form-control" id="contact_website" name="contact[website]" aria-describedby="website">
                         </div>
-    
+
                         <div class="form-group">
-                            <label class="contact_label" for="contact[message]">Message</label>
-                            <textarea class="form-control" id="contact[message]" rows="3"></textarea>
+                            <label class="contact_label" for="contact_message" >Message</label>
+                            <textarea class="form-control" id="contact_message" name="contact[message]" rows="3" required></textarea>
                         </div>
-    
-                    <div class="form_submit">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+        
+                        <div class="form_submit">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
                     </div>
+
+                    <div class="form_success hide">
+                        <img class="form_success--1" src="/assets/images/icons/tick.png" alt="Tick Icon">
+                        <h3 class="form_success--2">Thank You!</h3>
+                        <p class="form_success--3">I'll get back to you as soon as possible</p>
+                    </div>
+
                 </form>
+
             </div>
             </div>
         </div>
@@ -1104,8 +1121,14 @@
     </div>
 
     <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+        crossorigin="anonymous" nonce="<%=randomNonce%>">
+    </script>
+     <!-- SOCKET.IO -->
+     <script src="/socket.io/socket.io.js" nonce="<%=randomNonce%>"></script>
     <!-- INDEX.JS -->
-    <script src="/assets/javascripts/index.js"></script>
+    <script src="/assets/javascripts/index.js" nonce="<%=randomNonce%>"></script>
 </body>
 </html>

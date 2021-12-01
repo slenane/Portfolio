@@ -748,7 +748,6 @@ p {
 }
 
 /* CONTACT */
-/* Add sent animation - show tick then thanks you then we'll get back to you */
 #contact_section {
     padding: 5rem 0; 
     background-image: url("/assets/images/background-images/contact.png");
@@ -886,6 +885,44 @@ p {
     border-radius: 15px;
     background-color: white;
     margin: 2rem;
+    position: relative;
+}
+
+.form_loader {
+    display: none;
+}
+
+.form_loader.active {
+    display: block;
+    position: absolute;
+    left: 43%;
+    top: 43%;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid var(--secondary-colour);
+    width: 3rem;
+    height: 3rem;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.form_overlay {
+    height: 100%;
+}
+
+.form_overlay.active {
+    opacity: 0.2;
 }
 
 .form-control,
@@ -940,6 +977,48 @@ p {
 
 .form_submit button:hover {
     background-color: var(--secondary-colour);
+}
+
+.form_failure p {
+    text-align: center;
+    color: red !important;
+    margin-bottom: 0;
+}
+
+.form_success {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form_success img {
+    height: 12rem;
+}
+
+.form_success--1,
+.form_success--2,
+.form_success--3 {
+    opacity: 0;
+    animation: opacity 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.form_success--2 {
+    animation-delay: .75s;
+}
+
+.form_success--3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes opacity {
+    to {
+        opacity: 1;
+    }
 }
 
 /* FOOTER */

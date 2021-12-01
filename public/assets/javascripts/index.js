@@ -122,6 +122,7 @@ const contactInputs = document.querySelectorAll('.form-control');
 const phoneNumber = document.querySelector('.contact--phone_number');
 const email = document.querySelector('.contact--email');
 
+//  Animate the transformation of the input label to move from input field
 const animateInput = (e) => {
     let input = e.target;
     let group = input.parentElement;
@@ -134,6 +135,8 @@ const animateInput = (e) => {
     group.classList.add('group-focused');
 };
 
+
+// If the user selects the update existing website radio button then show the website URL input field
 const toggleWebsiteField = (e) => {
     if (websiteUpdate.checked) {
         websiteUrl.classList.remove('hide');
@@ -142,6 +145,7 @@ const toggleWebsiteField = (e) => {
     }
 };
 
+// Copy phone or email address to clipboard on click and show clipboard message 
 const copyToClipboard = (e) => {
     let target = e.target.closest('.contact_grid_item');
 
@@ -166,7 +170,74 @@ const copyToClipboard = (e) => {
     }
 }
 
+// Initialise socket.io
+const socket = io();
+
+const form = document.querySelector('.contact_form');
+
+const contactName = document.querySelector('#contact_name');
+const contactEmail = document.querySelector('#contact_email');
+const contactPhone = document.querySelector('#contact_phone');
+const contactService = document.querySelectorAll('.form-check-input');
+const contactWebsite = document.querySelector('#contact_website');
+const contactMessage = document.querySelector('#contact_message');
+
+const formLoader = document.querySelector('.form_loader');
+const formOverlay = document.querySelector('.form_overlay');
+const formFailure = document.querySelector('.form_failure');
+const formSuccess = document.querySelector('.form_success');
+const formSubmit = document.querySelector('.form_submit button');
+
+const sendMail = (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+    };
+    
+    form.classList.add('was-validated');
+
+    const mail = {
+        name: contactName.value,
+        email: contactEmail.value,
+        phone: contactPhone.value,
+        service: Array.from(contactService).filter(item => item.checked)[0].value,
+        website: contactWebsite.value,
+        message: contactMessage.value,
+    }
+
+    if (mail.name && mail.email && mail.phone && mail.service && mail.message) {
+        // Style contact form
+        formSubmit.setAttribute("disabled", true)
+        formLoader.classList.add('active');
+        formOverlay.classList.add('active');
+        // Use socket.io to send mail information to backend
+        socket.emit("send mail", mail); 
+    } else {
+        return;
+    }
+};
+
+socket.on("mail sent", (mailSent) => {
+    if (mailSent === true) {
+        // Update contact for html
+        formSubmit.setAttribute("disabled", false);
+        formLoader.classList.remove('active');
+        formOverlay.classList.remove('active');
+        formOverlay.classList.add('hide');
+        formSuccess.classList.remove('hide');
+        formFailure.classList.add('hide');
+    } else {
+        form.setAttribute("disabled", false);
+        formLoader.classList.remove('active');
+        formOverlay.classList.remove('active');
+        formFailure.classList.remove('hide');
+    }
+});
+
 contactInputs.forEach(input => input.addEventListener('focus', animateInput));
 contactRadioGroup.addEventListener("click", toggleWebsiteField);
 phoneNumber.addEventListener('click', copyToClipboard);
 email.addEventListener('click', copyToClipboard);
+form.addEventListener('submit', sendMail, false);
