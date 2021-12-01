@@ -90,8 +90,17 @@ p {
     color: var(--light-mode-main-font);
 }
 
+.navbar.secondary_navbar {
+    background: var(--primary-colour);
+    color: var(--light-mode-main-background);
+}
+
+.navbar.secondary_navbar .nav-link {
+    color: var(--light-mode-main-background);
+}
+
 .navbar-brand img {
-    width: 3rem;
+    width: 2rem;
 }
 
 .theme_div {
@@ -1025,27 +1034,7 @@ p {
 #footer {
     height: 4rem;
     margin-bottom: 0;
-    background-color: var(--secondary-colour);
+    background-color: var(--dark-mode-secondary-background);
     color: white;
     padding: 1rem;
-}
-
-.footer_icons {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-    align-content: center;
-    gap: 1rem;
-}
-
-.footer_icons a {
-    font-size: 1.5rem;
-    display: grid;
-    align-content: center;
-    color: white;
-    text-decoration: none;
-}
-
-.footer_icons a img {
-    height: 1.5rem;
 }

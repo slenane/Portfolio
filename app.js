@@ -1,13 +1,13 @@
 require('dotenv').config();
 const ExpressError = require("./util/ExpressError");
-const express = require('express');
+const mailService = require('./util/mailService');
 const compression = require('compression');
 const { v4: uuidv4 } = require('uuid');
 const socketio = require("socket.io");
+const express = require('express');
 const helmet = require('helmet');
 const http = require('http');
 const path = require('path');
-const mailService = require('./util/mailService');
 
 const app = express();
 

@@ -1,4 +1,29 @@
 // ##################################
+//              NAVBAR
+// ##################################
+const navbar = document.querySelector('.navbar');
+const whatIDoSection = document.querySelector('#what-i-do_section');
+const worksSection = document.querySelector('#project_section');
+const skillsSection = document.querySelector('#skillset_section');
+const contactSection = document.querySelector('#contact_section');
+
+const toggleNavColour = () => {
+    if (window.scrollY < whatIDoSection.offsetTop) {
+        navbar.classList.remove('secondary_navbar');
+    } else if (window.scrollY >= whatIDoSection.offsetTop && window.scrollY < worksSection.offsetTop) {
+        navbar.classList.add('secondary_navbar');
+    } else if (window.scrollY >= worksSection.offsetTop && window.scrollY < skillsSection.offsetTop) {
+        navbar.classList.remove('secondary_navbar');
+    } else if (window.scrollY >= skillsSection.offsetTop && window.scrollY < contactSection.offsetTop) {
+        navbar.classList.add('secondary_navbar');
+    } else {
+        navbar.classList.remove('secondary_navbar');
+    }
+}
+
+window.addEventListener('scroll', toggleNavColour);
+
+// ##################################
 //            WHAT I DO
 // ##################################
 const whatIDoGrid = document.querySelector('.what_i_do--grid');
@@ -112,7 +137,6 @@ bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation
 //          CONTACT FORM
 // ##################################
 
-const contactSection = document.querySelector('#contact_section');
 const contactRadioGroup = document.querySelector('.contact_radio_group');
 const websiteUpdate = document.querySelector('#website_update');
 const websiteUrl = document.querySelector('.website_url--input');
