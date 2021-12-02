@@ -2,6 +2,7 @@
 //              NAVBAR
 // ##################################
 const navbar = document.querySelector('.navbar');
+const navbarBrand = document.querySelector('.navbar-brand_image');
 const whatIDoSection = document.querySelector('#what-i-do_section');
 const worksSection = document.querySelector('#project_section');
 const skillsSection = document.querySelector('#skillset_section');
@@ -10,14 +11,19 @@ const contactSection = document.querySelector('#contact_section');
 const toggleNavColour = () => {
     if (window.scrollY < whatIDoSection.offsetTop) {
         navbar.classList.remove('secondary_navbar');
+        navbarBrand.src = "/assets/images/logo/logo-white.png"
     } else if (window.scrollY >= whatIDoSection.offsetTop && window.scrollY < worksSection.offsetTop) {
         navbar.classList.add('secondary_navbar');
+        navbarBrand.src = "/assets/images/logo/logo-orange.png"
     } else if (window.scrollY >= worksSection.offsetTop && window.scrollY < skillsSection.offsetTop) {
         navbar.classList.remove('secondary_navbar');
+        navbarBrand.src = "/assets/images/logo/logo-white.png"
     } else if (window.scrollY >= skillsSection.offsetTop && window.scrollY < contactSection.offsetTop) {
         navbar.classList.add('secondary_navbar');
+        navbarBrand.src = "/assets/images/logo/logo-orange.png"
     } else {
         navbar.classList.remove('secondary_navbar');
+        navbarBrand.src = "/assets/images/logo/logo-white.png"
     }
 }
 

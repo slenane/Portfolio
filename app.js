@@ -1,9 +1,9 @@
 require('dotenv').config();
-const ExpressError = require("./util/ExpressError");
 const mailService = require('./util/mailService');
 const compression = require('compression');
 const { v4: uuidv4 } = require('uuid');
 const socketio = require("socket.io");
+const ejsMate = require('ejs-mate');
 const express = require('express');
 const helmet = require('helmet');
 const http = require('http');
@@ -14,9 +14,11 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.static(__dirname + '/views'));
+// APP SETTINGS
+app.engine('ejs', ejsMate)
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(helmet());
 app.use(compression());
 
@@ -24,6 +26,7 @@ app.use(async (req, res, next) => {
     try {
         let randomNonce = uuidv4();
         res.setHeader('Content-Security-Policy', `base-uri 'self'; object-src 'none'; script-src 'nonce-${randomNonce}' 'unsafe-eval' 'strict-dynamic' https: http:;`);
+        res.locals.randomNonce = randomNonce;
         next();
     } catch (err) {
         console.log(err);
@@ -32,21 +35,17 @@ app.use(async (req, res, next) => {
 });
 
 app.get('/', (req, res, next) => {
-    // res.sendFile((__dirname + '/views/coming-soon.html'));
     res.render("index");
 });
 
 // ERROR SETTINGS
 app.all("*", (req, res, next) => {
-    next(new ExpressError("Page Not Found", 404))
+    res.redirect('/');
 });
 
 app.use((err, req, res, next) => {
-    const { statusCode = 500 } = err;
     console.log(err);
-    err.message = "Oh no, something went wrong!";
-    err.statusCode = statusCode;
-    res.status(statusCode).render("error", { err, path: '/error' });
+    res.redirect('/');
 });
 
 // SOCKET.IO

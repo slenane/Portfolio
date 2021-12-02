@@ -58,7 +58,7 @@ h2 {
     padding-left: 2rem;
     color: var(--light-mode-main-background);
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 2rem;
 }
 
@@ -100,7 +100,8 @@ p {
 }
 
 .navbar-brand img {
-    width: 2rem;
+    width: 5rem;
+    transition: all 0.5s;
 }
 
 .theme_div {
@@ -118,24 +119,35 @@ p {
     top: 35%;
 }
 
-.hero_body--grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: start;
-    gap: 1rem;
-}
-
 .hero--intro {
     font-size: 1.5rem;
     margin-bottom: 0;
     color: var(--light-mode-main-font);
+    opacity: 0;
+    animation: opacity .5s;
+    animation-fill-mode: forwards;
 }
 
 .hero--header {
     font-size: 3rem;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
+    opacity: 0;
+    animation: opacity .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+}
+
+.hero_body--grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 1rem;
+    opacity: 0;
+    animation: opacity .5s;
+    animation-fill-mode: forwards;
+    animation-delay: .8s;
 }
 
 .hero--subheader {
@@ -242,17 +254,16 @@ p {
 }
 
 .what_i_do--grid_item {
-    grid-column: 2 / 7;
+    grid-column: 3 / 7;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     background-image: url('/assets/images/background-images/what-i-do-item-bg.png');
     background-color: var(--light-mode-secondary-background);
-    background-position-y: 3%;
     background-repeat: no-repeat;
     background-size: contain;
     gap: 0.5rem;
-    padding: 3.5rem 3rem 1rem;
+    padding: 4rem 3rem 1rem;
     border-radius: 15px;
     justify-items: center;
     transform: translateX(-30rem);
@@ -271,7 +282,7 @@ p {
 } 
 
 .what_i_do--grid_item_right {
-    grid-column: 5 / -2;
+    grid-column: 5 / -3;
 }
 
 .what_i_do--grid_item_2 {
@@ -286,16 +297,12 @@ p {
     grid-row: 4 / 5;
 }
 
-.what_i_do--grid_item_5 {
-    grid-row: 5 / 6;
-}
-
 .what_i_do--grid_item img {
     width: 5rem;
     min-height: 3.5rem;
 }
 
-.what_i_do--grid_item_2 img,
+
 .what_i_do--grid_item_5 img {
     width: 5rem;
     height: 5rem;
@@ -1032,9 +1039,11 @@ p {
 
 /* FOOTER */
 #footer {
-    height: 4rem;
+    height: 3rem;
     margin-bottom: 0;
     background-color: var(--dark-mode-secondary-background);
     color: white;
     padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
 }
