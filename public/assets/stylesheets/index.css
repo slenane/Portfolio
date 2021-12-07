@@ -41,6 +41,7 @@
 body {
     background-color: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
+    overflow-x: hidden;
 }
 
 /* h1 {
@@ -117,6 +118,7 @@ p {
 .hero_body {
     position: relative;
     top: 35%;
+    padding-left: 7rem;
 }
 
 .hero--intro {
@@ -193,6 +195,7 @@ p {
 .hero_grid--2 {
     display: grid; 
     grid-template-columns: auto;
+    justify-items: center;
     gap: .2rem;
 }
 
@@ -254,7 +257,7 @@ p {
 }
 
 .what_i_do--grid_item {
-    grid-column: 3 / 7;
+    grid-column: 2 / 7;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -282,7 +285,7 @@ p {
 } 
 
 .what_i_do--grid_item_right {
-    grid-column: 5 / -3;
+    grid-column: 5 / -2;
 }
 
 .what_i_do--grid_item_2 {
@@ -326,14 +329,14 @@ p {
 .project_item {
     height: auto;
     display: grid;
-    margin: 0 3rem 10rem;
-    padding: 0 7rem;
+    margin-bottom: 10rem;
+    padding: 0 8rem;
     gap: 1rem;
     border-radius: 3px;
 }
 
 .project--goals.project_item {
-    margin: 0 1rem 5rem;
+    margin-bottom: 5rem;
 }
 
 .project_item--left {
@@ -347,6 +350,7 @@ p {
 .project_images {
     display: grid;
     grid-template-rows: auto;
+    align-items: center;
     gap: 0;
     transition: max-height 1s;
 }
@@ -603,7 +607,7 @@ p {
 }
 
 .project_stack img {
-    width: 2rem;
+    max-width: 2rem;
     padding-bottom: .1rem;
 }
 
@@ -615,7 +619,6 @@ p {
 .project_stack--description {
     position: absolute;
     bottom: 3rem;
-    right: -15rem;
     width: 30rem;
     height: auto;
     padding: 1rem;
@@ -627,8 +630,22 @@ p {
     cursor: initial;
 }
 
-.project_stack--description.description_out_of_view {
-    right: -10rem;
+.sacred-tribe_stack .project_stack--description,
+.goals_stack .project_stack--description {
+    right: -100%;
+}
+
+.daily-chess_stack .project_stack--description {
+    left: -100%;
+}
+
+.sacred-tribe_stack .description_large,
+.goals_stack .description_large {
+    right: -15rem;
+}
+
+.daily-chess_stack .description_large {
+    left: -15rem;
 }
 
 .description_large {
@@ -659,7 +676,7 @@ p {
 }
 
 .project_open--stack img {
-    width: 3rem;
+    max-width: 3rem;
 }
 
 .project_open--stack.bouncing_icon .project_stack--item.bounce {
@@ -1045,5 +1062,232 @@ p {
     color: white;
     padding: 1rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1300px) {
+    body {
+        max-width: 1300px;
+    }
+
+    #hero_section {
+        height: 38rem;
+    }
+
+    .hero_body {
+        padding-left: 6rem;
+    }
+
+    .project_item {
+        padding: 0 7rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    body {
+        max-width: 1250px;
+    }
+
+    #hero_section {
+        height: 36rem;
+    }
+
+    .hero_body {
+        padding-left: 5rem;
+    }
+
+    .avatar {
+        height: 9rem;
+    }
+
+    .project_item--left {
+        grid-template-columns: 45% auto;
+    }
+
+    .project_item--right {
+        grid-template-columns: auto 45%;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        max-width: 1200px;
+    }
+
+    #hero_section {
+        height: 35rem;
+    }
+
+    .hero_body {
+        padding-left: 4rem;
+    }
+
+    .hero--intro,
+    .hero--subheader {
+        font-size: 1.3rem;
+    }
+
+    .hero--header {
+        font-size: 2.6rem;
+    }
+
+    .hero_grid_1--buttons {
+        gap: 1rem;
+    }
+
+    .hero--buttons {
+        padding: 1rem;
+    }
+
+    #bio_section p {
+        padding: 0 4rem;
+        font-size: 1rem;
+    }
+
+    .description_large--left {
+        right: -20rem !important;
+    }
+
+    .description_large--right {
+        right: -8rem !important;
+    }
+
+    .skill_item {
+        gap: 0.5rem;
+        width: 6rem;
+        height: 6rem;
+        font-size: 0.9rem;
+    }
+
+    .skill_item img {
+        width: 2.2rem;
+    }
+
+    .contact_grid {
+        margin: 0 4rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    body {
+        max-width: 1150px;
+    }
+
+    #hero_section {
+        height: 33rem;
+    }
+
+    .avatar {
+        height: 8rem;
+    }
+
+    .project_item {
+        padding: 0 6rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .project_item {
+        padding: 0 5rem;
+    }
+
+    .what_i_do--grid_item_body h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact_grid {
+        margin: 0 3rem;
+    }
+}
+
+@media (max-width: 1075px) {
+    body {
+        max-width: 1075px;
+    }
+
+    #hero_section {
+        height: 31rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        max-width: 1024px;
+    }
+
+    #hero_section {
+        height: 30rem;
+    }
+
+    .hero_body {
+        padding-left: 3rem;
+    }
+
+    .hero--intro,
+    .hero--subheader {
+        font-size: 1.1rem;
+    }
+
+    .hero--header {
+        font-size: 2.2rem;
+    }
+
+    .hero_grid_1--buttons {
+        gap: .8rem;
+    }
+
+    .hero_grid_1--buttons .btn {
+        font-size: .8rem;
+    }
+
+    .hero_grid--2 {
+        gap: 0;
+    }
+
+    .hero_contact--link {
+        font-size: 1.5rem;
+    }
+
+    .hero_cv--link {
+        font-size: 1rem;
+    }
+
+    .hero--buttons {
+        padding: .9rem;
+    }
+
+    .what_i_do--grid_item {
+        grid-column: 2 / 8;
+    }
+
+    .what_i_do--grid_item_right {
+        grid-column: 4 / -2;
+    }
+
+    .project_item {
+        padding: 0 3rem;
+    }
+
+    .skill_item {
+        gap: 0.5rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        font-size: 0.8rem;
+    }
+
+    .skill_item img {
+        width: 2rem;
+    }
+
+    .contact_grid {
+        margin: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        max-width: 900px;
+    }
 }
