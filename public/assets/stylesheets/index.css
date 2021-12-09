@@ -38,10 +38,13 @@
 }
 
 /* GENERAL */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
-    overflow-x: hidden;
 }
 
 /* h1 {
@@ -87,6 +90,7 @@ p {
 
 .navbar {
     margin-bottom: 3rem;
+    padding: 0 7%;
     background: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
 }
@@ -118,13 +122,14 @@ p {
 .hero_body {
     position: relative;
     top: 35%;
-    padding-left: 7rem;
+    left: 7rem;
+    display: inline-block;
 }
 
 .hero--intro {
     font-size: 1.5rem;
-    margin-bottom: 0;
     color: var(--light-mode-main-font);
+    margin-bottom: 0.5rem;
     opacity: 0;
     animation: opacity .5s;
     animation-fill-mode: forwards;
@@ -154,6 +159,7 @@ p {
 
 .hero--subheader {
     font-size: 1.5rem;
+    color: var(--light-mode-main-font);
 }
 
 .hero_grid_1--buttons {
@@ -247,6 +253,7 @@ p {
     background-image: url('/assets/images/background-images/what-i-do-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: auto;
@@ -340,11 +347,11 @@ p {
 }
 
 .project_item--left {
-    grid-template-columns: 50% auto;
+    grid-template-columns: 50% 1fr;
 }
 
 .project_item--right {
-    grid-template-columns: auto 50%;
+    grid-template-columns: 1fr 50%;
 }
 
 .project_images {
@@ -607,7 +614,8 @@ p {
 }
 
 .project_stack img {
-    max-width: 2rem;
+    width: 100%;
+    max-height: 2rem;
     padding-bottom: .1rem;
 }
 
@@ -713,6 +721,7 @@ p {
 .skillset--sub_grid {
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: space-evenly;
 }
 
 #skillset_section h3 {
@@ -787,6 +796,10 @@ p {
     background-repeat: no-repeat;
     background-position-y: 65%;
     background-size: contain;
+}
+
+.contact_container {
+    padding: 0 13%;
 }
 
 #contact_section h2 {
@@ -1076,12 +1089,17 @@ p {
     }
 
     .hero_body {
-        padding-left: 6rem;
+        left: 6rem;
     }
 
     .project_item {
         padding: 0 7rem;
     }
+
+    .contact_container {
+        padding: 0 10%;
+    }
+    
 }
 
 @media (max-width: 1250px) {
@@ -1094,20 +1112,13 @@ p {
     }
 
     .hero_body {
-        padding-left: 5rem;
+        left: 5rem;
     }
 
     .avatar {
         height: 9rem;
     }
 
-    .project_item--left {
-        grid-template-columns: 45% auto;
-    }
-
-    .project_item--right {
-        grid-template-columns: auto 45%;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -1120,7 +1131,7 @@ p {
     }
 
     .hero_body {
-        padding-left: 4rem;
+        left: 4rem;
     }
 
     .hero--intro,
@@ -1141,7 +1152,7 @@ p {
     }
 
     #bio_section p {
-        padding: 0 4rem;
+        padding: 0 7rem;
         font-size: 1rem;
     }
 
@@ -1185,9 +1196,18 @@ p {
     .project_item {
         padding: 0 6rem;
     }
+
+    .contact_container {
+        padding: 0 8%;
+    }
+    
 }
 
 @media (max-width: 1100px) {
+    .hero--header {
+        font-size: 2.5rem;
+    }
+
     .project_item {
         padding: 0 5rem;
     }
@@ -1217,12 +1237,16 @@ p {
         max-width: 1024px;
     }
 
+    .navbar {
+        padding: 0 5%;
+    }
+
     #hero_section {
         height: 30rem;
     }
 
     .hero_body {
-        padding-left: 3rem;
+        left: 3rem;
     }
 
     .hero--intro,
@@ -1242,20 +1266,24 @@ p {
         font-size: .8rem;
     }
 
-    .hero_grid--2 {
-        gap: 0;
-    }
-
     .hero_contact--link {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero_cv--link {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .hero--buttons {
         padding: .9rem;
+    }
+
+    .avatar {
+        height: 7rem;
+    }
+
+    #bio_section p {
+        padding: 0 1rem;
     }
 
     .what_i_do--grid_item {
@@ -1266,8 +1294,20 @@ p {
         grid-column: 4 / -2;
     }
 
+    .project_body--open {
+        max-height: 100rem;
+    } 
+
     .project_item {
         padding: 0 3rem;
+    }
+
+    .project_item--left {
+        grid-template-columns: 40% 1fr;
+    }
+    
+    .project_item--right {
+        grid-template-columns: 1fr 40%;
     }
 
     .skill_item {
@@ -1281,8 +1321,36 @@ p {
         width: 2rem;
     }
 
+    .contact_container {
+        padding: 0 6%;
+    }
+
     .contact_grid {
         margin: 0 2rem;
+        grid-template-columns: 35% 1fr;
+    }
+    
+}
+
+@media only screen and (max-width: 950px) {
+    body {
+        max-width: 950px;
+    }
+
+    #hero_section {
+        height: 28rem;
+    }
+
+    .code_bracket {
+        font-size: 2rem;
+    }
+
+    #skillset_section ul {
+        gap: 1.5rem;
+    }
+
+    .contact_container {
+        padding: 0 5%;
     }
 }
 
@@ -1290,4 +1358,428 @@ p {
     body {
         max-width: 900px;
     }
+
+    .avatar {
+        height: 7rem;
+    }
+
+    .project_item {
+        grid-template-columns: auto;
+        padding: 0 8rem;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+
+    .project_item--right_body {
+        order: 2;
+    }
+
+    .project_open--stack  {
+        order: 3;
+    }
+
+    .project_images {
+        justify-items: center;
+    }
+
+    .project_images.images_open {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .project_image--main {
+        width: 65% !important;
+        grid-column: 1 / -1;
+    }
+
+    .chess_gif {
+        max-height: 15rem;
+        max-width: 10rem;
+        margin: 0.1rem 2rem;
+    }
+
+    .project_stack img {
+        max-height: 2.5rem;
+    }
+
+    .show_secondary_images {
+        margin-top: 2rem;
+    }
+
+    .code_bracket {
+        font-size: 2.5rem;
+    }
+
+    .project_open--stack {
+        margin-top: 0;
+        gap: 1rem;
+    }
+
+    .project_open--stack img {
+        width: 100%;
+        max-height: 2.5rem;
+    }
+
+    .skill_item {
+        gap: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 0.8rem;
+    }
+    
+    .skill_item img {
+        width: 2rem;
+    }
+    
+    .contact_grid {
+        margin: 0 2rem;
+        grid-template-columns: auto;
+    }
+
+    /* HHEEEEEEEEEEEEERRRRRRRRRRRRRRRRREEEEEEEEEEEEEEEEEEE */
+}
+
+@media only screen and (max-width: 875px) {
+    body {
+        max-width: 875px;
+    }
+
+    #hero_section {
+        height: 27rem;
+    }
+
+    .hero--header {
+        font-size: 2rem;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        max-width: 850px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        max-width: 800px;
+    }
+
+    #hero_section {
+        height: 25rem;
+    }
+
+    .hero--header {
+        font-size: 1.7rem;
+        margin-bottom: 0 !important;
+    }
+
+    .hero--intro, .hero--subheader {
+        font-size: 1rem;
+    }
+    
+    .hero--subheader {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero_grid_1--buttons .btn {
+        font-size: .7rem;
+    }
+
+    .hero--buttons {
+        padding: 0.8rem;
+    }
+
+    .hero_contact--link {
+        font-size: 1.1rem;
+    }
+
+    .hero_cv--link {
+        font-size: .8rem;
+    }
+
+    .avatar {
+        height: 6rem;
+    }
+
+    .what_i_do--grid_item {
+        grid-column: 2 / 9;
+    }
+    
+    .what_i_do--grid_item_right {
+        grid-column: 3 / -2;
+    }
+
+    .project_item {
+        padding: 0 6rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        max-width: 750px;
+    }
+
+    .what-i-do_header,
+    .works_header,
+    .skills_header {
+        font-size: 2.5rem;
+    }
+
+    .skillset--general {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .skillset--sub_grid {
+        grid-template-columns: auto;
+    }
+
+    .skill_item {
+        gap: .5rem;
+        width: 7rem;
+        height: 7rem;
+        font-size: 1rem;
+    }
+
+    .skill_item img {
+        width: 3rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        max-width: 700px;
+    }
+
+    #hero_section {
+        height: 52rem;
+        background-position-x: center;
+        background-position-y: 100%;
+        background-size: 100%;
+    }
+
+    .hero_body {
+        position: relative;
+        width: 500px;
+        top: 15%;
+        left: 50%;
+        margin-left: -250px;
+        text-align: center;
+    }
+
+    .hero--header {
+        font-size: 2.5rem;
+        margin-bottom: 0 !important;
+    }
+
+    .hero_body--grid {
+        justify-content: center;
+    }
+
+    .hero--intro, .hero--subheader {
+        font-size: 1.3rem;
+    }
+
+    .hero--intro {
+        margin-bottom: 0rem;
+    }
+    
+    .hero--subheader {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero_grid_1--buttons .btn {
+        font-size: 1rem;
+    }
+
+    .hero--buttons {
+        padding: 1rem;
+    }
+
+    .hero_contact--link {
+        font-size: 1.5rem;
+    }
+
+    .hero_cv--link {
+        font-size: 1rem;
+    }
+
+    .avatar {
+        height: 8rem;
+    }   
+    
+    .what_i_do--grid_item,
+    .what_i_do--grid_item_right {
+        grid-column: 2 / -2;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        max-width: 650px;
+    }
+
+    #hero_section {
+        height: 49rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
+
+    #hero_section {
+        height: 46rem;
+    }
+
+    .what_i_do--grid_item {
+        padding: 3rem 2rem 1rem;
+    }
+
+    .what_i_do--grid_item img {
+        width: 4rem;
+        min-height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        max-width: 550px;
+    }
+
+    #skillset_section ul {
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    body {
+        max-width: 530px;
+    }
+
+    #hero_section {
+        height: 44rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    body {
+        max-width: 520px;
+    }
+
+    .skill_item {
+        gap: .5rem;
+        width: 6rem;
+        height: 6rem;
+        font-size: .9rem;
+    }
+
+    .skill_item img {
+        width: 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        max-width: 500px;
+    }
+    
+    .what-i-do_header,
+    .works_header,
+    .skills_header {
+        font-size: 2.3rem;
+        padding-left: 1rem;
+    }
+
+    .what_i_do--grid_item {
+        padding: 2.5rem 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    body {
+        max-width: 470px;
+    }
+
+    #hero_section {
+        height: 40rem;
+    }
+
+    .hero--header {
+        font-size: 2.2rem;
+    }
+
+    .hero--intro, .hero--subheader {
+        font-size: 1.2rem;
+    }
+
+    .hero_grid_1--buttons .btn {
+        font-size: .9rem;
+    }
+
+    .hero--buttons {
+        padding: 1rem;
+    }
+
+    .hero_contact--link {
+        font-size: 1.3rem;
+    }
+
+    .hero_cv--link {
+        font-size: .9rem;
+    }
+        
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        max-width: 450px;
+    }
+
+    #hero_section {
+        height: 38rem;
+    }
+
+    .what_i_do--grid_item,
+    .what_i_do--grid_item_right {
+        grid-column: 1 / -1;
+        margin: 0 .5rem;
+    }
+
+    .what_i_do--grid_item {
+        padding: 2.5rem 1rem 1rem;
+    }
+
+    .skill_item {
+        gap: .3rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: .8rem;
+    }
+
+    .skill_item img {
+        width: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        max-width: 400px;
+    }
+
+    #hero_section {
+        height: 35rem;
+    }
+
+    .what-i-do_header,
+    .works_header,
+    .skills_header {
+        font-size: 2rem;
+        padding-left: .5rem;
+    }
+
 }
