@@ -177,27 +177,14 @@ const toggleWebsiteField = (e) => {
 
 // Copy phone or email address to clipboard on click and show clipboard message 
 const copyToClipboard = (e) => {
-    let target = e.target.closest('.contact_grid_item');
-
-    if (target === phoneNumber) {
-        navigator.clipboard.writeText("+353830920355").then(function() {
-            phoneNumber.querySelector('.copied_to_clipboard').classList.add('clipboard_updated');
-            setTimeout(() => {
-                phoneNumber.querySelector('.copied_to_clipboard').classList.remove('clipboard_updated');
-            }, 1500);
-          }, function(err) {
-            console.error('Async: Could not copy text: ', err);
-          });
-    } else {
-        navigator.clipboard.writeText("info@stephenlenane.com").then(function() {
-            email.querySelector('.copied_to_clipboard').classList.add('clipboard_updated');
-            setTimeout(() => {
-                email.querySelector('.copied_to_clipboard').classList.remove('clipboard_updated');
-            }, 1500);
-          }, function(err) {
-            console.error('Async: Could not copy text: ', err);
-          });
-    }
+    navigator.clipboard.writeText("info@stephenlenane.com").then(function() {
+        email.querySelector('.copied_to_clipboard').classList.add('clipboard_updated');
+        setTimeout(() => {
+            email.querySelector('.copied_to_clipboard').classList.remove('clipboard_updated');
+        }, 1500);
+        }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+        });
 }
 
 // Initialise socket.io
@@ -207,7 +194,6 @@ const form = document.querySelector('.contact_form');
 
 const contactName = document.querySelector('#contact_name');
 const contactEmail = document.querySelector('#contact_email');
-const contactPhone = document.querySelector('#contact_phone');
 const contactService = document.querySelectorAll('.form-check-input');
 const contactWebsite = document.querySelector('#contact_website');
 const contactMessage = document.querySelector('#contact_message');
@@ -268,6 +254,5 @@ socket.on("mail sent", (mailSent) => {
 
 contactInputs.forEach(input => input.addEventListener('focus', animateInput));
 contactRadioGroup.addEventListener("click", toggleWebsiteField);
-phoneNumber.addEventListener('click', copyToClipboard);
 email.addEventListener('click', copyToClipboard);
 form.addEventListener('submit', sendMail, false);

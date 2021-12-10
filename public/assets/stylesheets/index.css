@@ -109,6 +109,10 @@ p {
     transition: all 0.5s;
 }
 
+.navbar-toggler {
+    border: none;
+}
+
 .theme_div {
     position: absolute;
     top: 10%;
@@ -138,7 +142,7 @@ p {
 .hero--header {
     font-size: 3rem;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 700;
     opacity: 0;
     animation: opacity .5s;
@@ -274,7 +278,7 @@ p {
     background-size: contain;
     gap: 0.5rem;
     padding: 4rem 3rem 1rem;
-    border-radius: 15px;
+    border-radius: 8px;
     justify-items: center;
     transform: translateX(-30rem);
     opacity: 0;
@@ -594,7 +598,7 @@ p {
 }
 
 .daily-chess_stack {
-    grid-template-columns: repeat(9, auto);
+    grid-template-columns: repeat(8, auto);
 }
 
 .goals_stack {
@@ -622,7 +626,6 @@ p {
 .project_stack--item:hover {
     transform: translateY(-20%);
 }
-
 
 .project_stack--description {
     position: absolute;
@@ -799,7 +802,7 @@ p {
 }
 
 .contact_container {
-    padding: 0 13%;
+    padding: 0 5%;
 }
 
 #contact_section h2 {
@@ -1095,10 +1098,6 @@ p {
     .project_item {
         padding: 0 7rem;
     }
-
-    .contact_container {
-        padding: 0 10%;
-    }
     
 }
 
@@ -1195,10 +1194,6 @@ p {
 
     .project_item {
         padding: 0 6rem;
-    }
-
-    .contact_container {
-        padding: 0 8%;
     }
     
 }
@@ -1321,10 +1316,6 @@ p {
         width: 2rem;
     }
 
-    .contact_container {
-        padding: 0 6%;
-    }
-
     .contact_grid {
         margin: 0 2rem;
         grid-template-columns: 35% 1fr;
@@ -1347,10 +1338,6 @@ p {
 
     #skillset_section ul {
         gap: 1.5rem;
-    }
-
-    .contact_container {
-        padding: 0 5%;
     }
 }
 
@@ -1380,6 +1367,7 @@ p {
 
     .project_images {
         justify-items: center;
+        margin-bottom: 2rem;
     }
 
     .project_images.images_open {
@@ -1388,7 +1376,6 @@ p {
     }
 
     .project_image--main {
-        width: 65% !important;
         grid-column: 1 / -1;
     }
 
@@ -1404,6 +1391,10 @@ p {
 
     .show_secondary_images {
         margin-top: 2rem;
+    }
+
+    .project_stack {
+        gap: 1.5rem;
     }
 
     .code_bracket {
@@ -1433,10 +1424,53 @@ p {
     
     .contact_grid {
         margin: 0 2rem;
-        grid-template-columns: auto;
+        grid-template-columns: 95%;
+        row-gap: 0;
     }
 
-    /* HHEEEEEEEEEEEEERRRRRRRRRRRRRRRRREEEEEEEEEEEEEEEEEEE */
+    .contact_grid-1--top {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .contact_information {
+        grid-column: 1 / -1;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .contact_information h3 {
+        text-align: center;
+    }
+
+    .contact_grid_item {
+        grid-template-columns: auto;
+        justify-content: center;
+        justify-items: center;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        gap: .5rem;
+    }
+
+    .contact_grid_item img {
+        width: 2.7rem;
+    }
+
+    .contact_grid-1--bottom {
+        padding-bottom: 0;
+    }
+
+    .contact_grid-1--bottom a {
+        font-size: 2rem;
+    }
+
+    .contact_cv {
+        font-size: 1.5rem !important;
+    }
+
+    .contact_form {
+        margin: 0 2rem 2rem
+    }
 }
 
 @media only screen and (max-width: 875px) {
@@ -1512,8 +1546,9 @@ p {
     }
 
     .project_item {
-        padding: 0 6rem;
+        padding: 0 10%;
     }
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -1552,17 +1587,21 @@ p {
         max-width: 700px;
     }
 
+    .navbar-brand img {
+        width: 4rem;
+    }
+
     #hero_section {
-        height: 52rem;
+        height: 100vh;
         background-position-x: center;
-        background-position-y: 100%;
-        background-size: 100%;
+        background-position-y: 90%;
+        background-size: 120%;
     }
 
     .hero_body {
         position: relative;
         width: 500px;
-        top: 15%;
+        top: 20%;
         left: 50%;
         margin-left: -250px;
         text-align: center;
@@ -1613,6 +1652,12 @@ p {
     .what_i_do--grid_item_right {
         grid-column: 2 / -2;
     }
+
+    .project_item {
+        padding: 0 5%;
+    }
+
+
 }
 
 @media only screen and (max-width: 650px) {
@@ -1620,18 +1665,11 @@ p {
         max-width: 650px;
     }
 
-    #hero_section {
-        height: 49rem;
-    }
 }
 
 @media only screen and (max-width: 600px) {
     body {
         max-width: 600px;
-    }
-
-    #hero_section {
-        height: 46rem;
     }
 
     .what_i_do--grid_item {
@@ -1649,6 +1687,54 @@ p {
         max-width: 550px;
     }
 
+    .project_item {
+        margin-bottom: 6rem;
+    }
+
+    .project_images {
+        margin-bottom: 1rem;
+    }
+
+    .project_image--main {
+        max-width: 90%;
+    }
+
+    .chess_gif {
+        max-height: 10rem;
+        max-width: 6.5rem;
+        margin: 0.1rem 1rem;
+    }
+
+    .project_title {
+        font-size: 1.3rem;
+    }
+
+    .sacred_tribe--title {
+        font-size: 2rem;
+    }
+
+    .project_open--stack .code_bracket {
+        font-size: 2.5rem;
+    }
+
+    .project_stack {
+        align-items: baseline;
+        gap: .5rem;
+        margin-top: 0.7rem;
+    }
+    .project_item {
+        gap: .5rem;
+    }
+
+    .project_stack img {
+        max-height: 2rem;
+        margin-bottom: .6rem;
+    }
+
+    .code_bracket {
+        font-size: 2rem;
+    }
+
     #skillset_section ul {
         gap: 1rem;
     }
@@ -1659,9 +1745,6 @@ p {
         max-width: 530px;
     }
 
-    #hero_section {
-        height: 44rem;
-    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -1686,6 +1769,10 @@ p {
     body {
         max-width: 500px;
     }
+
+    /* .navbar-brand img {
+        width: 3rem;
+    } */
     
     .what-i-do_header,
     .works_header,
@@ -1697,6 +1784,10 @@ p {
     .what_i_do--grid_item {
         padding: 2.5rem 2rem 1rem;
     }
+
+    .project_item {
+        padding: 0 3%;
+    }
 }
 
 @media only screen and (max-width: 470px) {
@@ -1704,9 +1795,6 @@ p {
         max-width: 470px;
     }
 
-    #hero_section {
-        height: 40rem;
-    }
 
     .hero--header {
         font-size: 2.2rem;
@@ -1739,10 +1827,6 @@ p {
         max-width: 450px;
     }
 
-    #hero_section {
-        height: 38rem;
-    }
-
     .what_i_do--grid_item,
     .what_i_do--grid_item_right {
         grid-column: 1 / -1;
@@ -1769,10 +1853,6 @@ p {
 @media only screen and (max-width: 400px) {
     body {
         max-width: 400px;
-    }
-
-    #hero_section {
-        height: 35rem;
     }
 
     .what-i-do_header,
