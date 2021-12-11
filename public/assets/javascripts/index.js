@@ -7,6 +7,7 @@ const whatIDoSection = document.querySelector('#what-i-do_section');
 const worksSection = document.querySelector('#project_section');
 const skillsSection = document.querySelector('#skillset_section');
 const contactSection = document.querySelector('#contact_section');
+const navLinks = document.querySelectorAll('.nav-link');
 
 const toggleNavColour = () => {
     if (window.scrollY < whatIDoSection.offsetTop) {
@@ -25,9 +26,17 @@ const toggleNavColour = () => {
         navbar.classList.remove('secondary_navbar');
         navbarBrand.src = "/assets/images/logo/logo-white.png"
     }
-}
+};
+
+const collapseMobileNav = () => {
+    // Select the button and click it if it is shown to close it
+    let button = document.querySelector('.navbar-toggler');
+    if (button.style.display === "none") return;
+    else button.click();
+};
 
 window.addEventListener('scroll', toggleNavColour);
+navLinks.forEach(link => link.addEventListener('click', collapseMobileNav));
 
 // ##################################
 //            WHAT I DO
@@ -55,6 +64,7 @@ window.addEventListener('scroll', toggleShowGridItem);
 // ##################################
 const projectToggleShowBtns = document.querySelectorAll(".project_item--read_more");
 const bounce = document.querySelectorAll('.bouncing_icon');
+const stackItems = document.querySelectorAll('.project_stack--item');
 
 const toggleShowProject = (e) => {
     let project = e.target.closest('.project_item');
@@ -136,8 +146,21 @@ const stopBounceAnimation = (e) => {
     stack.classList.remove('bouncing_icon');
 };
 
+const justifyDescriptionCenter = (e) => {
+    let screenWidth = window.innerWidth;
+    let target = e.target.getBoundingClientRect();
+    let left = target.left;
+    let description = e.target.querySelector('.project_stack--description');
+    // At max-width 900 first translate the description box to the left side of the screen by translating the left of the item
+    // Then push it back 10% because the description box is 80vw - to center the box
+    description.style.transform = `translateX(-${left - ((screenWidth / 100) * 10)}px)`;
+};
+
 projectToggleShowBtns.forEach(btn => btn.addEventListener('click', toggleShowProject));
 bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation));
+if (window.innerWidth <= 900) {
+    stackItems.forEach(item => item.addEventListener("mouseenter", justifyDescriptionCenter))
+};
 
 // ##################################
 //          CONTACT FORM

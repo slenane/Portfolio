@@ -42,14 +42,14 @@ html, body {
     overflow-x: hidden;
 }
 
+html { 
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--light-mode-main-background);
     color: var(--light-mode-main-font);
 }
-
-/* h1 {
-    font-size: 3.5rem;
-} */
 
 h2, h3 {
     text-align: center;
@@ -70,9 +70,6 @@ p {
     color: var(--light-mode-secondary-font);
 }
 
-/* .section {
-    margin: 2rem auto;
-} */
 
 .hide {
     display: none !important;
@@ -341,7 +338,7 @@ p {
     height: auto;
     display: grid;
     margin-bottom: 10rem;
-    padding: 0 8rem;
+    padding: 0 8%;
     gap: 1rem;
     border-radius: 3px;
 }
@@ -496,6 +493,11 @@ p {
     color: var(--light-mode-secondary-font);
 }
 
+.project_notable_features ul {
+    padding-inline-start: 20px;
+
+}
+
 .project_links {
     display: grid;
     grid-template-columns: auto auto;
@@ -635,7 +637,6 @@ p {
     padding: 1rem;
     border-radius: 3px;
     background-color: white;
-    opacity: 0;
     visibility: hidden;
     transition: opacity .5s;
     cursor: initial;
@@ -1096,7 +1097,7 @@ p {
     }
 
     .project_item {
-        padding: 0 7rem;
+        padding: 0 5%;
     }
     
 }
@@ -1192,19 +1193,19 @@ p {
         height: 8rem;
     }
 
-    .project_item {
-        padding: 0 6rem;
+    .project_item--left {
+        grid-template-columns: 45% 1fr;
     }
     
+    .project_item--right {
+        grid-template-columns: 1fr 45%;
+    }
+
 }
 
 @media (max-width: 1100px) {
     .hero--header {
         font-size: 2.5rem;
-    }
-
-    .project_item {
-        padding: 0 5rem;
     }
 
     .what_i_do--grid_item_body h3 {
@@ -1293,10 +1294,6 @@ p {
         max-height: 100rem;
     } 
 
-    .project_item {
-        padding: 0 3rem;
-    }
-
     .project_item--left {
         grid-template-columns: 40% 1fr;
     }
@@ -1332,6 +1329,7 @@ p {
         height: 28rem;
     }
 
+    .project_open--stack .code_bracket,
     .code_bracket {
         font-size: 2rem;
     }
@@ -1385,6 +1383,7 @@ p {
         margin: 0.1rem 2rem;
     }
 
+    .project_open--stack img,
     .project_stack img {
         max-height: 2.5rem;
     }
@@ -1393,10 +1392,27 @@ p {
         margin-top: 2rem;
     }
 
+    .project_open--stack,
     .project_stack {
         gap: 1.5rem;
     }
 
+    .sacred-tribe_stack .project_stack--description,
+    .goals_stack .project_stack--description,
+    .daily-chess_stack .project_stack--description ,
+    .sacred-tribe_stack .description_large,
+    .goals_stack .description_large,
+    .daily-chess_stack .description_large {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px !important; opacity: 0;
+        left: 0;
+        width: 80vw;
+    }
+
+    .description_large {
+        bottom: 4rem;
+    }
+
+    .project_open--stack .code_bracket,
     .code_bracket {
         font-size: 2.5rem;
     }
@@ -1430,7 +1446,7 @@ p {
 
     .contact_grid-1--top {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
     }
 
     .contact_information {
@@ -1447,6 +1463,7 @@ p {
         grid-template-columns: auto;
         justify-content: center;
         justify-items: center;
+        align-content: baseline;
         border-radius: 10px;
         margin-bottom: 2rem;
         gap: .5rem;
@@ -1454,6 +1471,12 @@ p {
 
     .contact_grid_item img {
         width: 2.7rem;
+    }
+
+    .contact_grid_item:hover {
+        background-color: unset;
+        box-shadow: unset;
+        cursor: unset;
     }
 
     .contact_grid-1--bottom {
@@ -1556,6 +1579,7 @@ p {
         max-width: 750px;
     }
 
+    #contact_section h2, 
     .what-i-do_header,
     .works_header,
     .skills_header {
@@ -1592,16 +1616,16 @@ p {
     }
 
     #hero_section {
-        height: 100vh;
+        height: 55rem;
         background-position-x: center;
-        background-position-y: 90%;
+        background-position-y: 100%;
         background-size: 120%;
     }
 
     .hero_body {
         position: relative;
         width: 500px;
-        top: 20%;
+        top: 10%;
         left: 50%;
         margin-left: -250px;
         text-align: center;
@@ -1644,8 +1668,12 @@ p {
         font-size: 1rem;
     }
 
+    #bio_section {
+        padding: 5rem 0;
+    }
+
     .avatar {
-        height: 8rem;
+        height: 7rem;
     }   
     
     .what_i_do--grid_item,
@@ -1655,6 +1683,10 @@ p {
 
     .project_item {
         padding: 0 5%;
+    }
+
+    .project_image--main {
+        max-width: 90%;
     }
 
 
@@ -1680,11 +1712,41 @@ p {
         width: 4rem;
         min-height: 3rem;
     }
+
+    .project_open--stack,
+    .project_stack {
+        gap: 1rem;
+    }
+
+    #contact_section {
+        padding: 3rem 0;
+    }
+
+    #contact_section h2 {
+        margin-bottom: 3rem;
+    }
+
+    .contact_grid {
+        margin: 0 0;
+        grid-template-columns: 100%;
+        row-gap: 0;
+    }
 }
 
 @media only screen and (max-width: 550px) {
     body {
         max-width: 550px;
+    }
+
+    #hero_section {
+        height: 100vh;
+        background-position-x: center;
+        background-position-y: 90%;
+        background-size: 120%;
+    }
+
+    .hero_body {
+        top: 20%;
     }
 
     .project_item {
@@ -1693,10 +1755,6 @@ p {
 
     .project_images {
         margin-bottom: 1rem;
-    }
-
-    .project_image--main {
-        max-width: 90%;
     }
 
     .chess_gif {
@@ -1713,30 +1771,34 @@ p {
         font-size: 2rem;
     }
 
-    .project_open--stack .code_bracket {
-        font-size: 2.5rem;
-    }
-
+    .project_open--stack,
     .project_stack {
         align-items: baseline;
-        gap: .5rem;
+        gap: .75rem;
         margin-top: 0.7rem;
     }
+
     .project_item {
         gap: .5rem;
     }
 
+    .project_open--stack img,
     .project_stack img {
         max-height: 2rem;
         margin-bottom: .6rem;
     }
 
+    .project_open--stack .code_bracket,
     .code_bracket {
         font-size: 2rem;
     }
 
     #skillset_section ul {
         gap: 1rem;
+    }
+
+    .contact_container {
+        padding: 0 2%;
     }
 }
 
@@ -1752,6 +1814,11 @@ p {
         max-width: 520px;
     }
 
+    #skillset_section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
     .skill_item {
         gap: .5rem;
         width: 6rem;
@@ -1763,22 +1830,30 @@ p {
         width: 2.5rem;
     }
 
+    .contact_form {
+        margin: 0 1rem 2rem;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
     body {
         max-width: 500px;
     }
-
-    /* .navbar-brand img {
-        width: 3rem;
-    } */
     
     .what-i-do_header,
     .works_header,
     .skills_header {
         font-size: 2.3rem;
         padding-left: 1rem;
+    }
+    
+    #contact_section h2 {
+        font-size: 2.3rem;
+    }
+
+    .contact_information h3 {
+        font-size: 1.5rem;
     }
 
     .what_i_do--grid_item {
@@ -1827,14 +1902,26 @@ p {
         max-width: 450px;
     }
 
+    .avatar {
+        height: 6rem;
+    }  
+
     .what_i_do--grid_item,
     .what_i_do--grid_item_right {
         grid-column: 1 / -1;
-        margin: 0 .5rem;
+        margin: 0 5%;
     }
 
     .what_i_do--grid_item {
         padding: 2.5rem 1rem 1rem;
+    }
+
+    .chess_links {
+        grid-template-columns: auto auto;
+    }
+
+    .chess--challenge_link {
+        grid-column: 1 / -1;
     }
 
     .skill_item {
@@ -1846,6 +1933,10 @@ p {
 
     .skill_item img {
         width: 2rem;
+    }
+
+    .contact_grid_item p {
+        word-break: break-all;
     }
 
 }
@@ -1860,6 +1951,15 @@ p {
     .skills_header {
         font-size: 2rem;
         padding-left: .5rem;
+    }
+
+    .project_open--stack,
+    .project_stack {
+        gap: .5rem;
+    }
+
+    #contact_section h2 {
+        font-size: 2rem;
     }
 
 }
