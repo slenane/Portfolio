@@ -10,16 +10,17 @@ const contactSection = document.querySelector('#contact_section');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const toggleNavColour = () => {
-    if (window.scrollY < whatIDoSection.offsetTop) {
+    let position = window.scrollY + navbar.offsetHeight;
+    if (position < whatIDoSection.offsetTop) {
         navbar.classList.remove('secondary_navbar');
         navbarBrand.src = "/assets/images/logo/logo-white.png"
-    } else if (window.scrollY >= whatIDoSection.offsetTop && window.scrollY < worksSection.offsetTop) {
+    } else if (position >= whatIDoSection.offsetTop && position < worksSection.offsetTop) {
         navbar.classList.add('secondary_navbar');
         navbarBrand.src = "/assets/images/logo/logo-orange.png"
-    } else if (window.scrollY >= worksSection.offsetTop && window.scrollY < skillsSection.offsetTop) {
+    } else if (position >= worksSection.offsetTop && position < skillsSection.offsetTop) {
         navbar.classList.remove('secondary_navbar');
         navbarBrand.src = "/assets/images/logo/logo-white.png"
-    } else if (window.scrollY >= skillsSection.offsetTop && window.scrollY < contactSection.offsetTop) {
+    } else if (position >= skillsSection.offsetTop && position < contactSection.offsetTop) {
         navbar.classList.add('secondary_navbar');
         navbarBrand.src = "/assets/images/logo/logo-orange.png"
     } else {
@@ -140,11 +141,13 @@ const toggleShowProject = (e) => {
         project.classList.remove('project_open');
     }
 };
+projectToggleShowBtns.forEach(btn => btn.addEventListener('click', toggleShowProject));
 
 const stopBounceAnimation = (e) => {
     let stack = e.target.closest('.project_open--stack');
     stack.classList.remove('bouncing_icon');
 };
+bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation));
 
 const justifyDescriptionCenter = (e) => {
     let screenWidth = window.innerWidth;
@@ -156,10 +159,21 @@ const justifyDescriptionCenter = (e) => {
     description.style.transform = `translateX(-${left - ((screenWidth / 100) * 10)}px)`;
 };
 
-projectToggleShowBtns.forEach(btn => btn.addEventListener('click', toggleShowProject));
-bounce.forEach(stack => stack.addEventListener('mouseenter', stopBounceAnimation));
+// If the window is resized then alter the positioning
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 900) {
+        stackItems.forEach(item => item.addEventListener("mouseenter", justifyDescriptionCenter));
+    } else {
+        stackItems.forEach(item => item.removeEventListener("mouseenter", justifyDescriptionCenter));
+        stackItems.forEach(item => {
+            let description = item.querySelector('.project_stack--description');
+            description.style.transform = `translateX(0px)`; 
+        });
+    }
+})
+// If the viewport is 900px or less the descriptions should show in the center
 if (window.innerWidth <= 900) {
-    stackItems.forEach(item => item.addEventListener("mouseenter", justifyDescriptionCenter))
+    stackItems.forEach(item => item.addEventListener("mouseenter", justifyDescriptionCenter));
 };
 
 // ##################################

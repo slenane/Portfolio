@@ -1082,7 +1082,121 @@ p {
     font-size: 0.8rem;
 }
 
-/* MEDIA QUERIES */
+/* MIN WIDTH MEDIA QUERIES */
+
+@media (min-width: 1400px) {
+    #hero_section {
+        height: 45rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .what_i_do--grid_item {
+        grid-column: 3 / 7;
+    }
+    .what_i_do--grid_item_right {
+        grid-column: 5 / -3;
+    }
+
+    .project_item {
+        padding: 0 10%;
+    }
+
+    .contact_container {
+        padding: 0 10%;
+    }
+ 
+}
+
+@media (min-width: 1600px) {
+    .project_item--left {
+        grid-template-columns: 45% 1fr;
+    }
+    .project_item--right {
+        grid-template-columns: 1fr 45%;
+    }
+
+    .project_item {
+        padding: 0 15%;
+    }
+}
+
+@media (min-width: 1650px) {
+    #hero_section {
+        background-size: 50%;
+    }
+
+    .hero--intro,
+    .hero--subheader {
+        font-size: 2rem;
+    }
+
+    .hero--header {
+        font-size: 4rem;
+    }
+
+    .hero_grid_1--buttons {
+        gap: 1rem;
+    }
+
+    .hero_grid_1--buttons .btn {
+        font-size: 1.5rem;
+    }
+
+    .hero_contact--link {
+        font-size: 2rem;
+    }
+
+    .hero_cv--link {
+        font-size: 1.4rem;
+    }
+
+    .hero--buttons {
+        padding: 1.5rem;
+    }
+
+    #bio_section {
+        padding: 10rem 0;
+    }
+}
+
+@media (min-width: 1800px) {
+    #hero_section {
+        height: 50rem;
+        background-size: 46%;
+    }
+
+    .hero_body {
+        left: 10rem;
+    }
+
+    .contact_container {
+        padding: 0 15%;
+    }    
+    
+}
+
+@media (min-width: 2000px) {
+    #hero_section {
+        background-size: 46%;
+    }
+
+
+    .hero_body {
+        left: 15rem;
+    }
+
+    body {
+        padding: 0 10%;
+    }
+
+    .navbar {
+        padding: 0 17%;
+    }
+}
+
+/* MAX WIDTH MEDIA QUERIES */
+
 @media (max-width: 1300px) {
     body {
         max-width: 1300px;
@@ -1594,7 +1708,7 @@ p {
         grid-template-columns: auto;
     }
 
-    .skill_item {
+    /* .skill_item {
         gap: .5rem;
         width: 7rem;
         height: 7rem;
@@ -1603,7 +1717,7 @@ p {
 
     .skill_item img {
         width: 3rem;
-    }
+    } */
 }
 
 @media only screen and (max-width: 700px) {
@@ -1818,7 +1932,7 @@ p {
         font-size: 1.3rem;
         margin-bottom: 1rem;
     }
-
+/* 
     .skill_item {
         gap: .5rem;
         width: 6rem;
@@ -1828,7 +1942,7 @@ p {
 
     .skill_item img {
         width: 2.5rem;
-    }
+    } */
 
     .contact_form {
         margin: 0 1rem 2rem;
@@ -1926,13 +2040,13 @@ p {
 
     .skill_item {
         gap: .3rem;
-        width: 5rem;
-        height: 5rem;
-        font-size: .8rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: .6rem;
     }
 
     .skill_item img {
-        width: 2rem;
+        width: 1.7rem;
     }
 
     .contact_grid_item p {
