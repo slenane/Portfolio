@@ -235,7 +235,7 @@ p {
 .avatar {
     display: block;
     margin: 0 auto 2.5rem;
-    height: 10rem;
+    height: 9rem;
 }
 
 
@@ -1225,10 +1225,6 @@ p {
         left: 5rem;
     }
 
-    .avatar {
-        height: 9rem;
-    }
-
 }
 
 @media (max-width: 1200px) {
@@ -1452,10 +1448,6 @@ p {
 @media only screen and (max-width: 900px) {
     body {
         max-width: 900px;
-    }
-
-    .avatar {
-        height: 7rem;
     }
 
     .project_item {
