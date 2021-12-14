@@ -6,7 +6,7 @@
 :root {
     /* FONTS */
     --light-mode-main-font: #28292b;
-    --light-mode-secondary-font: #848687; 
+    --light-mode-secondary-font: #555657; 
 
     --dark-mode-main-font: #f3f3f3;
     --dark-mode-secondary-font: #8e8e91;
@@ -102,7 +102,7 @@ p {
 }
 
 .navbar-brand img {
-    width: 5rem;
+    width: 3.5rem;
     transition: all 0.5s;
 }
 
@@ -130,7 +130,7 @@ p {
 .hero--intro {
     font-size: 1.5rem;
     color: var(--light-mode-main-font);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
     opacity: 0;
     animation: opacity .5s;
     animation-fill-mode: forwards;
@@ -139,8 +139,8 @@ p {
 .hero--header {
     font-size: 3rem;
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
-    /* text-transform: uppercase; */
     font-weight: 700;
+    margin-bottom: 0;
     opacity: 0;
     animation: opacity .5s;
     animation-fill-mode: forwards;
@@ -241,7 +241,7 @@ p {
 
 #bio_section p {
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 10rem;
 }
 
@@ -1097,15 +1097,12 @@ p {
     .what_i_do--grid_item_right {
         grid-column: 5 / -3;
     }
-
     .project_item {
         padding: 0 10%;
     }
-
     .contact_container {
         padding: 0 10%;
     }
- 
 }
 
 @media (min-width: 1600px) {
@@ -1115,7 +1112,6 @@ p {
     .project_item--right {
         grid-template-columns: 1fr 45%;
     }
-
     .project_item {
         padding: 0 15%;
     }
@@ -1674,14 +1670,10 @@ p {
         height: 6rem;
     }
 
-    .what_i_do--grid_item {
-        grid-column: 2 / 9;
+    .what_i_do--grid_item,
+        .what_i_do--grid_item_right {
+        grid-column: 2 / -2;
     }
-    
-    .what_i_do--grid_item_right {
-        grid-column: 3 / -2;
-    }
-
     .project_item {
         padding: 0 10%;
     }
@@ -1863,6 +1855,12 @@ p {
         top: 20%;
     }
 
+    .what_i_do--grid_item, 
+    .what_i_do--grid_item_right {
+        grid-column: 1 / -1;
+        margin: 0 5%;
+    }
+
     .project_item {
         margin-bottom: 6rem;
     }
@@ -2019,12 +2017,6 @@ p {
     .avatar {
         height: 6rem;
     }  
-
-    .what_i_do--grid_item,
-    .what_i_do--grid_item_right {
-        grid-column: 1 / -1;
-        margin: 0 5%;
-    }
 
     .what_i_do--grid_item {
         padding: 2.5rem 1rem 1rem;
