@@ -78,7 +78,7 @@ p {
 /* HERO */
 #hero_section {
     height: 40rem;
-    background-image: url('/assets/images/background-images/desktop.png');
+    background-image: url('/assets/images/background-images/desktop.webp');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: 100%;
@@ -251,7 +251,7 @@ p {
 }
 
 .what_i_do--grid {
-    background-image: url('/assets/images/background-images/what-i-do-bg.png');
+    background-image: url('/assets/images/background-images/what-i-do-bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -796,7 +796,7 @@ p {
 /* CONTACT */
 #contact_section {
     padding: 5rem 0; 
-    background-image: url("/assets/images/background-images/contact.png");
+    background-image: url("/assets/images/background-images/contact.webp");
     background-repeat: no-repeat;
     background-position-y: 65%;
     background-size: contain;
