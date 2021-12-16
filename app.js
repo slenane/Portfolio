@@ -22,6 +22,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 app.use(compression());
 
+// If the user is not on HTTPS, then redirect
+if (process.env.NODE_ENV === 'production') {
+    app.use((req, res, next) => {
+        if (req.header('x-forwarded-proto') !== 'https') {
+            res.redirect(`https://${req.header('host')}${req.url}`);
+        } else {
+            next();
+        }
+    });
+}
+
 app.use(async (req, res, next) => {
     try {
         let randomNonce = uuidv4();

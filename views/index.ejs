@@ -11,13 +11,13 @@
     <title>Stephen Lenane</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K1WY5QT47"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K1WY5QT47" nonce="<%=randomNonce%>"></script>
+    <script nonce="<%=randomNonce%>">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-4K1WY5QT47');
+        gtag('config', 'G-4K1WY5QT47');
     </script>
 
     <!-- FAVICON -->
