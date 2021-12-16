@@ -230,6 +230,7 @@ const socket = io();
 const form = document.querySelector('.contact_form');
 
 const contactName = document.querySelector('#contact_name');
+const contactPhone = document.querySelector('#contact_phone');
 const contactEmail = document.querySelector('#contact_email');
 const contactService = document.querySelectorAll('.form-check-input');
 const contactWebsite = document.querySelector('#contact_website');
