@@ -1944,6 +1944,10 @@ p {
     body {
         max-width: 500px;
     }
+
+    .navbar-brand img {
+        width: 3rem;
+    }
     
     .what-i-do_header,
     .works_header,
