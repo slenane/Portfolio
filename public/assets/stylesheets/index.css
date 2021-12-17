@@ -241,8 +241,8 @@ p {
 
 #bio_section p {
     text-align: justify;
-    font-size: 1rem;
-    padding: 0 10rem;
+    font-size: 1.2rem;
+    padding: 0 20%;
 }
 
 /* WHAT I CAN DO */
@@ -1384,10 +1384,6 @@ p {
         height: 7rem;
     }
 
-    #bio_section p {
-        padding: 0 1rem;
-    }
-
     .what_i_do--grid_item {
         grid-column: 2 / 8;
     }
@@ -1672,6 +1668,12 @@ p {
 
 }
 
+@media only screen and (max-width: 767px) {
+    #bio_section p {
+        padding: 0;
+    }
+}
+
 @media only screen and (max-width: 750px) {
     body {
         max-width: 750px;
@@ -1692,16 +1694,7 @@ p {
         grid-template-columns: auto;
     }
 
-    /* .skill_item {
-        gap: .5rem;
-        width: 7rem;
-        height: 7rem;
-        font-size: 1rem;
-    }
-
-    .skill_item img {
-        width: 3rem;
-    } */
+    
 }
 
 @media only screen and (max-width: 700px) {
@@ -1828,6 +1821,12 @@ p {
         margin: 0 0;
         grid-template-columns: 100%;
         row-gap: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #bio_section p {
+        padding: 0 10%;
     }
 }
 
