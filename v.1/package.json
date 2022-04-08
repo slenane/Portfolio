@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Site for Stephen Lenane",
+  "main": "app.js",
+  "engines": {
+    "node": "16.13.0"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Stephen Lenane",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "csurf": "^1.11.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.3",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.14",
+    "socket.io": "^4.4.0",
+    "uuid": "^8.3.2"
+  }
+}
