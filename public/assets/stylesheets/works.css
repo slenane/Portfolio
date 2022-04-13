@@ -1,0 +1,641 @@
+/* PROJECTS */
+#project_section h2 {
+  color: var(--primary-colour);
+  margin-bottom: 5rem;
+}
+
+.project_item {
+  height: auto;
+  display: grid;
+  margin-bottom: 10rem;
+  padding: 0 8%;
+  gap: 1rem;
+  border-radius: 3px;
+}
+
+.project--goals.project_item {
+  margin-bottom: 5rem;
+}
+
+.project_item--left {
+  grid-template-columns: 50% 1fr;
+}
+
+.project_item--right {
+  grid-template-columns: 1fr 50%;
+}
+
+.project_images {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 0;
+  transition: max-height 1s;
+}
+
+.project_images img {
+  width: 100%;
+  height: auto;
+}
+
+.project_images.images_open {
+  align-content: space-around;
+}
+
+.secondary_images {
+  display: grid;
+  transition: all 1s;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.secondary_images.show_secondary_images {
+  opacity: 1;
+  max-height: 30rem;
+}
+
+.chess_gif {
+  max-height: 30rem;
+  max-width: 15rem;
+  margin: 0.5rem auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.goals_gif {
+  margin: 1rem auto;
+  max-width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project_item--left_body .project_title {
+  text-align: end;
+}
+
+.project_item--right_body .project_title {
+  text-align: left;
+}
+
+.sacred_tribe--title {
+  font-family: 'Amatic SC';
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--sacred-tribe-purple);
+}
+
+.daily_chess--title {
+  font-family: 'Spartan';
+  color: var(--daily-chess-red);
+  font-weight: 400;
+}
+
+.daily_chess--title_bold {
+  font-weight: 600;
+}
+
+.goals_title {
+  font-family: 'Spartan';
+  font-weight: 900;
+  color: var(--goals-green);
+}
+
+.project_info {
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: var(--light-mode-secondary-background);
+  position: relative;
+}
+
+.project--sacred_tribe_energy_healing .project_info {
+  border: 1px solid var(--sacred-tribe-purple);
+}
+
+.project--daily_chess_puzzle .project_info {
+  border: 1px solid var(--daily-chess-red);
+}
+
+.project--goals .project_info {
+  border: 1px solid var(--goals-green);
+}
+
+.project_item--read_more {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.project_item--read_more:hover {
+  text-decoration-style: solid;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.project_blurb {
+  max-height: 10rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  transition-delay: 0.3s;
+}
+
+.project_blurb.blurb_shrink {
+  max-height: 0;
+  opacity: 0.5;
+}
+
+.project_body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.project_body--open {
+  max-height: 70rem;
+}
+
+.project_body h4 {
+  font-size: 1.1rem;
+}
+
+.project_notable_features li {
+  list-style: initial;
+  color: var(--light-mode-secondary-font);
+}
+
+.project_notable_features ul {
+  padding-inline-start: 20px;
+}
+
+.project_links {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+}
+
+.chess_links {
+  grid-template-columns: auto auto 1fr;
+}
+
+.project_item--left_body .project_links {
+  justify-content: end;
+}
+
+.project_item--right_body .project_links {
+  justify-content: start;
+}
+
+.project_links button {
+  background: none;
+  border-radius: 3px;
+}
+
+.sacred_tribe--link {
+  border: var(--sacred-tribe-purple) 1px solid;
+  color: var(--sacred-tribe-purple);
+}
+
+.sacred_tribe--link:hover {
+  color: white;
+  background-color: var(--sacred-tribe-purple);
+}
+
+.daily_chess--link {
+  border: var(--daily-chess-red) 1px solid;
+  color: var(--daily-chess-red);
+}
+
+.daily_chess--link:hover {
+  color: white;
+  background-color: var(--daily-chess-red);
+}
+
+.goals--link {
+  border: var(--goals-green) 1px solid;
+  color: var(--goals-green);
+}
+
+.goals--link:hover {
+  color: white;
+  background-color: var(--goals-green);
+}
+
+.github_link {
+  border: var(--github-black) 1px solid;
+  color: var(--github-black);
+}
+
+.github_link:hover {
+  color: white;
+  background-color: var(--github-black);
+}
+
+.chess_com_link {
+  border: var(--chess-com-green) 1px solid;
+  color: var(--chess-com-green);
+}
+
+.chess_com_link img {
+  height: 1.3rem;
+  padding-bottom: 0.2rem;
+}
+
+.chess_com_link:hover {
+  color: white;
+  background-color: var(--chess-com-green);
+}
+
+.project_stack {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-height: 5rem;
+  transition: all 0.5s;
+}
+
+.project_stack:hover {
+  transform: scaleX(1.03);
+}
+
+.hide_stack {
+  transition: all 1s;
+  opacity: 0;
+  max-height: 0;
+}
+
+.sacred-tribe_stack {
+  grid-template-columns: repeat(11, auto);
+}
+
+.daily-chess_stack {
+  grid-template-columns: repeat(8, auto);
+}
+
+.goals_stack {
+  grid-template-columns: repeat(8, auto);
+}
+
+.code_bracket {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--light-mode-main-font);
+}
+
+.project_stack--item {
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project_stack img {
+  width: 100%;
+  max-height: 2rem;
+  padding-bottom: 0.1rem;
+}
+
+.project_stack--item:hover {
+  transform: translateY(-20%);
+}
+
+.project_stack--description {
+  position: absolute;
+  bottom: 3rem;
+  width: 30rem;
+  height: auto;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: white;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  cursor: initial;
+}
+
+.sacred-tribe_stack .project_stack--description,
+.goals_stack .project_stack--description {
+  right: -100%;
+}
+
+.daily-chess_stack .project_stack--description {
+  left: -100%;
+}
+
+.sacred-tribe_stack .description_large,
+.goals_stack .description_large {
+  right: -15rem;
+}
+
+.daily-chess_stack .description_large {
+  left: -15rem;
+}
+
+.description_large {
+  bottom: 4rem;
+  right: -14rem;
+}
+
+.project_stack--description h4 {
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.3rem;
+}
+
+.project_stack--item:hover .project_stack--description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project_open--stack {
+  grid-column: 1 /-1;
+  margin-top: 2rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project_open--stack img {
+  max-width: 3rem;
+}
+
+.project_open--stack.bouncing_icon .project_stack--item.bounce {
+  animation: bounce 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  25% {
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-20%);
+  }
+}
+
+.project_open--stack .code_bracket {
+  font-size: 3rem;
+}
+
+.project_open--stack.show_large_stack {
+  display: grid;
+}
+
+/* MIN WIDTH MEDIA QUERIES */
+
+@media (min-width: 1500px) {
+  .project_item {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .project_item--left {
+    grid-template-columns: 45% 1fr;
+  }
+  .project_item--right {
+    grid-template-columns: 1fr 45%;
+  }
+  .project_item {
+    padding: 0 15%;
+  }
+}
+
+/* MAX WIDTH MEDIA QUERIES */
+
+@media (max-width: 1300px) {
+  .project_item {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .description_large--left {
+    right: -20rem !important;
+  }
+
+  .description_large--right {
+    right: -8rem !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .project_item--left {
+    grid-template-columns: 45% 1fr;
+  }
+
+  .project_item--right {
+    grid-template-columns: 1fr 45%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project_body--open {
+    max-height: 100rem;
+  }
+
+  .project_item--left {
+    grid-template-columns: 40% 1fr;
+  }
+
+  .project_item--right {
+    grid-template-columns: 1fr 40%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .project_open--stack .code_bracket,
+  .code_bracket {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .project_item {
+    grid-template-columns: auto;
+    padding: 0 8rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .project_item--right_body {
+    order: 2;
+  }
+
+  .project_open--stack {
+    order: 3;
+  }
+
+  .project_images {
+    justify-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .project_images.images_open {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .project_image--main {
+    grid-column: 1 / -1;
+  }
+
+  .chess_gif {
+    max-height: 15rem;
+    max-width: 10rem;
+    margin: 0.1rem 2rem;
+  }
+
+  .project_open--stack img,
+  .project_stack img {
+    max-height: 2.5rem;
+  }
+
+  .show_secondary_images {
+    margin-top: 2rem;
+  }
+
+  .project_open--stack,
+  .project_stack {
+    gap: 1.5rem;
+  }
+
+  .sacred-tribe_stack .project_stack--description,
+  .goals_stack .project_stack--description,
+  .daily-chess_stack .project_stack--description,
+  .sacred-tribe_stack .description_large,
+  .goals_stack .description_large,
+  .daily-chess_stack .description_large {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px !important;
+    opacity: 0;
+    left: 0;
+    width: 80vw;
+  }
+
+  .description_large {
+    bottom: 4rem;
+  }
+
+  .project_open--stack .code_bracket,
+  .code_bracket {
+    font-size: 2.5rem;
+  }
+
+  .project_open--stack {
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  .project_open--stack img {
+    width: 100%;
+    max-height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .project_item {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .works_header {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project_item {
+    padding: 0 5%;
+  }
+
+  .project_image--main {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project_open--stack,
+  .project_stack {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .project_item {
+    margin-bottom: 6rem;
+  }
+
+  .project_images {
+    margin-bottom: 1rem;
+  }
+
+  .chess_gif {
+    max-height: 10rem;
+    max-width: 6.5rem;
+    margin: 0.1rem 1rem;
+  }
+
+  .project_title {
+    font-size: 1.3rem;
+  }
+
+  .sacred_tribe--title {
+    font-size: 2rem;
+  }
+
+  .project_open--stack,
+  .project_stack {
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-top: 0.7rem;
+  }
+
+  .project_item {
+    gap: 0.5rem;
+  }
+
+  .project_open--stack img,
+  .project_stack img {
+    max-height: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project_open--stack .code_bracket,
+  .code_bracket {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project_item {
+    padding: 0 3%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .chess_links {
+    grid-template-columns: auto auto;
+  }
+
+  .chess--challenge_link {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .works_header {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+  }
+
+  .project_open--stack,
+  .project_stack {
+    gap: 0.5rem;
+  }
+}

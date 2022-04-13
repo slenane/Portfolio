@@ -1,0 +1,175 @@
+/* SKILLSET */
+#skillset_section {
+  background-color: var(--primary-colour);
+}
+
+.skillset--sub_grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+}
+
+#skillset_section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--light-mode-main-background);
+}
+
+#skillset_section ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+#skillset_section ul {
+  margin-bottom: 2rem;
+}
+
+#skillset_section ul {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skillset--frontend {
+  grid-template-columns: repeat(4, auto);
+}
+
+.skillset--backend {
+  grid-template-columns: repeat(5, auto);
+}
+
+.skillset--general {
+  grid-template-columns: repeat(4, auto);
+}
+
+.skillset--languages {
+  grid-template-columns: repeat(2, auto);
+}
+
+.skillset--learning {
+  grid-template-columns: repeat(3, auto);
+}
+
+.skill_item {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 5px;
+  background-color: var(--light-mode-secondary-background);
+}
+
+.skill_item img {
+  width: 3rem;
+}
+
+.skill_item p {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* MAX WIDTH MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .skill_item {
+    gap: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    font-size: 0.9rem;
+  }
+
+  .skill_item img {
+    width: 2.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skill_item {
+    gap: 0.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 0.8rem;
+  }
+
+  .skill_item img {
+    width: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .skill_item {
+    gap: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 0.8rem;
+  }
+
+  .skill_item img {
+    width: 2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .skills_header {
+    font-size: 2.5rem;
+  }
+
+  .skillset--general {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .skillset--sub_grid {
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #skillset_section ul {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #skillset_section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  /* 
+    .skill_item {
+        gap: .5rem;
+        width: 6rem;
+        height: 6rem;
+        font-size: .9rem;
+    }
+
+    .skill_item img {
+        width: 2.5rem;
+    } */
+}
+
+@media only screen and (max-width: 450px) {
+  .skill_item {
+    gap: 0.3rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.6rem;
+  }
+
+  .skill_item img {
+    width: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .skills_header {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+  }
+}
