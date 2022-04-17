@@ -2,11 +2,11 @@
   <!-- NAVBAR -->
   <nav class="navbar fixed-top navbar-expand-md navbar-light pt-0 mt-0">
     <a class="navbar-brand" href="/" aria-label="Brand">
-      <img
+      <!-- <img
         class="navbar-brand_image"
         src="/assets/images/logo/logo-white.png"
         alt="Stephen Lenane Logo"
-      />
+      /> -->
     </a>
     <button
       class="navbar-toggler"
@@ -23,11 +23,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-label="Bio Section" href="#bio_section"
-            >Bio</a
+          <a
+            class="nav-link"
+            aria-label="Bio Section"
+            target="_blank"
+            href="https://slenane.github.io/CV/"
+            >CV</a
           >
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a
             class="nav-link"
             aria-label="What I Do Section"
@@ -56,16 +60,29 @@
             href="#contact_section"
             >Contact</a
           >
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
 
-  <!-- 
-  <div class="theme_div">
-      <img src="/assets/images/icons/sun.png" alt="Light mode icon">
-      <img src="/assets/images/icons/disco.png" alt="Dark mode icon"> 
-  </div> -->
+  <div class="hero-options">
+    <div class="theme-switcher">
+      <div class="current-theme">
+        <img src="/assets/images/icons/sun2.png" alt="" />
+      </div>
+      <div class="hidden-theme option-hidden">
+        <img src="/assets/images/icons/moon.png" alt="" />
+      </div>
+    </div>
+    <div class="language-switcher">
+      <div class="current-language">
+        <img src="/assets/images/icons/united-kingdom-circle.png" alt="" />
+      </div>
+      <div class="hidden-language option-hidden">
+        <img src="/assets/images/icons/spain-circle.png" alt="" />
+      </div>
+    </div>
+  </div>
 
   <div class="hero_body">
     <h1 class="hero--header">Stephen Lenane</h1>
@@ -89,7 +106,7 @@
             rel="noreferrer"
             class="hero_contact--link"
             href="https://github.com/slenane"
-            ><img src="/assets/images/icons/github.png" alt="GitHub Logo"
+            ><img src="/assets/images/icons/github-link.png" alt="GitHub Logo"
           /></a>
           <a
             target="_blank"
@@ -102,7 +119,11 @@
               alt="Linkedin Logo"
           /></a>
         </div>
-        <a href="#contact_section" aria-label="Hire Me Button">
+        <a
+          href="#contact_section"
+          class="blue-button"
+          aria-label="Hire Me Button"
+        >
           <button type="button" class="btn hero--buttons hire_me--button">
             HIRE ME
           </button>

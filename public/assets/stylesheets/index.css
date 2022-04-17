@@ -15,8 +15,8 @@
   --light-mode-main-background: #fbfaff;
   --light-mode-secondary-background: #ffffff;
 
-  --dark-mode-main-background: #282a2c;
-  --dark-mode-secondary-background: #343739;
+  --dark-mode-main-background: #121212;
+  --dark-mode-secondary-background: #1e1e1e;
 
   --primary-colour: #efb45c;
   --secondary-colour: #1d6aa3;
@@ -39,7 +39,7 @@
 /* GENERAL */
 html,
 body {
-  font-family: 'Segoe UI';
+  font-family: 'Montserrat';
 }
 
 html {
@@ -49,7 +49,6 @@ html {
 body {
   background-color: var(--light-mode-main-background);
   color: var(--light-mode-main-font);
-  width: auto;
 }
 
 h2,
