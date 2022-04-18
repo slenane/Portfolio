@@ -1,20 +1,179 @@
-<!-- HEADER -->
-<%- include('./partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web Developer Portfolio - Stephen Lenane"
+    />
+    <meta
+      name="keywords"
+      content="Web Development, Web Developer, Web Design, SEO, Responsive, Works, Skill Set, Contact"
+    />
+    <meta name="author" content="Stephen Lenane" />
 
-<!-- HERO -->
-<%- include('./hero.ejs') %>
+    <title>Stephen Lenane</title>
 
-<!-- WHAT I DO -->
-<%- include('./what-i-do.ejs') %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4K1WY5QT47"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <script nonce="<%=randomNonce%>">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-<!-- WORKS -->
-<%- include('./works.ejs') %>
+      gtag('config', 'G-4K1WY5QT47');
+    </script>
 
-<!-- SKILLS -->
-<%- include('./skills.ejs') %>
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Spartan:wght@400;600;900&family=Montserrat:wght@600;700;900&&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/index.css" />
+    <!-- HERO STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/hero.css" />
+    <!-- WHAT I DO STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/what-i-do.css" />
+    <!-- WORKS STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/works.css" />
+    <!-- SKILLS STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/skills.css" />
+    <!-- CONTACT STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/contact.css" />
+    <!-- FOOTER STYLESHEET -->
+    <link rel="stylesheet" href="/assets/stylesheets/footer.css" />
+  </head>
+  <body>
+    <div id="content-wrapper">
+      <!-- HERO -->
+      <%- include('./hero.ejs') %>
 
-<!-- CONTACT -->
-<%- include('./contact.ejs') %>
+      <!-- WHAT I DO -->
+      <%- include('./what-i-do.ejs') %>
 
-<!-- FOOTER -->
-<%- include('./partials/footer.ejs') %>
+      <!-- SKILLS -->
+      <%- include('./skills.ejs') %>
+
+      <!-- CONTACT -->
+      <%- include('./contact.ejs') %>
+    </div>
+    <!-- End of content wrapper -->
+
+    <div id="footer">
+      <div class="footer--links">
+        <a
+          target="_blank"
+          aria-label="View my CV"
+          rel="noreferrer"
+          href="https://slenane.github.io/CV/"
+          ><img
+            class="cv--link"
+            src="/assets/images/icons/cv-dark.png"
+            alt="CV Link"
+        /></a>
+        <a
+          target="_blank"
+          aria-label="View my GitHub profile"
+          rel="noreferrer"
+          href="https://github.com/slenane"
+          ><img
+            class="github--link"
+            src="/assets/images/icons/github-dark.png"
+            alt="GitHub Logo"
+        /></a>
+        <a
+          target="_blank"
+          aria-label="View my Linkedin profile"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/stephen-lenane-6756a0228/"
+          ><img
+            class="linkedin--link"
+            src="/assets/images/icons/linkedin-dark.png"
+            alt="Linkedin Logo"
+        /></a>
+      </div>
+      <div class="footer--copyright">
+        <small>Copyright &copy; 2021, Stephen Lenane</small>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <!-- SOCKET.IO -->
+    <script src="/socket.io/socket.io.js" nonce="<%=randomNonce%>"></script>
+    <!-- NAVBAR -->
+    <script
+      src="/assets/javascripts/navbar.js"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <!-- THEME -->
+    <script
+      src="/assets/javascripts/theme.js"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <!-- LANGUAGE -->
+    <script
+      src="/assets/javascripts/language.js"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <!-- WORKS -->
+    <script
+      src="/assets/javascripts/works.js"
+      nonce="<%=randomNonce%>"
+    ></script>
+    <!-- CONTACT -->
+    <script
+      src="/assets/javascripts/contact.js"
+      nonce="<%=randomNonce%>"
+    ></script>
+  </body>
+</html>

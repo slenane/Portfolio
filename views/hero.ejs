@@ -4,7 +4,7 @@
     <a class="navbar-brand" href="/" aria-label="Brand">
       <!-- <img
         class="navbar-brand_image"
-        src="/assets/images/logo/logo-white.png"
+        src="/assets/images/icons/avatar-sm.webp"
         alt="Stephen Lenane Logo"
       /> -->
     </a>
@@ -17,7 +17,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -67,20 +67,28 @@
 
   <div class="hero-options">
     <div class="theme-switcher">
-      <div class="current-theme">
-        <img src="/assets/images/icons/sun2.png" alt="" />
-      </div>
-      <div class="hidden-theme option-hidden">
-        <img src="/assets/images/icons/moon.png" alt="" />
-      </div>
+      <img
+        class="dark-mode"
+        src="/assets/images/icons/dark-mode.png"
+        alt="Dark mode icon"
+      />
+      <img
+        class="light-mode hide"
+        src="/assets/images/icons/light-mode.png"
+        alt="Light mode icon"
+      />
     </div>
     <div class="language-switcher">
-      <div class="current-language">
-        <img src="/assets/images/icons/united-kingdom-circle.png" alt="" />
-      </div>
-      <div class="hidden-language option-hidden">
-        <img src="/assets/images/icons/spain-circle.png" alt="" />
-      </div>
+      <img
+        class="lang-english"
+        src="/assets/images/icons/uk-circle.png"
+        alt="English language icon"
+      />
+      <img
+        class="lang-spanish hide-language"
+        src="/assets/images/icons/spain-circle.png"
+        alt="Spanish language icon"
+      />
     </div>
   </div>
 
@@ -90,15 +98,19 @@
       <div class="hero_grid">
         <p class="hero--subheader">
           Front-end developer from Ireland based in Lisbon, Portugal
+          <i class="fa fa-regular fa-sun-bright"></i>
         </p>
         <div class="hero_grid--links">
           <a
             target="_blank"
-            aria-label="View my GitHub profile"
+            aria-label="View my CV"
             rel="noreferrer"
             class="hero_contact--link"
             href="https://slenane.github.io/CV/"
-            ><img src="/assets/images/icons/cv.png" alt="CV Link"
+            ><img
+              class="cv--link"
+              src="/assets/images/icons/cv-light.png"
+              alt="CV Link"
           /></a>
           <a
             target="_blank"
@@ -106,7 +118,10 @@
             rel="noreferrer"
             class="hero_contact--link"
             href="https://github.com/slenane"
-            ><img src="/assets/images/icons/github-link.png" alt="GitHub Logo"
+            ><img
+              class="github--link"
+              src="/assets/images/icons/github-light.png"
+              alt="GitHub Logo"
           /></a>
           <a
             target="_blank"
@@ -114,19 +129,15 @@
             rel="noreferrer"
             class="hero_contact--link"
             href="https://www.linkedin.com/in/stephen-lenane-6756a0228/"
-            ><img
-              src="/assets/images/icons/linkedin-circle.png"
+          >
+            <img
+              class="linkedin--link"
+              src="/assets/images/icons/linkedin-light.png"
               alt="Linkedin Logo"
           /></a>
         </div>
-        <a
-          href="#contact_section"
-          class="blue-button"
-          aria-label="Hire Me Button"
-        >
-          <button type="button" class="btn hero--buttons hire_me--button">
-            HIRE ME
-          </button>
+        <a href="#contact_section" aria-label="Hire Me Button">
+          <button type="button" class="btn blue-button">HIRE ME</button>
         </a>
       </div>
     </div>

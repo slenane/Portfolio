@@ -1,7 +1,7 @@
 /* HERO */
 #hero_section {
   height: 40rem;
-  background-image: url('/assets/images/avatar.webp');
+  background-image: url('/assets/images/icons/avatar.webp');
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 100%;
