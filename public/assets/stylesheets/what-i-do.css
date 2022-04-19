@@ -1,16 +1,8 @@
-#what-i-do_section {
-  margin-top: 5rem;
-}
-
-.what-i-do_header {
-  text-align: center;
-  margin: 1rem auto;
-}
-
 .what_i_do--grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  padding: 0 5%;
 }
 
 .what_i_do--grid_item {
@@ -27,22 +19,20 @@
   box-shadow: var(--icon-shadow);
   content: '';
   border-radius: 10px;
-  top: 8px;
-  left: 8px;
-  bottom: -8px;
-  right: -8px;
+  top: 5px;
+  left: 5px;
+  bottom: -5px;
+  right: -5px;
   z-index: -1;
 }
 
 .what_i_do--grid_item img {
   display: block;
   margin: 0 auto;
-  width: 30%;
+  width: 20%;
 }
 
 .what_i_do--grid_item h3 {
-  font-size: 1.3rem;
-  text-align: center;
   margin-top: 8px;
 }
 

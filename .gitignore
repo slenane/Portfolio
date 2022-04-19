@@ -1,10 +1,9 @@
 node_modules
 .env
 ideas
-cv
-navbar-temp.js
 contact-temp.css
 skills-temp.css
 what-i-do-temp.css
 hero-temp.css
-temp.ejs
+works-temp.css
+works-temp.js

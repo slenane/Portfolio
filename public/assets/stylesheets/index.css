@@ -3,25 +3,72 @@
 }
 
 /* VARIABLES */
-:root {
-  /* COLOR PALETTE */
-  --primary-color: #efb45d;
-  --secondary-color: #1d6aa3;
-  --accent-color: #5bb0f0;
-  /* WORKS STYLES */
-  /* --sacred-tribe-purple: #602f78;
+/* :root { */
+/* WORKS STYLES */
+/* --sacred-tribe-purple: #602f78;
   --daily-chess-red: #8f3016;
   --goals-green: #3b8038;
   --github-black: #333;
   --chess-com-green: #5b9e46; */
-}
+/* } */
+
 /* Light Mode */
 html[data-theme='light'] {
   --primary-background-color: #fbfaff;
   --secondary-background-color: #ffffff;
   --primary-text-color: #28292b;
   --secondary-text-color: #555657;
-  --icon-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --icon-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  /* COLOR PALETTE */
+  --primary-color: #efb45d;
+  --secondary-color: #1d6aa3;
+  --accent-color: #5bb0f0;
+}
+
+/* MAIN BUTTON */
+html[data-theme='light'] .hire-me-button {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  padding: 20px 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+html[data-theme='light'] .hire-me-button::before {
+  position: absolute;
+  background-color: var(--primary-color);
+  box-shadow: var(--icon-shadow);
+  content: '';
+  top: 5px;
+  left: 5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+html[data-theme='light'] .works-view-site-button,
+html[data-theme='light'] .contact-submit-button {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+html[data-theme='light'] .works-github-button {
+  text-align: center;
+  background-color: var(--primary-text-color);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 /* Dark Mode */
@@ -31,6 +78,59 @@ html[data-theme='dark'] {
   --primary-text-color: #f3f3f3;
   --secondary-text-color: #8e8e91;
   --icon-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+
+  /* COLOR PALETTE */
+  --primary-color: #d69b44;
+  --secondary-color: #04518a;
+  --accent-color: #5bb0f0;
+}
+
+html[data-theme='dark'] .hire-me-button {
+  text-align: center;
+  background-color: var(--secondary-background-color);
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+  padding: 20px 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+html[data-theme='dark'] .hire-me-button::before {
+  position: absolute;
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--icon-shadow);
+  content: '';
+  top: 5px;
+  left: 5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+html[data-theme='dark'] .works-view-site-button,
+html[data-theme='dark'] .contact-submit-button {
+  text-align: center;
+  background-color: var(--secondary-background-color);
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+html[data-theme='dark'] .works-github-button {
+  text-align: center;
+  background-color: var(--secondary-background-color);
+  border: 2px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 /* GENERAL */
@@ -57,37 +157,31 @@ h3,
 h4,
 h5,
 h6 {
+  text-align: center;
   color: var(--primary-text-color);
 }
 
-p {
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p,
+li {
   color: var(--secondary-text-color);
+}
+
+.section {
+  margin-top: 4rem;
 }
 
 .hide {
   display: none !important;
-}
-
-/* MAIN BUTTON */
-.blue-button {
-  text-align: center;
-  background-color: var(--secondary-color);
-  color: white;
-  font-weight: 700;
-  padding: 20px 30px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.blue-button::before {
-  position: absolute;
-  background-color: var(--primary-color);
-  box-shadow: var(--icon-shadow);
-  content: '';
-  top: 8px;
-  left: 8px;
-  right: -8px;
-  bottom: -8px;
-  z-index: -1;
-  border-radius: 10px;
 }

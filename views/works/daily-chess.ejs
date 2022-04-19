@@ -1,0 +1,174 @@
+<div class="project--daily_chess_puzzle project_item project_item--right">
+  <h3 class="project_title">Daily Chess Puzzle</h3>
+  <div class="project_images">
+    <img
+      class="project_image--main"
+      loading="lazy"
+      src="/assets/images/chess/daily-chess-puzzle.png"
+      alt="Daily Chess Puzzle Preview"
+    />
+  </div>
+  <div class="project_info">
+    <p class="project_blurb">
+      Daily Chess Puzzle chrome extension allows users to solve chess.com's
+      daily puzzle directly from the browser. It also gives users unlimited
+      access to the daily puzzle archives for free. Daily Chess Puzzle currently
+      has 100+ weekly users.
+    </p>
+
+    <div class="project_body">
+      <div class="project_description">
+        <h4>Description</h4>
+        <p>
+          Most chess experts claim that solving chess puzzles is the most
+          effective chess training method to improve your chess skills. So I
+          wanted to develop a free chrome extension that would allow the user to
+          improve their chess conveniently from the browser.
+        </p>
+      </div>
+
+      <div class="project_images">
+        <img
+          loading="lazy"
+          src="/assets/images/chess/daily-chess.gif"
+          alt="Daily Chess Gif Preview"
+        />
+      </div>
+
+      <div class="project_difficulties">
+        <h4>Difficulties</h4>
+        <p>
+          Most chess application require a paid membership to have unlimited
+          access to puzzles. So I needed to find a way to import the puzzle data
+          for free. Puzzle data is in PGN format so this data would then need to
+          be parsed and divided into individual moves. All potential moves
+          needed to be incorporated, for example, castling on both sides and
+          pawn promotion. It also needed to look familiar and function similarly
+          to the major chess sites so users would be comfortable using it
+          immediately.
+        </p>
+      </div>
+
+      <div class="project_images">
+        <img
+          loading="lazy"
+          src="/assets/images/chess/daily-chess-puzzle2.png"
+          alt="Chess puzzle sample image"
+        />
+      </div>
+
+      <div class="project_solutions">
+        <h4>Solutions</h4>
+        <p>
+          chess.com's chess-web-api provided the data for their daily puzzle in
+          PGN notation. This data was parsed and separated into individual moves
+          with regular expressions. chessboard.js was used to generate the
+          chessboard with moveable pieces and chess.js was used for the chess
+          logic and rules. With chess.js, you can view the current position in
+          PGN notation. Using these three packages I was able to set the
+          starting position and allow the user to make a move, the PGN of which
+          was then compared to the expected value. If the move matched, the
+          puzzle continued. If not, the user is shown an incorrect move message
+          and asked to try again. The style and controls were made to match
+          chess.com for familiarity. The chess-web-api also releases the
+          notation for a random daily puzzle from the archives, which updates
+          every 15 seconds allowing unlimited free access to past puzzles.
+        </p>
+      </div>
+
+      <div class="project_notable_features">
+        <h4>Notable Features</h4>
+        <ul>
+          <li>Unlimited free puzzles</li>
+          <li>Direct access from the browser</li>
+          <li>Familiar chess.com style</li>
+          <li>No membership/subscription necessary</li>
+          <li>Hints, solution, reset and rotate board buttons</li>
+          <li>Direct links to chess.com for more information</li>
+        </ul>
+      </div>
+
+      <!-- Project stack -->
+      <div class="project-stack--container">
+        <h4>Project Stack</h4>
+
+        <div class="project_stack daily-chess_stack">
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/html5.png"
+            alt="HTML Logo"
+          />
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/css3.png"
+            alt="CSS Logo"
+          />
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/javascript.png"
+            alt="JavaScript Logo"
+          />
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/nodejs.png"
+            alt="Node.js Logo"
+          />
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/webpack.png"
+            alt="Webpack Logo"
+          />
+          <img
+            class="project_stack--icon"
+            loading="lazy"
+            src="/assets/images/icons/chesscom.png"
+            alt="chess.com Logo"
+          />
+        </div>
+      </div>
+      <!-- End of Project stack -->
+    </div>
+    <!-- End of project body -->
+
+    <p class="project_item--read_more closed">Read more</p>
+
+    <!-- Project links -->
+    <div class="project_links">
+      <a
+        target="_blank"
+        aria-label="View Daily Chess Puzzle"
+        rel="noreferrer"
+        href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=en"
+        ><button type="button" class="btn works-view-site-button">
+          View Extension
+        </button></a
+      >
+      <a
+        target="_blank"
+        aria-label="View the Daily Chess Puzzle GitHub Repo"
+        rel="noreferrer"
+        href="https://github.com/slenane/Chess-Daily-Puzzle"
+        ><button type="button" class="btn works-github-button">
+          <i class="fab fa-github"></i> GitHub
+        </button></a
+      >
+      <a
+        target="_blank"
+        aria-label="Challenge me on chess.com"
+        rel="noreferrer"
+        href="https://www.chess.com/member/lovelycarbonara"
+        class="chess--challenge_link hide"
+        ><button type="button" class="btn chess_com_link">
+          <img src="/assets/images/icons/chesscom.png" alt="" /> Challenge me!
+        </button></a
+      >
+    </div>
+    <!-- End of project links -->
+  </div>
+  <!-- End of project info -->
+</div>

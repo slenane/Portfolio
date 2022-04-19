@@ -3,12 +3,26 @@
   background-image: url('/assets/images/icons/avatar.webp');
   background-repeat: no-repeat;
   background-position: 50% 20%;
-  background-size: 70%;
+  background-size: 60%;
+}
+
+.navbar {
+  transition: all 0.5s;
+}
+
+.navbar.display-navbar {
+  background-color: var(--secondary-background-color);
+  box-shadow: var(--icon-shadow);
 }
 
 .navbar-brand_image {
   margin-left: 1rem;
   width: 2rem;
+  visibility: hidden;
+}
+
+.display-brand {
+  visibility: visible;
 }
 
 .navbar-toggler,
@@ -35,7 +49,7 @@
 
 .hero-options div {
   display: grid;
-  grid-template-columns: repeat(2, 48px);
+  grid-template-columns: repeat(2, 42px);
   gap: 2px;
 }
 
@@ -47,15 +61,15 @@
   background-color: var(--secondary-background-color);
   padding: 8px;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
   margin: 0 auto;
   box-shadow: var(--icon-shadow);
 }
 
 .language-switcher img {
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
   box-shadow: var(--icon-shadow);
   transform: translateX(0px);
@@ -65,13 +79,13 @@
 
 .language-switcher img.hide-language {
   visibility: hidden;
-  transform: translateX(-50px);
+  transform: translateX(-44px);
   box-shadow: none;
   z-index: 1;
 }
 
 .language-switcher img:nth-of-type(2).selected-language {
-  transform: translateX(-50px);
+  transform: translateX(-44px);
   box-shadow: none;
   z-index: 8;
 }

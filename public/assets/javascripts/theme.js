@@ -9,6 +9,8 @@ let responsiveImg = document.querySelector('.res-img');
 let seoImg = document.querySelector('.seo-img');
 let eCommerceImg = document.querySelector('.e-com-img');
 
+let heroSection = document.querySelector('#hero_section');
+
 // Update theme and images
 let updateTheme = (theme) => {
   if (theme === 'dark') {
@@ -39,9 +41,11 @@ let updateTheme = (theme) => {
 };
 
 // If the user has a preference for light or dark - set to preference
-let preference = window.matchMedia('(prefers-color-scheme: dark)').matches
-  ? 'dark'
-  : 'light';
+let preference =
+  localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light');
 
 if (preference) {
   document.documentElement.setAttribute('data-theme', preference);
@@ -58,5 +62,10 @@ themeSwitcher.forEach((icon) =>
 
     document.documentElement.setAttribute('data-theme', targetTheme);
     targetTheme === 'light' ? updateTheme('light') : updateTheme('dark');
+    localStorage.setItem('theme', targetTheme);
   })
 );
+
+window.addEventListener('load', () => {
+  heroSection.classList.add('animation-on-load');
+});
