@@ -116,6 +116,7 @@
 }
 
 .form-check-label {
+  text-align: center;
   transform: translateX(-15px);
   font-size: 0.9rem;
 }

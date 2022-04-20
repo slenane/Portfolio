@@ -8,8 +8,11 @@ let developDesignImg = document.querySelector('.des-dev-img');
 let responsiveImg = document.querySelector('.res-img');
 let seoImg = document.querySelector('.seo-img');
 let eCommerceImg = document.querySelector('.e-com-img');
-
-let heroSection = document.querySelector('#hero_section');
+let htmlIcon = document.querySelectorAll('.html-icon');
+let cssIcon = document.querySelectorAll('.css-icon');
+let nodeIcon = document.querySelectorAll('.nodejs-icon');
+let expressIcon = document.querySelectorAll('.express-icon');
+let githubIcon = document.querySelector('.github-icon');
 
 // Update theme and images
 let updateTheme = (theme) => {
@@ -18,25 +21,41 @@ let updateTheme = (theme) => {
     lightModeIcon.classList.remove('hide');
     darkModeIcon.classList.add('hide');
     // Update Icons
-    cv.src = '/assets/images/icons/cv-dark.png';
     github.src = '/assets/images/icons/github-dark.png';
-    linkedin.src = '/assets/images/icons/linkedin-dark.png';
     developDesignImg.src = '/assets/images/icons/design-develop-dark.png';
     responsiveImg.src = '/assets/images/icons/responsive-dark.png';
     seoImg.src = '/assets/images/icons/seo-dark.png';
     eCommerceImg.src = '/assets/images/icons/ecommerce-dark.png';
+    htmlIcon.forEach(
+      (icon) => (icon.src = '/assets/images/icons/html5-dark.png')
+    );
+    cssIcon.forEach(
+      (icon) => (icon.src = '/assets/images/icons/css3-dark.png')
+    );
+    nodeIcon.forEach(
+      (icon) => (icon.src = '/assets/images/icons/nodejs-dark.png')
+    );
+    expressIcon.forEach(
+      (icon) => (icon.src = '/assets/images/icons/express-dark.png')
+    );
+    githubIcon.src = '/assets/images/icons/github-dark.png';
   } else {
     // Update the icon
     darkModeIcon.classList.remove('hide');
     lightModeIcon.classList.add('hide');
     // Update Icons
-    cv.src = '/assets/images/icons/cv-light.png';
-    github.src = '/assets/images/icons/github-light.png';
-    linkedin.src = '/assets/images/icons/linkedin-light.png';
+    github.src = '/assets/images/icons/github.png';
     developDesignImg.src = '/assets/images/icons/design-develop-light.png';
     responsiveImg.src = '/assets/images/icons/responsive-light.png';
     seoImg.src = '/assets/images/icons/seo-light.png';
     eCommerceImg.src = '/assets/images/icons/ecommerce-light.png';
+    htmlIcon.forEach((icon) => (icon.src = '/assets/images/icons/html5.png'));
+    cssIcon.forEach((icon) => (icon.src = '/assets/images/icons/css3.png'));
+    nodeIcon.forEach((icon) => (icon.src = '/assets/images/icons/nodejs.png'));
+    expressIcon.forEach(
+      (icon) => (icon.src = '/assets/images/icons/express.png')
+    );
+    githubIcon.src = '/assets/images/icons/github.png';
   }
 };
 
@@ -65,7 +84,3 @@ themeSwitcher.forEach((icon) =>
     localStorage.setItem('theme', targetTheme);
   })
 );
-
-window.addEventListener('load', () => {
-  heroSection.classList.add('animation-on-load');
-});

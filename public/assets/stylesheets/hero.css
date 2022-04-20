@@ -18,14 +18,14 @@
 .navbar-brand_image {
   margin-left: 1rem;
   width: 2rem;
-  visibility: hidden;
+  display: none;
 }
 
 .display-brand {
-  visibility: visible;
+  display: block;
 }
 
-.navbar-toggler,
+/* .navbar-toggler,
 .navbar-toggler:focus {
   border: none;
   outline: none;
@@ -37,20 +37,44 @@
   color: var(--primary-text-color);
   text-align: end;
   padding-top: 0.5rem;
+} */
+
+.navbar-nav.ml-auto {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.nav-cv,
+.nav-email {
+  font-size: 0.9rem;
+  display: none;
+}
+
+.nav-cv a,
+.nav-email a {
+  color: var(--primary-text-color);
+}
+
+.display-nav-cv,
+.display-nav-email {
+  display: block;
 }
 
 .hero-options {
   position: absolute;
-  top: 8%;
-  left: 5%;
+  top: 5%;
+  right: 5%;
   display: grid;
+  direction: rtl;
   grid-template-columns: auto;
 }
 
 .hero-options div {
   display: grid;
   grid-template-columns: repeat(2, 42px);
-  gap: 2px;
+  gap: 5px;
 }
 
 .theme-switcher {
@@ -72,22 +96,26 @@
   width: 42px;
   border-radius: 50%;
   box-shadow: var(--icon-shadow);
-  transform: translateX(0px);
-  transition: all 0.5s;
-  z-index: 5;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1;
 }
 
-.language-switcher img.hide-language {
+.language-switcher img.active {
+  z-index: 2;
+}
+
+.language-switcher img:nth-of-type(2) {
   visibility: hidden;
-  transform: translateX(-44px);
+  right: -47px;
   box-shadow: none;
   z-index: 1;
 }
 
-.language-switcher img:nth-of-type(2).selected-language {
-  transform: translateX(-44px);
-  box-shadow: none;
-  z-index: 8;
+.language-switcher.options-open img:nth-of-type(2) {
+  visibility: visible;
+  right: 0;
+  z-index: 1;
 }
 
 .hero_body {
@@ -107,7 +135,7 @@
 
 .hero_grid--links {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 48px);
   justify-content: center;
   gap: 1.5rem;
   margin: 2rem auto;
@@ -115,5 +143,9 @@
 
 .hero_grid--links img {
   border-radius: 50%;
-  box-shadow: var(--icon-shadow);
+  height: 48px;
+}
+
+html[data-theme='dark'] .hero_grid--links img {
+  border: 2px solid white;
 }
