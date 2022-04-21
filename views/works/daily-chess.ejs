@@ -9,17 +9,17 @@
     />
   </div>
   <div class="project_info">
-    <p class="project_blurb">
+    <p class="project_blurb" data-i18n-key="dc-blurb">
       Daily Chess Puzzle chrome extension allows users to solve chess.com's
       daily puzzle directly from the browser. It also gives users unlimited
       access to the daily puzzle archives for free. Daily Chess Puzzle currently
-      has ~150 weekly users.
+      has ~150 weekly users
     </p>
 
     <div class="project_body">
       <div class="project_description">
-        <h4>Description</h4>
-        <p>
+        <h4 data-i18n-key="description">Description</h4>
+        <p data-i18n-key="dc-description">
           Most chess experts claim that solving chess puzzles is the most
           effective chess training method to improve your chess skills. So I
           wanted to develop a free chrome extension that would allow the user to
@@ -36,8 +36,8 @@
       </div>
 
       <div class="project_difficulties">
-        <h4>Difficulties</h4>
-        <p>
+        <h4 data-i18n-key="difficulties">Difficulties</h4>
+        <p data-i18n-key="dc-difficulties">
           Most chess application require a paid membership to have unlimited
           access to puzzles. So I needed to find a way to import the puzzle data
           for free. Puzzle data is in PGN format so this data would then need to
@@ -58,8 +58,8 @@
       </div>
 
       <div class="project_solutions">
-        <h4>Solutions</h4>
-        <p>
+        <h4 data-i18n-key="solutions">Solutions</h4>
+        <p data-i18n-key="dc-solutions">
           chess.com's chess-web-api provided the data for their daily puzzle in
           PGN notation. This data was parsed and separated into individual moves
           with regular expressions. chessboard.js was used to generate the
@@ -77,20 +77,24 @@
       </div>
 
       <div class="project_notable_features">
-        <h4>Notable Features</h4>
+        <h4 data-i18n-key="notable-features">Notable Features</h4>
         <ul>
-          <li>Unlimited free puzzles</li>
-          <li>Direct access from the browser</li>
-          <li>Familiar chess.com style</li>
-          <li>No membership/subscription necessary</li>
-          <li>Hints, solution, reset and rotate board buttons</li>
-          <li>Direct links to chess.com for more information</li>
+          <li data-i18n-key="dc-nf-1">Unlimited free puzzles</li>
+          <li data-i18n-key="dc-nf-2">Direct access from the browser</li>
+          <li data-i18n-key="dc-nf-3">Familiar chess.com style</li>
+          <li data-i18n-key="dc-nf-4">No membership/subscription necessary</li>
+          <li data-i18n-key="dc-nf-5">
+            Hints, solution, reset and rotate board buttons
+          </li>
+          <li data-i18n-key="dc-nf-6">
+            Direct links to chess.com for more information
+          </li>
         </ul>
       </div>
 
       <!-- Project stack -->
       <div class="project-stack--container">
-        <h4>Project Stack</h4>
+        <h4 data-i18n-key="project-stack">Project Stack</h4>
 
         <div class="project_stack daily-chess_stack">
           <img
@@ -129,7 +133,12 @@
     </div>
     <!-- End of project body -->
 
-    <p class="project_item--read_more closed">Read more</p>
+    <p class="project_item--read_more closed" data-i18n-key="read-more">
+      Read more
+    </p>
+    <p class="project_item--read_less hide" data-i18n-key="read-less">
+      Read Less
+    </p>
 
     <!-- Project links -->
     <div class="project_links">
@@ -138,7 +147,11 @@
         aria-label="View Daily Chess Puzzle"
         rel="noreferrer"
         href="https://chrome.google.com/webstore/detail/daily-chess-puzzle/nbccedaochfcpakfdgclnjkdbagniplh?hl=en"
-        ><button type="button" class="btn link-button works-view-site-button">
+        ><button
+          type="button"
+          class="btn link-button works-view-site-button"
+          data-i18n-key="view-extension"
+        >
           View Extension
         </button></a
       >
@@ -157,7 +170,11 @@
         rel="noreferrer"
         href="https://www.chess.com/member/lovelycarbonara"
         class="chess--challenge_link hide"
-        ><button type="button" class="btn link-button chess_com_link">
+        ><button
+          type="button"
+          class="btn link-button chess_com_link"
+          data-i18n-key="dc-challenge"
+        >
           <img
             src="/assets/images/icons/chesscom.png"
             alt="Link to chess.com profile"

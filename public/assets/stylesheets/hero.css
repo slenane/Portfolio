@@ -25,20 +25,6 @@
   display: block;
 }
 
-/* .navbar-toggler,
-.navbar-toggler:focus {
-  border: none;
-  outline: none;
-}
-
-.navbar-light .navbar-toggler-icon {
-  background-image: none !important;
-  font-size: 1.5rem;
-  color: var(--primary-text-color);
-  text-align: end;
-  padding-top: 0.5rem;
-} */
-
 .navbar-nav.ml-auto {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -95,7 +81,7 @@
   height: 42px;
   width: 42px;
   border-radius: 50%;
-  box-shadow: var(--icon-shadow);
+  box-shadow: none;
   position: relative;
   transition: all 0.3s;
   z-index: 1;
@@ -103,12 +89,12 @@
 
 .language-switcher img.active {
   z-index: 2;
+  box-shadow: var(--icon-shadow);
 }
 
 .language-switcher img:nth-of-type(2) {
   visibility: hidden;
   right: -47px;
-  box-shadow: none;
   z-index: 1;
 }
 
@@ -131,6 +117,7 @@
 
 .hero--subheader {
   padding: 0 10%;
+  font-size: 1rem;
 }
 
 .hero_grid--links {

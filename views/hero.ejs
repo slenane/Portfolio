@@ -1,70 +1,5 @@
 <div id="hero_section">
   <!-- NAVBAR -->
-  <!-- <nav class="navbar fixed-top navbar-expand-md navbar-light pt-0 mt-0">
-    <a class="navbar-brand" href="/" aria-label="Brand">
-      <img
-        class="navbar-brand_image"
-        src="/assets/images/icons/avatar-sm.webp"
-        alt="Stephen Lenane Logo"
-      />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-label="Bio Section"
-            target="_blank"
-            href="https://slenane.github.io/CV/"
-            >CV</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-label="What I Do Section"
-            href="#what-i-do_section"
-            >What I Do</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-label="Works Section" href="#project_section"
-            >Works</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-label="Skill Set Section"
-            href="#skillset_section"
-            >Skill Set</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-label="Contact Section"
-            href="#contact_section"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-
   <nav class="navbar fixed-top navbar-light pt-0 mt-0">
     <a class="navbar-brand" href="#" aria-label="Brand">
       <img
@@ -98,12 +33,12 @@
     </div>
     <div class="language-switcher">
       <img
-        class="lang-english active"
+        data-language="en"
         src="/assets/images/icons/united-kingdom-circle.png"
         alt="English language icon"
       />
       <img
-        class="lang-spanish"
+        data-language="es"
         src="/assets/images/icons/spain-circle.png"
         alt="Spanish language icon"
       />
@@ -114,8 +49,8 @@
     <h1 class="hero--header">Stephen Lenane</h1>
     <div class="hero_body--grid">
       <div class="hero_grid">
-        <p class="hero--subheader">
-          Front-end developer from Ireland based in Lisbon, Portugal
+        <p class="hero--subheader" data-i18n-key="hero-sub-heading">
+          Front-end developer from Ireland based in Seville, Spain
         </p>
         <div class="hero_grid--links">
           <a
@@ -154,7 +89,13 @@
           /></a>
         </div>
         <a href="#contact_section" aria-label="Hire Me Button">
-          <button type="button" class="btn hire-me-button">HIRE ME</button>
+          <button
+            type="button"
+            class="btn hire-me-button"
+            data-i18n-key="hire-me-button"
+          >
+            HIRE ME
+          </button>
         </a>
       </div>
     </div>

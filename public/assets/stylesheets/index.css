@@ -169,6 +169,13 @@ li {
   color: var(--secondary-text-color);
 }
 
+p,
+li,
+label,
+input {
+  font-size: 0.9rem;
+}
+
 .link-button {
   text-align: center;
   font-weight: 700;
