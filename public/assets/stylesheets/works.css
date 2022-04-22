@@ -20,10 +20,6 @@
   z-index: -1;
 }
 
-.project_item h3 {
-  font-size: 1.2rem;
-}
-
 .project_images img {
   max-width: 90%;
   display: block;
@@ -65,24 +61,48 @@
   max-height: 2rem;
 }
 
-.project_item--read_more {
+.project_item--read_more,
+.project_item--read_less {
   text-align: center;
+  outline: none;
+  background: none;
+  border: none;
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1rem;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 0.3rem;
 }
 
+.project_item--read_more:focus,
+.project_item--read_less:focus {
+  outline: none;
+  background: none;
+  border: none;
+}
+
 .project_links {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project--goals .project_links {
+  gap: 0;
+}
+
+.chess--challenge_link {
+  grid-column: 1 / -1;
 }
 
 .chess_com_link {
   background-color: var(--chess-com-green);
   color: white;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border-radius: 10px;
 }
 
 .chess_com_link img {

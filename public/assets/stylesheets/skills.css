@@ -24,10 +24,15 @@ li {
   display: grid;
   justify-content: center;
   gap: 1rem;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(6, auto);
+}
+
+#skillset_section ul.skillset--learning {
+  grid-template-columns: repeat(2, auto);
 }
 
 .skill_item {
+  grid-column: span 2;
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
@@ -43,6 +48,18 @@ li {
   background-color: var(--secondary-background-color);
   border: 1px solid var(--primary-color);
   box-shadow: var(--icon-shadow);
+}
+
+.skill-center-2 {
+  grid-column: 2 / 4;
+}
+
+.skill-center {
+  grid-column: 3 / 5;
+}
+
+#skillset_section ul.skillset--learning .skill_item {
+  grid-column: span 1;
 }
 
 .skill_item img {

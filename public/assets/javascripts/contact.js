@@ -1,9 +1,5 @@
-const contactRadioGroup = document.querySelector('.contact_radio_group');
-const websiteUpdate = document.querySelector('#website_update');
-const websiteUrl = document.querySelector('.website_url--input');
 const contactGroups = document.querySelectorAll('.form-group');
 const contactInputs = document.querySelectorAll('.form-control');
-const formCheckLabels = document.querySelectorAll('.form-check-label');
 
 //  Animate the transformation of the input label to move from input field
 const animateInput = (e) => {
@@ -18,37 +14,13 @@ const animateInput = (e) => {
   group.classList.add('group-focused');
 };
 
-// Update UI when user selects a service type
-formCheckLabels.forEach((label) =>
-  label.addEventListener('click', (e) => {
-    if (e.target.classList.contains('checked')) {
-      return;
-    } else {
-      formCheckLabels.forEach((label) => label.classList.remove('checked'));
-      e.target.classList.add('checked');
-    }
-  })
-);
-
-// If the user selects the update existing website radio button then show the website URL input field
-const toggleWebsiteField = (e) => {
-  if (websiteUpdate.checked) {
-    websiteUrl.classList.remove('hide');
-  } else {
-    websiteUrl.classList.add('hide');
-  }
-};
-
 // Initialise socket.io
 const socket = io();
 
 const form = document.querySelector('.contact_form');
 
 const contactName = document.querySelector('#contact_name');
-const contactPhone = document.querySelector('#contact_phone');
 const contactEmail = document.querySelector('#contact_email');
-const contactService = document.querySelectorAll('.form-check-input');
-const contactWebsite = document.querySelector('#contact_website');
 const contactMessage = document.querySelector('#contact_message');
 
 const formLoader = document.querySelector('.form_loader');
@@ -70,13 +42,10 @@ const sendMail = (e) => {
   const mail = {
     name: contactName.value,
     email: contactEmail.value,
-    phone: contactPhone.value,
-    service: Array.from(contactService).filter((item) => item.checked)[0].value,
-    website: contactWebsite.value,
     message: contactMessage.value,
   };
 
-  if (mail.name && mail.email && mail.phone && mail.service && mail.message) {
+  if (mail.name && mail.email && mail.message) {
     // Style contact form
     formSubmit.setAttribute('disabled', true);
     formLoader.classList.add('active');
@@ -106,5 +75,4 @@ socket.on('mail sent', (mailSent) => {
 });
 
 contactInputs.forEach((input) => input.addEventListener('focus', animateInput));
-contactRadioGroup.addEventListener('click', toggleWebsiteField);
 form.addEventListener('submit', sendMail, false);

@@ -100,36 +100,6 @@
   transform: translateY(0);
 }
 
-.contact_radio_group {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 1rem 0;
-}
-
-.service_select {
-  color: var(--primary-text-color);
-}
-
-.form-check-input {
-  appearance: none;
-  display: none;
-}
-
-.form-check-label {
-  text-align: center;
-  transform: translateX(-15px);
-  font-size: 0.9rem;
-}
-
-.form-check-label.checked {
-  border-bottom: 2px solid var(--primary-color);
-  font-weight: 700;
-}
-
-.form-check-label:hover {
-  cursor: pointer;
-}
-
 .form_submit {
   display: grid;
   justify-content: center;
