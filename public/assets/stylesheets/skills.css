@@ -84,6 +84,8 @@ html[data-theme='dark'] .github-icon {
   .skillset--sub_grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    justify-content: space-evenly;
+    /* gap: 2rem; */
   }
 
   #skillset_section .skillset--sub_grid_1 ul {

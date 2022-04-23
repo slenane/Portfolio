@@ -40,14 +40,55 @@
   font-size: 0.9rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 480px) {
   .what_i_do--grid {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10%;
   }
 }
 
-/* @media (min-width: 1350px) {
+@media only screen and (min-width: 680px) {
   .what_i_do--grid {
-    grid-template-columns: repeat(4, 1fr);
+    padding: 0 15%;
   }
-} */
+}
+
+@media only screen and (min-width: 768px) {
+  .what_i_do--grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .what_i_do--grid {
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .what_i_do--grid {
+    justify-content: space-evenly;
+  }
+
+  .what_i_do--grid_item {
+    padding: 5% 10%;
+  }
+
+  .what_i_do--grid_item img {
+    width: 20%;
+  }
+
+  .what_i_do--grid_item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .what_i_do--grid_item img {
+    width: 20%;
+  }
+
+  .what_i_do--grid_item p {
+    font-size: 0.9rem;
+  }
+}

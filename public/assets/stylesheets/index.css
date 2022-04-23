@@ -191,6 +191,7 @@ input {
   }
 
   h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
 
@@ -198,24 +199,13 @@ input {
     font-size: 1.5rem;
   }
 
-  h4 {
-    font-size: 1.3rem;
-  }
-
-  p,
-  li,
-  label,
-  input {
-    font-size: 1rem;
-  }
-
   .section {
     margin-top: 6rem;
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #content-wrapper {
     padding: 0 15%;
   }
-}
+} */
