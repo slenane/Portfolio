@@ -10,7 +10,7 @@
 .project_item::before {
   position: absolute;
   background-color: var(--primary-color);
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
   content: '';
   border-radius: 10px;
   top: 5px;
@@ -18,6 +18,11 @@
   bottom: -5px;
   right: -5px;
   z-index: -1;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .project_images img {
@@ -71,7 +76,7 @@
   font-size: 0.9rem;
   margin: 0 auto;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 0.3rem;
@@ -108,4 +113,28 @@
 .chess_com_link img {
   height: 1.3rem;
   padding-bottom: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  .works-grid {
+    align-items: center;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
+
+  .works-order-2-desktop {
+    order: 2;
+  }
+
+  .project_item--reverse .works-grid {
+    direction: rtl;
+  }
+
+  .project--daily_chess_puzzle .project_links {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .chess--challenge_link {
+    grid-column: unset;
+  }
 }

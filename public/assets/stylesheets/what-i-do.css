@@ -16,7 +16,7 @@
 .what_i_do--grid_item::before {
   position: absolute;
   background-color: var(--primary-color);
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
   content: '';
   border-radius: 10px;
   top: 5px;
@@ -39,3 +39,15 @@
 .what_i_do--grid_item p {
   font-size: 0.9rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .what_i_do--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 1350px) {
+  .what_i_do--grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */

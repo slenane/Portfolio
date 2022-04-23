@@ -1,7 +1,7 @@
 let themeSwitcher = document.querySelectorAll('.theme-switcher img');
 let lightModeIcon = document.querySelector('.light-mode');
 let darkModeIcon = document.querySelector('.dark-mode');
-let heroSectionBackground = document.querySelector('#hero_section');
+let heroAvatar = document.querySelector('.hero-avatar img');
 let navbarBrandImage = document.querySelector('.navbar-brand_image');
 let cv = document.querySelector('.cv--link');
 let github = document.querySelector('.github--link');
@@ -15,6 +15,7 @@ let cssIcon = document.querySelectorAll('.css-icon');
 let nodeIcon = document.querySelectorAll('.nodejs-icon');
 let expressIcon = document.querySelectorAll('.express-icon');
 let githubIcon = document.querySelector('.github-icon');
+let successTick = document.querySelector('.form_success--1');
 
 // Update theme and images
 let updateTheme = (theme) => {
@@ -23,10 +24,9 @@ let updateTheme = (theme) => {
     lightModeIcon.classList.remove('hide');
     darkModeIcon.classList.add('hide');
     // Update avatar
-    heroSectionBackground.style.backgroundImage =
-      "url('/assets/images/icons/avatar-dark.png')";
-    // Update Icons
+    heroAvatar.src = '/assets/images/icons/avatar-dark.png';
     navbarBrandImage.src = '/assets/images/icons/avatar-sm-dark.png';
+    // Update Icons
     github.src = '/assets/images/icons/github-dark.png';
     developDesignImg.src = '/assets/images/icons/design-develop-dark.png';
     responsiveImg.src = '/assets/images/icons/responsive-dark.png';
@@ -45,15 +45,15 @@ let updateTheme = (theme) => {
       (icon) => (icon.src = '/assets/images/icons/express-dark.png')
     );
     githubIcon.src = '/assets/images/icons/github-dark.png';
+    successTick.src = '/assets/images/icons/tick-dark.png';
   } else {
     // Update the icon
     darkModeIcon.classList.remove('hide');
     lightModeIcon.classList.add('hide');
     // Update avatar
-    heroSectionBackground.style.backgroundImage =
-      "url('/assets/images/icons/avatar.png')";
-    // Update Icons
+    heroAvatar.src = '/assets/images/icons/avatar.png';
     navbarBrandImage.src = '/assets/images/icons/avatar-sm.png';
+    // Update Icons
     github.src = '/assets/images/icons/github.png';
     developDesignImg.src = '/assets/images/icons/design-develop-light.png';
     responsiveImg.src = '/assets/images/icons/responsive-light.png';
@@ -66,6 +66,7 @@ let updateTheme = (theme) => {
       (icon) => (icon.src = '/assets/images/icons/express.png')
     );
     githubIcon.src = '/assets/images/icons/github.png';
+    successTick.src = '/assets/images/icons/tick.png';
   }
 };
 

@@ -15,7 +15,7 @@
 .contact_form--container::before {
   position: absolute;
   background-color: var(--primary-color);
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
   content: '';
   border-radius: 10px;
   top: 5px;
@@ -34,7 +34,7 @@
   position: absolute;
   left: 43%;
   top: 43%;
-  border: 8px solid #f3f3f3;
+  border: 8px solid var(--secondary-background-color);
   border-radius: 50%;
   border-top: 8px solid var(--secondary-color);
   width: 3rem;
@@ -120,6 +120,7 @@
   justify-items: center;
   align-items: center;
   align-content: center;
+  text-align: center;
 }
 
 .form_success img {
@@ -140,4 +141,28 @@
 
 .form_success--3 {
   animation-delay: 1.5s;
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 550px) {
+  #contact_section {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact_section {
+    padding: 0 15%;
+  }
+}
+
+@media (min-width: 1000px) {
+  #contact_section {
+    padding: 0 20%;
+  }
 }

@@ -47,7 +47,7 @@ li {
   border-radius: 10px;
   background-color: var(--secondary-background-color);
   border: 1px solid var(--primary-color);
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .skill-center-2 {
@@ -74,4 +74,23 @@ html[data-theme='dark'] .github-icon {
 .skill_item p {
   margin-bottom: 0;
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .skill_item {
+    grid-column: span 1;
+  }
+
+  .skillset--sub_grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  #skillset_section .skillset--sub_grid_1 ul {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  #skillset_section .skillset--sub_grid_2 ul {
+    grid-template-columns: repeat(2, auto);
+  }
 }

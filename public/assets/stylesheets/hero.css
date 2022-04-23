@@ -1,9 +1,5 @@
 #hero_section {
   height: 100vh;
-  background-image: url('/assets/images/icons/avatar.png');
-  background-repeat: no-repeat;
-  background-position: 50% 20%;
-  background-size: 60%;
 }
 
 .navbar {
@@ -12,7 +8,7 @@
 
 .navbar.display-navbar {
   background-color: var(--secondary-background-color);
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .navbar-brand_image {
@@ -74,7 +70,7 @@
   height: 42px;
   width: 42px;
   margin: 0 auto;
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .language-switcher img {
@@ -89,7 +85,7 @@
 
 .language-switcher img.active {
   z-index: 2;
-  box-shadow: var(--icon-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .language-switcher img:nth-of-type(2) {
@@ -104,9 +100,24 @@
   z-index: 1;
 }
 
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-content: center;
+  height: 100%;
+}
+
+.hero-avatar {
+  text-align: center;
+}
+
+.hero-avatar img {
+  width: 60%;
+}
+
 .hero_body {
   position: relative;
-  top: 50%;
   text-align: center;
 }
 
@@ -135,4 +146,35 @@
 
 html[data-theme='dark'] .hero_grid--links img {
   border: 2px solid white;
+  height: 46px;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 767px) {
+  .hero-avatar img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero_section {
+    height: 40rem;
+  }
+
+  .navbar {
+    padding: 0 10%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-avatar img {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 0 15%;
+  }
 }
