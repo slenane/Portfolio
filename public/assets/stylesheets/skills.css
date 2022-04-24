@@ -27,8 +27,12 @@ li {
   grid-template-columns: repeat(6, auto);
 }
 
+#skillset_section ul.skillset--languages {
+  grid-template-columns: repeat(6, auto);
+}
+
 #skillset_section ul.skillset--learning {
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(4, auto);
 }
 
 .skill_item {
@@ -50,20 +54,16 @@ li {
   box-shadow: var(--box-shadow);
 }
 
-.skill-center-2 {
+.skill-center-sm {
   grid-column: 2 / 4;
 }
 
-.skill-center {
+.heroku.skill-center-sm {
   grid-column: 3 / 5;
 }
 
-#skillset_section ul.skillset--learning .skill_item {
-  grid-column: span 1;
-}
-
 .skill_item img {
-  width: 2.5rem;
+  max-width: 2.5rem;
 }
 
 html[data-theme='dark'] .github-icon {
@@ -77,22 +77,30 @@ html[data-theme='dark'] .github-icon {
 }
 
 @media (min-width: 768px) {
+  #skillset_section ul {
+    grid-template-columns: repeat(10, auto);
+  }
+  .skill-center-sm {
+    grid-column: unset;
+  }
+
+  .shopify.skill-center-lg {
+    grid-column: 4 / 6;
+  }
+
+  .heroku.skill-center-lg {
+    grid-column: 6 / 8;
+  }
+}
+
+@media (min-width: 1024px) {
   .skill_item {
-    grid-column: span 1;
+    height: 7rem;
+    width: 7rem;
+    align-content: space-evenly;
   }
 
-  .skillset--sub_grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-evenly;
-    /* gap: 2rem; */
-  }
-
-  #skillset_section .skillset--sub_grid_1 ul {
-    grid-template-columns: repeat(3, auto);
-  }
-
-  #skillset_section .skillset--sub_grid_2 ul {
-    grid-template-columns: repeat(2, auto);
+  .skill_item img {
+    max-width: 3rem;
   }
 }

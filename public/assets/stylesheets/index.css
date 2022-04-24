@@ -5,6 +5,7 @@
 /* VARIABLES */
 :root {
   --chess-com-green: #5b9e46;
+  --content-padding: 0 5%;
 }
 
 /* Light Mode */
@@ -24,6 +25,7 @@ html[data-theme='light'] {
 html[data-theme='light'] .hire-me-button {
   text-align: center;
   background-color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
   color: white;
   font-weight: 700;
   padding: 20px 30px;
@@ -36,28 +38,52 @@ html[data-theme='light'] .hire-me-button::before {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   content: '';
-  top: 5px;
-  left: 5px;
-  right: -5px;
-  bottom: -5px;
+  top: 7px;
+  left: 7px;
+  right: -7px;
+  bottom: -7px;
   z-index: -1;
   border-radius: 10px;
+}
+
+html[data-theme='light'] .hire-me-button:hover {
+  background-color: white;
+  color: var(--secondary-color);
 }
 
 html[data-theme='light'] .works-view-site-button,
 html[data-theme='light'] .contact-submit-button {
   background-color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
   color: white;
 }
 
 html[data-theme='light'] .works-github-button {
   background-color: var(--primary-text-color);
+  border: 3px solid var(--primary-text-color);
   color: white;
 }
 
 html[data-theme='light'] .chess_com_link {
   background-color: var(--chess-com-green);
+  border: 3px solid var(--chess-com-green);
   color: white;
+}
+
+html[data-theme='light'] .works-view-site-button:hover,
+html[data-theme='light'] .contact-submit-button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+html[data-theme='light'] .works-github-button:hover {
+  background-color: white;
+  color: var(--primary-text-color);
+}
+
+html[data-theme='light'] .chess_com_link:hover {
+  background-color: white;
+  color: var(--chess-com-green);
 }
 
 /* Dark Mode */
@@ -86,16 +112,21 @@ html[data-theme='dark'] .hire-me-button {
 
 html[data-theme='dark'] .hire-me-button::before {
   position: absolute;
-  background-color: transparent;
+  background-color: var(--primary-color);
   border: 3px solid var(--primary-color);
   box-shadow: var(--box-shadow);
   content: '';
-  top: 5px;
-  left: 5px;
-  right: -5px;
-  bottom: -5px;
+  top: 7px;
+  left: 7px;
+  right: -7px;
+  bottom: -7px;
   z-index: -1;
   border-radius: 10px;
+}
+
+html[data-theme='dark'] .hire-me-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--secondary-background-color);
 }
 
 html[data-theme='dark'] .works-view-site-button,
@@ -117,6 +148,22 @@ html[data-theme='dark'] .chess_com_link {
   color: var(--chess-com-green);
 }
 
+html[data-theme='dark'] .works-view-site-button:hover,
+html[data-theme='dark'] .contact-submit-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--secondary-background-color);
+}
+
+html[data-theme='dark'] .works-github-button:hover {
+  background-color: #c6c6c6;
+  color: var(--secondary-background-color);
+}
+
+html[data-theme='dark'] .chess_com_link:hover {
+  background-color: var(--chess-com-green);
+  color: var(--secondary-background-color);
+}
+
 /* GENERAL */
 html,
 body {
@@ -132,7 +179,7 @@ body {
 }
 
 #content-wrapper {
-  padding: 0 5%;
+  padding: var(--content-padding);
 }
 
 h1,
@@ -185,9 +232,15 @@ input {
   display: none !important;
 }
 
+@media (min-width: 600px) {
+  :root {
+    --content-padding: 0 10%;
+  }
+}
+
 @media (min-width: 768px) {
-  #content-wrapper {
-    padding: 0 10%;
+  :root {
+    --content-padding: 0 15%;
   }
 
   h2 {
@@ -204,8 +257,8 @@ input {
   }
 }
 
-/* @media (min-width: 1024px) {
-  #content-wrapper {
-    padding: 0 15%;
+@media (min-width: 1024px) {
+  :root {
+    --content-padding: 0 20%;
   }
-} */
+}

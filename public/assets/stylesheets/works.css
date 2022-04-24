@@ -26,7 +26,7 @@
 }
 
 .project_images img {
-  width: 90%;
+  width: 80%;
   display: block;
   margin: 1rem auto;
 }
@@ -115,17 +115,7 @@
   padding-bottom: 0.2rem;
 }
 
-@media (min-width: 600px) {
-  #works_section {
-    padding: 0 5%;
-  }
-}
-
 @media (min-width: 768px) {
-  #works_section {
-    padding: 0;
-  }
-
   .project_images img {
     width: 70%;
   }
@@ -136,20 +126,19 @@
 }
 
 @media (min-width: 1024px) {
-  #works_section {
-    padding: 0 5%;
-  }
-
   .project_item {
     margin-bottom: 5rem;
-    padding: 5% 10%;
   }
 
   .works-grid {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+
+  .project_item.project_open .works-grid {
+    margin-bottom: 2rem;
   }
 
   .works-order-2-desktop {

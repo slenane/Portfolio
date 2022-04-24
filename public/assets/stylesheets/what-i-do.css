@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 0 5%;
 }
 
 .what_i_do--grid_item {
@@ -10,7 +9,7 @@
   border: 1px solid var(--primary-color);
   position: relative;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5%;
 }
 
 .what_i_do--grid_item::before {
@@ -40,28 +39,9 @@
   font-size: 0.9rem;
 }
 
-@media only screen and (min-width: 480px) {
-  .what_i_do--grid {
-    padding: 0 10%;
-  }
-}
-
-@media only screen and (min-width: 680px) {
-  .what_i_do--grid {
-    padding: 0 15%;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .what_i_do--grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .what_i_do--grid {
-    padding: 0 5%;
   }
 }
 

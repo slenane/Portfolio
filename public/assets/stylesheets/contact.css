@@ -5,7 +5,7 @@
 
 .contact_form--container {
   background-color: var(--secondary-background-color);
-  padding: 20px;
+  padding: 5%;
   border-radius: 10px;
   border: 1px solid var(--primary-color);
   position: relative;

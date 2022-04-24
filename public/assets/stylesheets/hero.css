@@ -4,6 +4,7 @@
 
 .navbar {
   transition: all 0.5s;
+  padding: var(--content-padding);
 }
 
 .navbar.display-navbar {
@@ -39,6 +40,12 @@
   color: var(--primary-text-color);
 }
 
+.nav-cv a:hover,
+.nav-email a:hover {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
 .display-nav-cv,
 .display-nav-email {
   display: block;
@@ -67,7 +74,6 @@
   background-color: var(--secondary-background-color);
   padding: 8px;
   border-radius: 50%;
-  height: 42px;
   width: 42px;
   margin: 0 auto;
   box-shadow: var(--box-shadow);
@@ -75,8 +81,7 @@
 }
 
 .language-switcher img {
-  height: 42px;
-  width: 42px;
+  max-width: 42px;
   border-radius: 50%;
   box-shadow: none;
   position: relative;
@@ -143,12 +148,12 @@
 
 .hero_grid--links img {
   border-radius: 50%;
-  height: 48px;
+  width: 48px;
 }
 
 html[data-theme='dark'] .hero_grid--links img {
   border: 2px solid white;
-  height: 46px;
+  width: 46px;
 }
 
 @media only screen and (min-width: 550px) and (max-width: 767px) {
@@ -162,21 +167,94 @@ html[data-theme='dark'] .hero_grid--links img {
     height: 40rem;
   }
 
-  .navbar {
-    padding: 0 10%;
-  }
-
   .hero-content {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 
   .hero-avatar img {
-    width: 55%;
+    width: 75%;
+  }
+
+  .hero_body {
+    text-align: start;
+  }
+
+  .hero_body h1 {
+    text-align: start;
+  }
+
+  .hero--subheader {
+    padding: 0 10% 0 0;
+    text-align: start;
+  }
+
+  .hero_grid--links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .hero_grid--links img {
+    width: 30px;
+  }
+
+  html[data-theme='dark'] .hero_grid--links img {
+    width: 28px;
   }
 }
 
 @media (min-width: 1024px) {
-  .navbar {
-    padding: 0 15%;
+  .hero-options {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+  }
+
+  .hero-avatar img {
+    width: 70%;
+  }
+
+  .hero_body {
+    text-align: start;
+  }
+
+  .hero_body h1 {
+    font-size: 2.3rem;
+    text-align: start;
+  }
+
+  .hero--subheader {
+    padding: 0 10% 0 0;
+    font-size: 1.1rem;
+    text-align: start;
+  }
+
+  .hero_grid--links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .hero_grid--links img {
+    width: 40px;
+  }
+
+  html[data-theme='dark'] .hero_grid--links img {
+    width: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero_body h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero--subheader {
+    font-size: 1.2rem;
   }
 }
