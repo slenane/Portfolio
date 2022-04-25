@@ -97,6 +97,10 @@ const manageLanguageOptions = (e) => {
       setTimeout(() => {
         languageSwitcher.insertAdjacentElement('afterbegin', selectedLanguage);
         setLocale(selectedLanguage.dataset['language']);
+        localStorage.setItem(
+          'language-preference',
+          selectedLanguage.dataset['language']
+        );
         return;
       }, 300);
     }
@@ -108,7 +112,9 @@ languageSwitcher.addEventListener('click', manageLanguageOptions);
 
 // When the page content is ready...
 document.addEventListener('DOMContentLoaded', () => {
-  const initialLocale = supportedOrDefault(browserLocales(true));
+  const initialLocale =
+    localStorage.getItem('language-preference') ||
+    supportedOrDefault(browserLocales(true));
   // Translate the page to the default locale
   setLocale(initialLocale);
   // Set the correct flag
