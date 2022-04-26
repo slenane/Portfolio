@@ -38,10 +38,10 @@ html[data-theme='light'] .hire-me-button::before {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   content: '';
-  top: 7px;
-  left: 7px;
-  right: -7px;
-  bottom: -7px;
+  top: 6px;
+  left: 6px;
+  right: -6px;
+  bottom: -6px;
   z-index: -1;
   border-radius: 10px;
 }
@@ -116,10 +116,10 @@ html[data-theme='dark'] .hire-me-button::before {
   border: 3px solid var(--primary-color);
   box-shadow: var(--box-shadow);
   content: '';
-  top: 7px;
-  left: 7px;
-  right: -7px;
-  bottom: -7px;
+  top: 6px;
+  left: 6px;
+  right: -6px;
+  bottom: -6px;
   z-index: -1;
   border-radius: 10px;
 }
