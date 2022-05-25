@@ -32,7 +32,7 @@ li {
 }
 
 #skillset_section ul.skillset--learning {
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(6, auto);
 }
 
 .skill_item {
@@ -58,8 +58,12 @@ li {
   grid-column: 2 / 4;
 }
 
-.heroku.skill-center-sm {
+.wordpress.skill-center-sm {
   grid-column: 3 / 5;
+}
+
+.shopify.skill-center-sm {
+  grid-column: 2 / 4;
 }
 
 .skill_item img {
@@ -81,15 +85,27 @@ html[data-theme='dark'] .github-icon {
     grid-template-columns: repeat(10, auto);
   }
   .skill-center-sm {
-    grid-column: unset;
+    grid-column: span 2;
   }
 
-  .shopify.skill-center-lg {
+  .bootstrap.skill-center-lg {
     grid-column: 4 / 6;
   }
 
-  .heroku.skill-center-lg {
+  .wordpress.skill-center-lg {
     grid-column: 6 / 8;
+  }
+
+  .postman.skill-center-lg {
+    grid-column: 3 / 5;
+  }
+
+  .shopify.skill-center-lg {
+    grid-column: 5 / 7;
+  }
+
+  .heroku.skill-center-lg {
+    grid-column: 7 / 9;
   }
 }
 
